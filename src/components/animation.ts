@@ -13,7 +13,6 @@ type Renamed = Rename<
     onPlusCancel: 'onCancel';
     onPlusFinish: 'onFinish';
     onPlusRemove: 'onRemove';
-    onPlusStart: 'onStart';
   }
 >;
 
@@ -27,13 +26,14 @@ export const Animation = proxy<HTMLPlusAnimationElement, Renamed>(
     'easing',
     'endDelay',
     'fill',
+    'instance',
     'iterationComposite',
     'iterations',
     'iterationStart',
     'keyframes',
     'name',
-    'play',
-    'playbackRate'
+    'playbackRate',
+    'run'
   ],
-  ['plusCancel', 'plusFinish', 'plusRemove', 'plusStart']
+  ['plusCancel', 'plusFinish', 'plusRemove']
 );
