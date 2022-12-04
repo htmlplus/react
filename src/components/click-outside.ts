@@ -16,6 +16,6 @@ type Renamed = Rename<
 
 export const ClickOutside = proxy<HTMLPlusClickOutsideElement, Renamed>(
   'plus-click-outside',
-  ['disabled', 'once'],
+  ['capture', 'disabled', 'once'],
   ['plusClickOutside']
 );

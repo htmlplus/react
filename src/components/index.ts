@@ -8,6 +8,7 @@ export * from './avatar.compact';
 export * from './breadcrumb';
 export * from './browse';
 export * from './card.compact';
+export * from './center';
 export * from './click-outside';
 export * from './counter';
 export * from './cropper';
