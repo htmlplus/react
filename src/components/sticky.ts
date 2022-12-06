@@ -16,6 +16,6 @@ type Renamed = Rename<
 
 export const Sticky = proxy<HTMLPlusStickyElement, Renamed>(
   'plus-sticky',
-  ['disabled', 'top', 'watcher', 'zIndex'],
+  ['top', 'watcher', 'zIndex'],
   ['plusChange']
 );
