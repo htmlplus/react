@@ -2,10 +2,10 @@ name: Node.js Package
 
 on:
   push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-
+    branches:
+      - 'main'
+    tags:
+      - release@latest
 jobs:
   release:
     name: publish
