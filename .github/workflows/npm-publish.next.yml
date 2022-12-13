@@ -5,7 +5,7 @@ on:
     branches:
       - 'main'
     tags:
-      - release@latest
+      - release@next
 jobs:
   release:
     name: publish
@@ -23,6 +23,6 @@ jobs:
       - name: build
         run: npm run build
       - name: publish
-        run: cd dist && npm publish --access public
+        run: cd dist && npm publish --access public --tag next
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
