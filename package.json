@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/htmlplus/react#readme",
   "dependencies": {
-    "@htmlplus/core": "^0.7.3",
+    "@htmlplus/core": "^0.7.4-next-12150250",
     "change-case": "^4.1.2"
   },
   "devDependencies": {
