@@ -16,6 +16,6 @@ type Renamed = Rename<
 
 export const Intersection = proxy<HTMLPlusIntersectionElement, Renamed>(
   'plus-intersection',
-  ['behavior', 'disabled', 'once', 'root', 'rootMargin', 'threshold'],
+  ['disabled', 'once', 'root', 'rootMargin', 'threshold'],
   ['plusChange']
 );
