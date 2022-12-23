@@ -20,6 +20,7 @@ export * from './icon';
 export * from './intersection';
 export * from './portal';
 export * from './scroll-indicator';
+export * from './signature';
 export * from './spinner';
 export * from './sticky';
 export * from './switch';
