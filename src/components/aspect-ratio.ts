@@ -9,4 +9,8 @@ import type { Rename } from '../proxy';
 
 type Renamed = Rename<AspectRatioJSX, {}>;
 
-export const AspectRatio = proxy<HTMLPlusAspectRatioElement, Renamed>('plus-aspect-ratio', ['value'], []);
+export const AspectRatio = proxy<HTMLPlusAspectRatioElement, Renamed>(
+  'plus-aspect-ratio',
+  ['minHeight', 'maxHeight', 'value'],
+  []
+);
