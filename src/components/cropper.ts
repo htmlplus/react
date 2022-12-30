@@ -12,6 +12,9 @@ type Renamed = Rename<
   {
     onPlusReady: 'onReady';
     onPlusCrop: 'onCrop';
+    onPlusCropEnd: 'onCropEnd';
+    onPlusCropMove: 'onCropMove';
+    onPlusCropStart: 'onCropStart';
     onPlusZoom: 'onZoom';
   }
 >;
@@ -37,5 +40,5 @@ export const Cropper = proxy<HTMLPlusCropperElement, Renamed>(
     'zoomable',
     'zoomRatio'
   ],
-  ['plusReady', 'plusCrop', 'plusZoom']
+  ['plusReady', 'plusCrop', 'plusCropEnd', 'plusCropMove', 'plusCropStart', 'plusZoom']
 );

@@ -16,6 +16,6 @@ type Renamed = Rename<
 
 export const Counter = proxy<HTMLPlusCounterElement, Renamed>(
   'plus-counter',
-  ['easing', 'decimal', 'decimals', 'delay', 'duration', 'from', 'play', 'separator', 'to'],
+  ['easing', 'decimal', 'decimals', 'delay', 'duration', 'from', 'numerals', 'play', 'separator', 'to'],
   ['plusComplete']
 );
