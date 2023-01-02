@@ -1,6 +1,6 @@
 {
   "name": "@htmlplus/react",
-  "version": "0.6.6-next-01022336",
+  "version": "0.6.6-next-01030035",
   "license": "MIT",
   "author": "Masood Abdolian <m.abdolian@gmail.com>",
   "description": "React output target for @htmlplus/core.",
