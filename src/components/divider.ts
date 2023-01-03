@@ -11,6 +11,6 @@ type Renamed = Rename<DividerJSX, {}>;
 
 export const Divider = proxy<HTMLPlusDividerElement, Renamed>(
   'plus-divider',
-  ['placement', 'type', 'variant', 'vertical', 'width'],
+  ['placement', 'width', 'type', 'variant', 'vertical'],
   []
 );
