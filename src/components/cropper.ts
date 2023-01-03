@@ -10,11 +10,11 @@ import type { Rename } from '../proxy';
 type Renamed = Rename<
   CropperJSX,
   {
-    onPlusReady: 'onReady';
     onPlusCrop: 'onCrop';
     onPlusCropEnd: 'onCropEnd';
     onPlusCropMove: 'onCropMove';
     onPlusCropStart: 'onCropStart';
+    onPlusReady: 'onReady';
     onPlusZoom: 'onZoom';
   }
 >;
@@ -40,5 +40,5 @@ export const Cropper = proxy<HTMLPlusCropperElement, Renamed>(
     'zoomable',
     'zoomRatio'
   ],
-  ['plusReady', 'plusCrop', 'plusCropEnd', 'plusCropMove', 'plusCropStart', 'plusZoom']
+  ['plusCrop', 'plusCropEnd', 'plusCropMove', 'plusCropStart', 'plusReady', 'plusZoom']
 );
