@@ -19,6 +19,7 @@ export * from './grid.compact';
 export * from './icon';
 export * from './intersection';
 export * from './portal';
+export * from './scroll-detector';
 export * from './scroll-indicator';
 export * from './signature';
 export * from './spinner';
