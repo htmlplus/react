@@ -2,6 +2,7 @@
   "name": "@htmlplus/react",
   "version": "0.7.0",
   "license": "MIT",
+	"sideEffects": false,
   "author": "Masood Abdolian <m.abdolian@gmail.com>",
   "description": "React output target for @htmlplus/core.",
   "type": "module",
