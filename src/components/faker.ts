@@ -11,6 +11,6 @@ type Renamed = Rename<FakerJSX, {}>;
 
 export const Faker = proxy<HTMLPlusFakerElement, Renamed>(
   'plus-faker',
-  ['arguments', 'instance', 'locale', 'seed', 'type'],
+  ['api', 'arguments', 'instance', 'locale', 'seed'],
   []
 );
