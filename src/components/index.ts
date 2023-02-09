@@ -28,3 +28,4 @@ export * from './spinner';
 export * from './sticky';
 export * from './switch';
 export * from './tabs.compact';
+export * from './tooltip';
