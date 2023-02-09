@@ -1,0 +1,57 @@
+{
+  "name": "@htmlplus/react",
+  "version": "0.7.3-next-02012227",
+  "license": "MIT",
+  "sideEffects": false,
+  "author": "Masood Abdolian <m.abdolian@gmail.com>",
+  "description": "React output target for @htmlplus/core.",
+  "type": "module",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "**/*.*"
+  ],
+  "publishConfig": {
+    "directory": "dist"
+  },
+  "engines": {
+    "node": ">= 12.7.0"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/htmlplus/react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/htmlplus/react/issues"
+  },
+  "homepage": "https://github.com/htmlplus/react#readme",
+  "dependencies": {
+    "@htmlplus/core": "^0.8.3-next-02092150",
+    "change-case": "^4.1.2"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "@floating-ui/dom": "^1.2.0",
+    "@rollup/plugin-commonjs": "^23.0.2",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@trivago/prettier-plugin-sort-imports": "^4.0.0",
+    "@types/react": "^18.0.25",
+    "fast-glob": "^3.2.12",
+    "prettier": "^2.8.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^3.4.0",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "typescript": "^4.9.3"
+  },
+  "peerDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "@floating-ui/dom": "^1.2.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  }
+}
