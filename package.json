@@ -1,6 +1,6 @@
 {
   "name": "@htmlplus/react",
-  "version": "0.7.4-next-01282147",
+  "version": "0.7.4",
   "license": "MIT",
   "sideEffects": false,
   "author": "Masood Abdolian <m.abdolian@gmail.com>",
