@@ -1,10 +1,11 @@
-import { _ as __decorate, P as Property, E as Event$1, S as State, A as Attributes, M as Method, B as Bind, W as Watch, a as Element } from './index-1398441b.js';
+import { _ as __decorate, P as Property, E as Event$1, S as State, A as Attributes, M as Method, B as Bind, W as Watch, a as Element } from './index-1628d3b2.js';
 import { proxy } from './proxy.js';
 import 'react';
 
 const COUNTER_EASINGS = {
     'ease-out-expo': (currentTime, beginningValue, changeInValue, duration) => {
-        return (changeInValue * (-Math.pow(2, (-10 * currentTime) / duration) + 1) * 1024) / 1023 + beginningValue;
+        return ((changeInValue * (-Math.pow(2, (-10 * currentTime) / duration) + 1) * 1024) / 1023 +
+            beginningValue);
     }
 };
 

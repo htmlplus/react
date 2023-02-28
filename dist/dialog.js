@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, E as Event$1, A as Attributes, W as Watch, B as Bind, j as createLink, h as host, k as toAxis, l as isRTL, c as classes, m as getComputedStyle$1, n as Animation, p as Scrollbar, C as ClickOutside, e as off, d as Portal, o as on, u as uhtml, a as Element } from './index-1398441b.js';
+import { _ as __decorate, P as Property, E as Event$1, A as Attributes, W as Watch, B as Bind, k as createLink, h as host, l as toAxis, i as isRTL, c as classes, m as Animation, n as Scrollbar, C as ClickOutside, e as off, d as Portal, o as on, u as uhtml, a as Element } from './index-1628d3b2.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -85,7 +85,7 @@ let Dialog$1 = Dialog_1 = class Dialog {
         const [instance] = Dialog_1.instances.slice(-1);
         if (!instance)
             return;
-        const zIndex = getComputedStyle$1(instance.$host, 'z-index');
+        const zIndex = window.getComputedStyle(instance.$host).getPropertyValue('z-index');
         return `${parseInt(zIndex) + 1}`;
     }
     /**

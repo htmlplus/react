@@ -1,4 +1,4 @@
-import { _ as __decorate, u as uhtml, a as Element } from './index-1398441b.js';
+import { _ as __decorate, u as uhtml, a as Element } from './index-1628d3b2.js';
 import { proxy } from './proxy.js';
 import 'react';
 

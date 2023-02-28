@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, a as Element } from './index-1398441b.js';
+import { _ as __decorate, P as Property, a as Element } from './index-1628d3b2.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -33,6 +33,8 @@ let Faker$1 = class Faker {
             return;
         import('@faker-js/faker/locale/en').then(module => {
             this.instance = module.faker;
+        }).catch(() => {
+            console.error("It seems that '@faker-js/faker' is not installed!");
         });
     }
     render() {

@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, E as Event$1, M as Method, W as Watch, B as Bind, a as Element, c as classes, u as uhtml } from './index-1398441b.js';
+import { _ as __decorate, P as Property, E as Event$1, M as Method, W as Watch, B as Bind, a as Element, c as classes, u as uhtml } from './index-1628d3b2.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -314,7 +314,7 @@ let Cropper$1 = class Cropper {
         event.preventDefault();
     }
     loadedCallback() {
-        import('./cropperjs-cf39cfa4.js').then(function (n) { return n.c; }).then(moddule => {
+        import('./cropperjs-48b84db1.js').then(function (n) { return n.c; }).then(moddule => {
             Core = moddule.default;
             this.bind();
         });

@@ -1,4 +1,4 @@
-import { _ as __decorate, s as setConfig, P as Property, E as Event$1, M as Method, W as Watch, B as Bind, a as Element, h as host, g as getConfig, u as uhtml } from './index-1398441b.js';
+import { _ as __decorate, s as setConfig, P as Property, E as Event$1, M as Method, W as Watch, B as Bind, a as Element, g as getConfig, h as host, u as uhtml } from './index-1628d3b2.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -126,9 +126,6 @@ let Animation$1 = class Animation {
          */
         this.playbackRate = 1;
     }
-    get $host() {
-        return host(this);
-    }
     get options() {
         var _a, _b;
         return {
@@ -227,7 +224,7 @@ let Animation$1 = class Animation {
         var _a, _b;
         this.disconnectedCallback();
         const keyframes = (_b = (_a = this.keyframes) !== null && _a !== void 0 ? _a : getConfig('component', 'plus-animation', 'asset', 'name', this.name)) !== null && _b !== void 0 ? _b : [];
-        this.instance = this.$host.animate(keyframes, this.options);
+        this.instance = host(this).animate(keyframes, this.options);
         this.instance.addEventListener('cancel', this.onCancel);
         this.instance.addEventListener('finish', this.onFinish);
         this.instance.addEventListener('remove', this.onRemove);

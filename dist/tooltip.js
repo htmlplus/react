@@ -1,93 +1,136 @@
-import { _ as __decorate, P as Property, A as Attributes, M as Method, W as Watch, B as Bind, a as Element, i as query, h as host, u as uhtml } from './index-1398441b.js';
-import { offset, flip, shift, arrow, computePosition } from '@floating-ui/dom';
+import { _ as __decorate, P as Property, S as State, A as Attributes, M as Method, W as Watch, B as Bind, a as Element, i as isRTL, j as query, h as host, o as on, e as off, u as uhtml } from './index-1628d3b2.js';
 import { proxy } from './proxy.js';
 import 'react';
 
-var css_248z = "*,:after,:before{box-sizing:border-box}:host,:host:after,:host:before{box-sizing:border-box}:host([hidden]:not([hidden=false])){display:none}:host{background-color:#000;border-radius:4px;color:#fff;display:none;font-size:90%;font-weight:700;left:0;padding:5px;position:absolute;top:0;width:max-content}[part=arrow]{height:0;position:absolute;width:0}:host([placement-computed^=top]){transform:translateY(-6px)}:host([placement-computed^=top]) [part=arrow]{border-color:#000 transparent transparent;border-style:solid;border-width:6px 6px 0;bottom:-6px}:host([placement-computed^=right]){transform:translateX(6px)}:host([placement-computed^=right]) [part=arrow]{border-color:transparent #000 transparent transparent;border-style:solid;border-width:6px 6px 6px 0;left:-6px}:host([placement-computed^=bottom]){transform:translateY(6px)}:host([placement-computed^=bottom]) [part=arrow]{border-color:transparent transparent #000;border-style:solid;border-width:0 6px 6px;top:-6px}:host([placement-computed^=left]){transform:translateX(-6px)}:host([placement-computed^=left]) [part=arrow]{border-color:transparent transparent transparent #000;border-style:solid;border-width:6px 0 6px 6px;right:-6px}";
+var css_248z = "*,:after,:before{box-sizing:border-box}:host,:host:after,:host:before{box-sizing:border-box}:host([hidden]:not([hidden=false])){display:none}:host{background-color:#000;border-radius:4px;color:#fff;font-size:90%;font-weight:700;padding:4px 8px;position:absolute;width:max-content}:host([fixed]:not([fixed=false])){position:fixed}:host([state=hide]){display:none}:host([state=show]){display:block}[part=arrow]{display:none;height:0;position:absolute;width:0}:host([arrow]:not([arrow=false])) [part=arrow]{display:block}:host([arrow]:not([arrow=false])):host([placement-computed^=top]){transform:translateY(-6px)}:host([arrow]:not([arrow=false])):host([placement-computed^=top]) [part=arrow]{border-color:#000 transparent transparent;border-style:solid;border-width:6px 6px 0;bottom:-6px;transform:translateX(-50%)}:host([arrow]:not([arrow=false])):host([placement-computed^=right]){transform:translateX(6px)}:host([arrow]:not([arrow=false])):host([placement-computed^=right]) [part=arrow]{border-color:transparent #000 transparent transparent;border-style:solid;border-width:6px 6px 6px 0;left:-6px;transform:translateY(-50%)}:host([arrow]:not([arrow=false])):host([placement-computed^=bottom]){transform:translateY(6px)}:host([arrow]:not([arrow=false])):host([placement-computed^=bottom]) [part=arrow]{border-color:transparent transparent #000;border-style:solid;border-width:0 6px 6px;top:-6px;transform:translateX(-50%)}:host([arrow]:not([arrow=false])):host([placement-computed^=left]){transform:translateX(-6px)}:host([arrow]:not([arrow=false])):host([placement-computed^=left]) [part=arrow]{border-color:transparent transparent transparent #000;border-style:solid;border-width:6px 0 6px 6px;right:-6px;transform:translateY(-50%)}";
 
 /**
- * TODO
+ * @dependencies @floating-ui/dom
+ * @thirdParty
  */
 let Tooltip$1 = class Tooltip {
     constructor() {
         /**
          * TODO
          */
+        this.auto = true;
+        /**
+         * TODO
+         */
         this.offset = [5, 0];
         /**
-         * TODO
+         * Specifies the element to which the tooltip will be attached.
+         * Use `next` to attach to the next sibling.
+         * Use `parent` to attach to the parent.
+         * Use `previous` to attach to the previous sibling.
+         * Use a string to find an element to attach to that.
+         * Use an element to attach to that.
          */
-        this.source = 'previous';
+        this.reference = 'previous';
         /**
-         * TODO
+         * Specifies the activation method.
          */
         this.trigger = ['focus', 'hover'];
+        this.state = 'hide';
     }
     get attributes() {
         return {
-            role: 'tooltip'
+            role: 'tooltip',
+            state: this.state
         };
     }
     get options() {
+        const PLACEMENT = {
+            'top': 'top',
+            'top-left': isRTL(this) ? 'top-end' : 'top-start',
+            'top-right': isRTL(this) ? 'top-start' : 'top-end',
+            'top-start': 'top-start',
+            'top-end': 'top-end',
+            'right': 'right',
+            'right-top': 'right-start',
+            'right-bottom': 'right-end',
+            'bottom': 'bottom',
+            'bottom-left': isRTL(this) ? 'bottom-end' : 'bottom-start',
+            'bottom-right': isRTL(this) ? 'bottom-start' : 'bottom-end',
+            'bottom-start': 'bottom-start',
+            'bottom-end': 'bottom-end',
+            'left': 'left',
+            'left-top': 'left-start',
+            'left-bottom': 'left-end',
+            'start': isRTL(this) ? 'right' : 'left',
+            'start-top': isRTL(this) ? 'right-start' : 'left-start',
+            'start-bottom': isRTL(this) ? 'right-end' : 'left-end',
+            'end': isRTL(this) ? 'left' : 'right',
+            'end-top': isRTL(this) ? 'left-start' : 'right-start',
+            'end-bottom': isRTL(this) ? 'left-end' : 'right-end'
+        };
         const padding = [this.offset].flat();
         return {
-            middleware: [offset(padding[0] || 0), flip(), shift({
+            middleware: [this.instance.offset(padding[0] || 0), this.instance.flip(), this.instance.shift({
                     padding: padding[1] || 0
-                }), this.arrow && arrow({
+                }), this.arrow && this.instance.arrow({
                     element: this.$arrow
                 })],
-            placement: this.placement,
+            placement: PLACEMENT[this.placement],
             strategy: this.fixed ? 'fixed' : 'absolute'
         };
     }
     get $arrow() {
         return query(this, '[part=arrow]');
     }
-    get $source() {
-        switch (this.source) {
-            case 'next':
-                return host(this).nextElementSibling;
-            case 'parent':
-                return host(this).parentElement;
-            case 'previous':
-                return host(this).previousElementSibling;
-        }
-        return typeof this.source == 'string' ? document.querySelector(this.source) : this.source;
-    }
-    get $tooltip() {
+    get $host() {
         return host(this);
     }
+    get $reference() {
+        if (typeof this.reference != 'string')
+            return this.reference;
+        switch (this.reference) {
+            case 'next':
+                return this.$host.nextElementSibling;
+            case 'parent':
+                return this.$host.parentElement;
+            case 'previous':
+                return this.$host.previousElementSibling;
+        }
+        return document.querySelector(this.reference);
+    }
     /**
-     * TODO
+     * Hides the component.
      */
-    hide() { }
+    hide() {
+        var _a;
+        if (this.state == 'hide')
+            return;
+        clearTimeout(this.timeout);
+        const delay = ((_a = this.delay) === null || _a === void 0 ? void 0 : _a[1]) || this.delay || 0;
+        this.timeout = setTimeout(() => {
+            this.state = 'hide';
+            this.observe(false);
+        }, delay);
+    }
     /**
-     * TODO
+     * Shows the component.
      */
-    show() { }
-    events(all) {
-        return [['click', 'click', this.onShow], ['click', 'blur', this.onHide], ['focus', 'focus', this.onShow], ['focus', 'blur', this.onHide], ['hover', 'mouseenter', this.onShow], ['hover', 'mouseleave', this.onHide]].filter((row) => all || [this.trigger].flat().includes(row[0])).map((row) => row.slice(1));
-    }
-    bind() {
-        clearTimeout(this.timeout);
-        if (!this.$activator)
+    show() {
+        var _a;
+        if (this.state == 'show')
             return;
-        this.events(false).forEach(parameters => {
-            this.$activator.addEventListener.apply(this.$activator, parameters);
-        });
-    }
-    unbind() {
         clearTimeout(this.timeout);
-        if (!this.$activator)
-            return;
-        this.events(true).forEach(parameters => {
-            this.$activator.removeEventListener.apply(this.$activator, parameters);
-        });
+        const delay = ((_a = this.delay) === null || _a === void 0 ? void 0 : _a[0]) || this.delay || 0;
+        this.timeout = setTimeout(() => {
+            this.state = 'show';
+            this.observe(true);
+        }, delay);
     }
+    /**
+     * Updates the component's position.
+     */
     update() {
-        computePosition(this.$activator, this.$tooltip, this.options).then(data => {
+        this.$host.removeAttribute('placement-computed');
+        this.instance.computePosition(this.$activator, this.$host, this.options).then(data => {
             const { x, y, placement, middlewareData } = data;
-            Object.assign(this.$tooltip.style, {
+            this.$host.setAttribute('placement-computed', placement);
+            Object.assign(this.$host.style, {
                 left: `${x}px`,
                 top: `${y}px`
             });
@@ -98,19 +141,55 @@ let Tooltip$1 = class Tooltip {
                 left: arrowX == null ? '' : `${arrowX}px`,
                 top: arrowY == null ? '' : `${arrowY}px`
             });
-            this.$tooltip.setAttribute('placement-computed', placement);
         });
+    }
+    bind() {
+        // TODO
+        if (this.disabled)
+            return;
+        // TODO
+        this.$activator = this.$reference;
+        clearTimeout(this.timeout);
+        if (!this.$activator)
+            return;
+        this.events(false).forEach(([type, handler]) => {
+            on(this.$activator, type, handler);
+        });
+    }
+    unbind() {
+        clearTimeout(this.timeout);
+        if (!this.$activator)
+            return;
+        this.events(true).forEach(([type, handler]) => {
+            off(this.$activator, type, handler);
+        });
+    }
+    events(all) {
+        return [['click', 'click', this.onShow], ['click', 'blur', this.onHide], ['focus', 'focus', this.onShow], ['focus', 'blur', this.onHide], ['hover', 'mouseenter', this.onShow], ['hover', 'mouseleave', this.onHide]].filter((row) => all || [this.trigger].flat().includes(row[0])).map((row) => row.slice(1));
+    }
+    observe(active) {
+        var _a;
+        (_a = this.cleanup) === null || _a === void 0 ? void 0 : _a.call(this);
+        if (!this.auto || !active)
+            return;
+        this.cleanup = this.instance.autoUpdate(this.$activator, this.$host, this.update.bind(this));
     }
     watcher(next, prev, key) {
         switch (key) {
+            case 'auto':
+                this.observe(next);
+                break;
             case 'disabled':
                 next ? this.unbind() : this.bind();
                 break;
-            case 'source':
-                this.unbind();
-                this.$activator = this.$source;
-                this.bind();
+            case 'fixed':
+            case 'offset':
+            case 'placement':
+                if (this.state == 'hide')
+                    break;
+                this.update();
                 break;
+            case 'reference':
             case 'trigger':
                 this.unbind();
                 this.bind();
@@ -118,34 +197,26 @@ let Tooltip$1 = class Tooltip {
         }
     }
     onHide() {
-        var _a;
-        clearTimeout(this.timeout);
-        const delay = ((_a = this.delay) === null || _a === void 0 ? void 0 : _a[1]) || this.delay || 0;
-        this.timeout = setTimeout(() => {
-            this.$tooltip.style.display = '';
-        }, delay);
+        this.hide();
     }
     onShow() {
-        var _a;
-        clearTimeout(this.timeout);
-        const delay = ((_a = this.delay) === null || _a === void 0 ? void 0 : _a[0]) || this.delay || 0;
-        this.timeout = setTimeout(() => {
-            this.$tooltip.style.display = 'block';
-            this.update();
-        }, delay);
+        this.show();
     }
     connectedCallback() {
-        if (this.disabled)
-            return;
-        // TODO
-        this.$activator = this.$source;
         this.bind();
     }
     disconnectedCallback() {
         this.unbind();
     }
+    loadedCallback() {
+        import('@floating-ui/dom').then(module => {
+            this.instance = module;
+        }).catch(() => {
+            console.error("It seems that '@floating-ui/dom' is not installed!");
+        });
+    }
     render() {
-        return uhtml.html `<slot />${this.arrow && uhtml.html `<div part="arrow"></div>`}`;
+        return uhtml.html `<slot /><div part="arrow"></div>`;
     }
 };
 // THIS PROPERTY IS AUTO-ADDED, DO NOT EDIT MANUALY
@@ -154,9 +225,15 @@ Tooltip$1.TAG = "plus-tooltip";
 Tooltip$1.STYLES = css_248z;
 __decorate([
     Property({
+        reflect: true,
         type: 2
     })
 ], Tooltip$1.prototype, "arrow", void 0);
+__decorate([
+    Property({
+        type: 2
+    })
+], Tooltip$1.prototype, "auto", void 0);
 __decorate([
     Property({
         type: 65
@@ -170,6 +247,7 @@ __decorate([
 ], Tooltip$1.prototype, "disabled", void 0);
 __decorate([
     Property({
+        reflect: true,
         type: 2
     })
 ], Tooltip$1.prototype, "fixed", void 0);
@@ -185,14 +263,17 @@ __decorate([
 ], Tooltip$1.prototype, "placement", void 0);
 __decorate([
     Property({
-        type: 264
+        type: 8
     })
-], Tooltip$1.prototype, "source", void 0);
+], Tooltip$1.prototype, "reference", void 0);
 __decorate([
     Property({
         type: 9
     })
 ], Tooltip$1.prototype, "trigger", void 0);
+__decorate([
+    State()
+], Tooltip$1.prototype, "state", void 0);
 __decorate([
     Attributes()
 ], Tooltip$1.prototype, "attributes", null);
@@ -203,7 +284,10 @@ __decorate([
     Method()
 ], Tooltip$1.prototype, "show", null);
 __decorate([
-    Watch(['disabled', 'source', 'trigger'])
+    Method()
+], Tooltip$1.prototype, "update", null);
+__decorate([
+    Watch()
 ], Tooltip$1.prototype, "watcher", null);
 __decorate([
     Bind()
@@ -218,6 +302,6 @@ Tooltip$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Tooltip = proxy('plus-tooltip', ['arrow', 'delay', 'disabled', 'fixed', 'offset', 'placement', 'source', 'trigger'], []);
+var Tooltip = proxy('plus-tooltip', ['arrow', 'auto', 'delay', 'disabled', 'fixed', 'offset', 'placement', 'reference', 'trigger'], []);
 
 export { Tooltip };
