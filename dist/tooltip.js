@@ -1,9 +1,10 @@
-import { _ as __decorate, P as Property, S as State, A as Attributes, M as Method, W as Watch, B as Bind, a as Element, i as isRTL, j as query, h as host, o as on, e as off, u as uhtml } from './index-1628d3b2.js';
+import { _ as __decorate, P as Property, S as State, A as Attributes, M as Method, W as Watch, B as Bind, a as Element, i as isRTL, j as query, h as host, o as on, f as off, d as __awaiter, u as uhtml } from './index-8bea4c0b.js';
 import { proxy } from './proxy.js';
 import 'react';
 
 var css_248z = "*,:after,:before{box-sizing:border-box}:host,:host:after,:host:before{box-sizing:border-box}:host([hidden]:not([hidden=false])){display:none}:host{background-color:#000;border-radius:4px;color:#fff;font-size:90%;font-weight:700;padding:4px 8px;position:absolute;width:max-content}:host([fixed]:not([fixed=false])){position:fixed}:host([state=hide]){display:none}:host([state=show]){display:block}[part=arrow]{display:none;height:0;position:absolute;width:0}:host([arrow]:not([arrow=false])) [part=arrow]{display:block}:host([arrow]:not([arrow=false])):host([placement-computed^=top]){transform:translateY(-6px)}:host([arrow]:not([arrow=false])):host([placement-computed^=top]) [part=arrow]{border-color:#000 transparent transparent;border-style:solid;border-width:6px 6px 0;bottom:-6px;transform:translateX(-50%)}:host([arrow]:not([arrow=false])):host([placement-computed^=right]){transform:translateX(6px)}:host([arrow]:not([arrow=false])):host([placement-computed^=right]) [part=arrow]{border-color:transparent #000 transparent transparent;border-style:solid;border-width:6px 6px 6px 0;left:-6px;transform:translateY(-50%)}:host([arrow]:not([arrow=false])):host([placement-computed^=bottom]){transform:translateY(6px)}:host([arrow]:not([arrow=false])):host([placement-computed^=bottom]) [part=arrow]{border-color:transparent transparent #000;border-style:solid;border-width:0 6px 6px;top:-6px;transform:translateX(-50%)}:host([arrow]:not([arrow=false])):host([placement-computed^=left]){transform:translateX(-6px)}:host([arrow]:not([arrow=false])):host([placement-computed^=left]) [part=arrow]{border-color:transparent transparent transparent #000;border-style:solid;border-width:6px 0 6px 6px;right:-6px;transform:translateY(-50%)}";
 
+let FloatingCore;
 /**
  * @dependencies @floating-ui/dom
  * @thirdParty
@@ -66,9 +67,9 @@ let Tooltip$1 = class Tooltip {
         };
         const padding = [this.offset].flat();
         return {
-            middleware: [this.instance.offset(padding[0] || 0), this.instance.flip(), this.instance.shift({
+            middleware: [FloatingCore.offset(padding[0] || 0), FloatingCore.flip(), FloatingCore.shift({
                     padding: padding[1] || 0
-                }), this.arrow && this.instance.arrow({
+                }), this.arrow && FloatingCore.arrow({
                     element: this.$arrow
                 })],
             placement: PLACEMENT[this.placement],
@@ -127,7 +128,7 @@ let Tooltip$1 = class Tooltip {
      */
     update() {
         this.$host.removeAttribute('placement-computed');
-        this.instance.computePosition(this.$activator, this.$host, this.options).then(data => {
+        FloatingCore.computePosition(this.$activator, this.$host, this.options).then(data => {
             const { x, y, placement, middlewareData } = data;
             this.$host.setAttribute('placement-computed', placement);
             Object.assign(this.$host.style, {
@@ -172,7 +173,7 @@ let Tooltip$1 = class Tooltip {
         (_a = this.cleanup) === null || _a === void 0 ? void 0 : _a.call(this);
         if (!this.auto || !active)
             return;
-        this.cleanup = this.instance.autoUpdate(this.$activator, this.$host, this.update.bind(this));
+        this.cleanup = FloatingCore.autoUpdate(this.$activator, this.$host, this.update.bind(this));
     }
     watcher(next, prev, key) {
         switch (key) {
@@ -202,18 +203,21 @@ let Tooltip$1 = class Tooltip {
     onShow() {
         this.show();
     }
+    connectCallback() {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                FloatingCore = yield import('@floating-ui/dom');
+            }
+            catch (_a) {
+                throw new Error("It seems that '@floating-ui/dom' is not installed!");
+            }
+        });
+    }
     connectedCallback() {
         this.bind();
     }
     disconnectedCallback() {
         this.unbind();
-    }
-    loadedCallback() {
-        import('@floating-ui/dom').then(module => {
-            this.instance = module;
-        }).catch(() => {
-            console.error("It seems that '@floating-ui/dom' is not installed!");
-        });
     }
     render() {
         return uhtml.html `<slot /><div part="arrow"></div>`;
@@ -263,7 +267,7 @@ __decorate([
 ], Tooltip$1.prototype, "placement", void 0);
 __decorate([
     Property({
-        type: 8
+        type: 264
     })
 ], Tooltip$1.prototype, "reference", void 0);
 __decorate([

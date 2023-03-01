@@ -1,6 +1,6 @@
 {
   "name": "@htmlplus/react",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "license": "MIT",
   "sideEffects": false,
   "author": "Masood Abdolian <m.abdolian@gmail.com>",
@@ -32,12 +32,10 @@
   },
   "homepage": "https://github.com/htmlplus/react#readme",
   "dependencies": {
-    "@htmlplus/core": "^0.8.4",
+    "@htmlplus/core": "^0.8.5",
     "change-case": "^4.1.2"
   },
   "devDependencies": {
-    "@faker-js/faker": "^7.6.0",
-    "@floating-ui/dom": "^1.2.0",
     "@rollup/plugin-commonjs": "^23.0.2",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@trivago/prettier-plugin-sort-imports": "^4.0.0",
@@ -55,7 +53,8 @@
   },
   "peerDependencies": {
     "@faker-js/faker": "^7.6.0",
-    "@floating-ui/dom": "^1.2.0",
+    "@floating-ui/dom": "^1.2.2",
+    "cropperjs": "^1.5.13",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   }

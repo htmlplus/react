@@ -1,4 +1,4 @@
-import { _ as __decorate, k as createLink, P as Property, A as Attributes, a as Element, u as uhtml } from './index-1628d3b2.js';
+import { _ as __decorate, k as createLink, P as Property, A as Attributes, a as Element, u as uhtml } from './index-8bea4c0b.js';
 import { proxy } from './proxy.js';
 import 'react';
 

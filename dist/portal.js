@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, W as Watch, a as Element, h as host, d as Portal$2 } from './index-1628d3b2.js';
+import { _ as __decorate, P as Property, W as Watch, a as Element, h as host, e as Portal$2 } from './index-8bea4c0b.js';
 import { proxy } from './proxy.js';
 import 'react';
 

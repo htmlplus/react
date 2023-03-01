@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, a as Element } from './index-1628d3b2.js';
+import { _ as __decorate, P as Property, a as Element, d as __awaiter } from './index-8bea4c0b.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -28,13 +28,16 @@ let Faker$1 = class Faker {
         this.instance.seed(this.seed);
         return method(...this.arguments) || null;
     }
-    loadedCallback() {
-        if (this.instance)
-            return;
-        import('@faker-js/faker/locale/en').then(module => {
-            this.instance = module.faker;
-        }).catch(() => {
-            console.error("It seems that '@faker-js/faker' is not installed!");
+    connectCallback() {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (this.instance)
+                return;
+            try {
+                this.instance = (yield import('@faker-js/faker/locale/en')).faker;
+            }
+            catch (_a) {
+                throw new Error("It seems that '@floating-ui/dom' is not installed!");
+            }
         });
     }
     render() {
