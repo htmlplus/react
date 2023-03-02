@@ -1,4 +1,4 @@
-import { _ as __decorate, k as createLink, P as Property, E as Event$1, S as State, A as Attributes, W as Watch, B as Bind, p as Media, a as Element, h as host, l as toAxis, i as isRTL, c as classes, b as styles, m as Animation, n as Scrollbar, C as ClickOutside, u as uhtml } from './index-8bea4c0b.js';
+import { _ as __decorate, k as createLink, P as Property, E as Event$1, S as State, A as Attributes, W as Watch, B as Bind, p as Media, a as Element, h as host, l as toAxis, i as isRTL, d as classes, b as styles, m as Animation, n as Scrollbar, c as off, o as on, u as uhtml } from './index-75149982.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -63,9 +63,6 @@ let Drawer$1 = class Drawer {
             '--plus-drawer-mini-size': (_b = this.miniSize) !== null && _b !== void 0 ? _b : null
         });
     }
-    /**
-     * Methods
-     */
     hide() {
         this.tryHide(true, false);
     }
@@ -75,9 +72,6 @@ let Drawer$1 = class Drawer {
     toggle() {
         this.isOpen ? this.hide() : this.show();
     }
-    /**
-     * Internal Methods
-     */
     broadcast(value) {
         this.tunnel = value;
     }
@@ -159,9 +153,6 @@ let Drawer$1 = class Drawer {
             }
         });
     }
-    /**
-     * Watchers
-     */
     watcher(next, prev, name) {
         var _a, _b;
         switch (name) {
@@ -178,14 +169,11 @@ let Drawer$1 = class Drawer {
                 break;
         }
     }
-    /**
-     * Events handler
-     */
     onHide() {
         // reset document's scroll
         Scrollbar.reset(this);
         // remove outside click listener
-        ClickOutside.off(this.$root);
+        off(this.$root, 'outside', this.onClickOutside, true);
         // update state
         this.open = this.isOpen = false;
         // TODO: experimantal new link
@@ -195,7 +183,7 @@ let Drawer$1 = class Drawer {
         // remove document's scroll
         this.isTemporary && Scrollbar.remove(this);
         // remove outside click listener
-        ClickOutside.on(this.$root, this.onClickOutside, false);
+        on(this.$root, 'outside', this.onClickOutside, true);
         // update state
         this.open = this.isOpen = true;
         // TODO: experimantal new link
@@ -211,10 +199,7 @@ let Drawer$1 = class Drawer {
             return;
         this.tryHide(true, false);
     }
-    /**
-     * Lifecycles
-     */
-    connectedCallback() {
+    loadedCallback() {
         this.initialize();
     }
     disconnectedCallback() {

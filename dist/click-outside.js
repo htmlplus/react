@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, E as Event$1, W as Watch, B as Bind, a as Element, h as host, C as ClickOutside$2, u as uhtml } from './index-8bea4c0b.js';
+import { _ as __decorate, P as Property, E as Event$1, W as Watch, B as Bind, a as Element, h as host, o as on, c as off, u as uhtml } from './index-75149982.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -16,10 +16,10 @@ let ClickOutside$1 = class ClickOutside {
         };
     }
     bind() {
-        ClickOutside$2.on(this.$host, this.onClickOutside, true, this.options);
+        on(this.$host, 'outside', this.onClickOutside, this.options);
     }
     unbind() {
-        ClickOutside$2.off(this.$host, this.options);
+        off(this.$host, 'outside', this.onClickOutside, this.options);
     }
     watcher(next, prev, name) {
         switch (name) {

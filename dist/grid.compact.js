@@ -1,6 +1,6 @@
 import { Grid } from './grid.js';
 import { GridItem } from './grid-item.js';
-import './index-8bea4c0b.js';
+import './index-75149982.js';
 import './proxy.js';
 import 'react';
 

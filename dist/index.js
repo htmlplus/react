@@ -25,7 +25,7 @@ export { Sticky } from './sticky.js';
 export { Switch } from './switch.js';
 export { Tabs } from './tabs.compact.js';
 export { Tooltip } from './tooltip.js';
-import './index-8bea4c0b.js';
+import './index-75149982.js';
 import './proxy.js';
 import 'react';
 import './avatar.js';
