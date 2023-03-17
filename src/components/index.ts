@@ -16,6 +16,7 @@ export * from './dialog.compact';
 export * from './divider';
 export * from './drawer.compact';
 export * from './faker';
+export * from './floating';
 export * from './format-bytes';
 export * from './grid.compact';
 export * from './icon';

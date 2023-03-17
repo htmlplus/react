@@ -16,6 +16,6 @@ type Renamed = Rename<
 
 export const ScrollDetector = proxy<HTMLPlusScrollDetectorElement, Renamed>(
   'plus-scroll-detector',
-  ['disabled', 'source', 'vertical'],
+  ['disabled', 'reference', 'vertical'],
   ['plusChange']
 );

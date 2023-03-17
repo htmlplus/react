@@ -11,6 +11,6 @@ type Renamed = Rename<TooltipJSX, {}>;
 
 export const Tooltip = proxy<HTMLPlusTooltipElement, Renamed>(
   'plus-tooltip',
-  ['arrow', 'auto', 'delay', 'disabled', 'fixed', 'offset', 'placement', 'reference', 'trigger'],
+  ['arrow', 'delay', 'disabled', 'fixed', 'offset', 'placement', 'reference', 'trigger', 'z'],
   []
 );
