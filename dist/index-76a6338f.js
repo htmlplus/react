@@ -1251,6 +1251,8 @@ function Element(tag) {
             }
             connectedCallback() {
                 const instance = this[API_INSTANCE];
+                // TODO: experimental for global config
+                Object.assign(instance, getConfig('component', getTag(instance), 'property'));
                 const connect = () => {
                     instance[API_CONNECTED] = true;
                     call(instance, LIFECYCLE_CONNECTED);
@@ -1331,14 +1333,7 @@ function Property(options) {
         }
         defineProperty(target, propertyKey, { get, set });
         appendToMethod(target, LIFECYCLE_CONNECTED, function () {
-            var _a;
             const element = host(this);
-            // TODO: experimental for global config
-            if (((_a = getMembers(this.constructor)[name]) === null || _a === void 0 ? void 0 : _a.default) === this[name]) {
-                const config = getConfig('component', getTag(target), 'property', name);
-                if (typeof config != 'undefined')
-                    this[name] = config;
-            }
             // TODO: experimental for isolated options
             if (element === this)
                 return;
@@ -1973,4 +1968,4 @@ function Media(query) {
     };
 }
 
-export { Attributes as A, Bind as B, Event$1 as E, Method as M, Property as P, State as S, Watch as W, __decorate as _, Element as a, styles as b, off as c, classes as d, __awaiter as e, Portal as f, getConfig as g, host as h, isRTL as i, query as j, createLink as k, toAxis as l, Animation as m, Scrollbar as n, on as o, Media as p, queryAll as q, request as r, setConfig as s, toUnit as t, uhtml as u };
+export { Attributes as A, Bind as B, Event$1 as E, Method as M, Property as P, State as S, Watch as W, __decorate as _, Element as a, styles as b, off as c, classes as d, __awaiter as e, toUnit as f, getConfig as g, host as h, isRTL as i, Portal as j, query as k, createLink as l, Animation as m, Scrollbar as n, on as o, Media as p, queryAll as q, request as r, setConfig as s, toAxis as t, uhtml as u };

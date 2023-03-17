@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, S as State, A as Attributes, M as Method, W as Watch, B as Bind, a as Element, i as isRTL, j as query, h as host, o as on, c as off, e as __awaiter, u as uhtml } from './index-75149982.js';
+import { _ as __decorate, P as Property, S as State, A as Attributes, M as Method, W as Watch, B as Bind, a as Element, i as isRTL, k as query, h as host, o as on, c as off, e as __awaiter, u as uhtml } from './index-76a6338f.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -14,11 +14,7 @@ let Tooltip$1 = class Tooltip {
         /**
          * TODO
          */
-        this.auto = true;
-        /**
-         * TODO
-         */
-        this.offset = [5, 0];
+        this.offset = [0, 10];
         /**
          * Specifies the element to which the tooltip will be attached.
          * Use `next` to attach to the next sibling.
@@ -32,6 +28,10 @@ let Tooltip$1 = class Tooltip {
          * Specifies the activation method.
          */
         this.trigger = ['focus', 'hover'];
+        /**
+         * TODO
+         */
+        this.z = 'auto';
         this.state = 'hide';
     }
     get attributes() {
@@ -67,11 +67,14 @@ let Tooltip$1 = class Tooltip {
         };
         const padding = [this.offset].flat();
         return {
-            middleware: [FloatingCore.offset(padding[0] || 0), FloatingCore.flip(), FloatingCore.shift({
-                    padding: padding[1] || 0
-                }), this.arrow && FloatingCore.arrow({
+            middleware: [FloatingCore.offset({
+                    crossAxis: padding[0] || 0,
+                    mainAxis: padding[1] || 0
+                }), FloatingCore.flip(), this.arrow && FloatingCore.arrow({
                     element: this.$arrow
-                })],
+                })
+                // FloatingCore.hide()
+            ],
             placement: PLACEMENT[this.placement],
             strategy: this.fixed ? 'fixed' : 'absolute'
         };
@@ -130,6 +133,7 @@ let Tooltip$1 = class Tooltip {
         this.$host.removeAttribute('placement-computed');
         FloatingCore.computePosition(this.$activator, this.$host, this.options).then(data => {
             const { x, y, placement, middlewareData } = data;
+            // console.log(1, middlewareData.hide);
             this.$host.setAttribute('placement-computed', placement);
             Object.assign(this.$host.style, {
                 left: `${x}px`,
@@ -156,6 +160,31 @@ let Tooltip$1 = class Tooltip {
         this.events(false).forEach(([type, handler]) => {
             on(this.$activator, type, handler);
         });
+        // TODO
+        // this.state = 'show';
+        // this.observe(true);
+        // this.$activator.addEventListener('mousemove', (event: any) => {
+        //   const virtualEl = {
+        //     getBoundingClientRect() {
+        //       return {
+        //         width: 0,
+        //         height: 0,
+        //         x: event.clientX,
+        //         y: event.clientY,
+        //         left: event.clientX,
+        //         right: event.clientX,
+        //         top: event.clientY,
+        //         bottom: event.clientY
+        //       };
+        //     }
+        //   };
+        //   FloatingCore.computePosition(virtualEl, this.$host, this.options).then(({ x, y }) => {
+        //     Object.assign(this.$host.style, {
+        //       top: `${y}px`,
+        //       left: `${x}px`
+        //     });
+        //   });
+        // });
     }
     unbind() {
         clearTimeout(this.timeout);
@@ -166,20 +195,17 @@ let Tooltip$1 = class Tooltip {
         });
     }
     events(all) {
-        return [['click', 'click', this.onShow], ['click', 'blur', this.onHide], ['focus', 'focus', this.onShow], ['focus', 'blur', this.onHide], ['hover', 'mouseenter', this.onShow], ['hover', 'mouseleave', this.onHide]].filter((row) => all || [this.trigger].flat().includes(row[0])).map((row) => row.slice(1));
+        return [['click', 'click', this.onShow], ['click', 'blur', this.onHide], ['click', 'outside', this.onHide], ['focus', 'focus', this.onShow], ['focus', 'blur', this.onHide], ['hover', 'mouseenter', this.onShow], ['hover', 'mouseleave', this.onHide]].filter((row) => all || [this.trigger].flat().includes(row[0])).map((row) => row.slice(1));
     }
     observe(active) {
         var _a;
         (_a = this.cleanup) === null || _a === void 0 ? void 0 : _a.call(this);
-        if (!this.auto || !active)
+        if (!active)
             return;
         this.cleanup = FloatingCore.autoUpdate(this.$activator, this.$host, this.update.bind(this));
     }
     watcher(next, prev, key) {
         switch (key) {
-            case 'auto':
-                this.observe(next);
-                break;
             case 'disabled':
                 next ? this.unbind() : this.bind();
                 break;
@@ -209,7 +235,7 @@ let Tooltip$1 = class Tooltip {
                 FloatingCore = yield import('@floating-ui/dom');
             }
             catch (_a) {
-                throw new Error("It seems that '@floating-ui/dom' is not installed!");
+                throw new Error("The `tooltip` component depends on an external package, but it doesn't seem to be installed. Running `npm install @floating-ui/dom` will fix this problem.");
             }
         });
     }
@@ -233,11 +259,6 @@ __decorate([
         type: 2
     })
 ], Tooltip$1.prototype, "arrow", void 0);
-__decorate([
-    Property({
-        type: 2
-    })
-], Tooltip$1.prototype, "auto", void 0);
 __decorate([
     Property({
         type: 65
@@ -276,6 +297,11 @@ __decorate([
     })
 ], Tooltip$1.prototype, "trigger", void 0);
 __decorate([
+    Property({
+        type: 8
+    })
+], Tooltip$1.prototype, "z", void 0);
+__decorate([
     State()
 ], Tooltip$1.prototype, "state", void 0);
 __decorate([
@@ -306,6 +332,6 @@ Tooltip$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Tooltip = proxy('plus-tooltip', ['arrow', 'auto', 'delay', 'disabled', 'fixed', 'offset', 'placement', 'reference', 'trigger'], []);
+var Tooltip = proxy('plus-tooltip', ['arrow', 'delay', 'disabled', 'fixed', 'offset', 'placement', 'reference', 'trigger', 'z'], []);
 
 export { Tooltip };

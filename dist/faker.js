@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, a as Element, e as __awaiter } from './index-75149982.js';
+import { _ as __decorate, P as Property, a as Element, e as __awaiter } from './index-76a6338f.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -36,7 +36,7 @@ let Faker$1 = class Faker {
                 this.instance = (yield import('@faker-js/faker/locale/en')).faker;
             }
             catch (_a) {
-                throw new Error("It seems that '@floating-ui/dom' is not installed!");
+                throw new Error("The `faker` component depends on an external package, but it doesn't seem to be installed. Running `npm install @faker-js/faker` will fix this problem.");
             }
         });
     }

@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, E as Event$1, M as Method, W as Watch, B as Bind, a as Element, d as classes, e as __awaiter, u as uhtml } from './index-75149982.js';
+import { _ as __decorate, P as Property, E as Event$1, M as Method, W as Watch, B as Bind, a as Element, d as classes, e as __awaiter, u as uhtml } from './index-76a6338f.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -321,7 +321,7 @@ let Cropper$1 = class Cropper {
                 CropperCore = (yield import('cropperjs')).default;
             }
             catch (_a) {
-                throw new Error("It seems that 'cropperjs' is not installed!");
+                throw new Error("The `cropper` component depends on an external package, but it doesn't seem to be installed. Running `npm install cropperjs` will fix this problem.");
             }
         });
     }

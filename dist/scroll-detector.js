@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, E as Event$1, W as Watch, B as Bind, a as Element, o as on, c as off } from './index-75149982.js';
+import { _ as __decorate, P as Property, E as Event$1, W as Watch, B as Bind, a as Element, o as on, c as off } from './index-76a6338f.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -8,51 +8,50 @@ import 'react';
 let ScrollDetector$1 = class ScrollDetector {
     constructor() {
         /**
-         * Specifies the source of the scroll.
+         * Specifies the reference of the scroll.
          */
-        this.source = 'document';
+        this.reference = 'document';
     }
-    get $source() {
-        if (typeof this.source != 'string')
-            return this.source;
-        if (this.source == 'document')
+    get $reference() {
+        if (typeof this.reference != 'string')
+            return this.reference;
+        if (this.reference == 'document')
             return document.documentElement;
-        return document.querySelector(this.source);
+        return document.querySelector(this.reference);
     }
     bind() {
         if (this.disabled)
             return;
-        if (!this.$source)
+        if (!this.$reference)
             return;
-        on(this.$source, 'scroll', this.onScroll);
+        on(this.$reference, 'scroll', this.onScroll);
         this.onScroll();
     }
     unbind() {
-        off(this.$source, 'scroll', this.onScroll);
+        off(this.$reference, 'scroll', this.onScroll);
     }
     watcher(next) {
         next ? this.unbind() : this.bind();
     }
     onScroll() {
-        const { scrollTop, scrollLeft, scrollHeight, scrollWidth, clientHeight, clientWidth } = this.$source;
+        const { scrollTop, scrollLeft, scrollHeight, scrollWidth, clientHeight, clientWidth } = this.$reference;
         const offset = this.vertical ? scrollTop : scrollLeft;
         const total = this.vertical ? scrollHeight : scrollWidth;
         const viewport = this.vertical ? clientHeight : clientWidth;
         const overflow = total - viewport;
-        const progress = Math.round(offset / overflow * 100);
+        const progress = overflow ? Math.round(offset / overflow * 100) : 0;
         if (this.offset == progress)
             return;
         this.offset = offset;
-        const detail = {
+        this.plusChange({
             offset,
             overflow,
             progress,
             total,
             viewport
-        };
-        this.plusChange(detail);
+        });
     }
-    loadedCallback() {
+    connectedCallback() {
         this.bind();
     }
     disconnectedCallback() {
@@ -71,9 +70,9 @@ __decorate([
 ], ScrollDetector$1.prototype, "disabled", void 0);
 __decorate([
     Property({
-        type: 256
+        type: 264
     })
-], ScrollDetector$1.prototype, "source", void 0);
+], ScrollDetector$1.prototype, "reference", void 0);
 __decorate([
     Property({
         type: 2
@@ -83,7 +82,7 @@ __decorate([
     Event$1()
 ], ScrollDetector$1.prototype, "plusChange", void 0);
 __decorate([
-    Watch(['disabled', 'source'])
+    Watch(['disabled', 'reference'])
 ], ScrollDetector$1.prototype, "watcher", null);
 __decorate([
     Bind()
@@ -95,6 +94,6 @@ ScrollDetector$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var ScrollDetector = proxy('plus-scroll-detector', ['disabled', 'source', 'vertical'], ['plusChange']);
+var ScrollDetector = proxy('plus-scroll-detector', ['disabled', 'reference', 'vertical'], ['plusChange']);
 
 export { ScrollDetector };
