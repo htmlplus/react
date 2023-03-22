@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, E as Event$1, S as State, A as Attributes, M as Method, B as Bind, W as Watch, a as Element } from './index-76a6338f.js';
+import { _ as __decorate, P as Property, E as Event$1, S as State, A as Attributes, M as Method, B as Bind, W as Watch, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -265,12 +265,12 @@ __decorate([
     Watch(['play'], true)
 ], Counter$1.prototype, "watcher", null);
 Counter$1 = __decorate([
-    Element("plus-counter")
+    Element()
 ], Counter$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Counter = proxy('plus-counter', ['easing', 'decimal', 'decimals', 'delay', 'duration', 'from', 'numerals', 'play', 'separator', 'to'], ['plusComplete']);
+var Counter = proxy(Counter$1.TAG, ['easing', 'decimal', 'decimals', 'delay', 'duration', 'from', 'numerals', 'play', 'separator', 'to'], ['plusComplete']);
 
 export { Counter };

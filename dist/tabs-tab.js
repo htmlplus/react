@@ -1,4 +1,4 @@
-import { _ as __decorate, l as createLink, P as Property, A as Attributes, B as Bind, a as Element, u as uhtml } from './index-76a6338f.js';
+import { _ as __decorate, l as createLink, u as uhtml, P as Property, A as Attributes, B as Bind, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -63,12 +63,12 @@ __decorate([
     Bind()
 ], TabsTab$1.prototype, "onClick", null);
 TabsTab$1 = __decorate([
-    Element("plus-tabs-tab")
+    Element()
 ], TabsTab$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var TabsTab = proxy('plus-tabs-tab', ['disabled', 'value'], []);
+var TabsTab = proxy(TabsTab$1.TAG, ['disabled', 'value'], []);
 
 export { TabsTab };

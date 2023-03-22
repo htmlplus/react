@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, a as Element, u as uhtml, b as styles } from './index-76a6338f.js';
+import { _ as __decorate, u as uhtml, b as styles, P as Property, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -69,12 +69,12 @@ __decorate([
     })
 ], AspectRatio$1.prototype, "value", void 0);
 AspectRatio$1 = __decorate([
-    Element("plus-aspect-ratio")
+    Element()
 ], AspectRatio$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var AspectRatio = proxy('plus-aspect-ratio', ['minHeight', 'maxHeight', 'value'], []);
+var AspectRatio = proxy(AspectRatio$1.TAG, ['minHeight', 'maxHeight', 'value'], []);
 
 export { AspectRatio };

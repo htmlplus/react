@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, A as Attributes, a as Element, f as toUnit, u as uhtml } from './index-76a6338f.js';
+import { _ as __decorate, f as toUnit, u as uhtml, P as Property, A as Attributes, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -51,12 +51,12 @@ __decorate([
     Attributes()
 ], Avatar$1.prototype, "attributes", null);
 Avatar$1 = __decorate([
-    Element("plus-avatar")
+    Element()
 ], Avatar$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Avatar = proxy('plus-avatar', ['shape', 'size'], []);
+var Avatar = proxy(Avatar$1.TAG, ['shape', 'size'], []);
 
 export { Avatar };

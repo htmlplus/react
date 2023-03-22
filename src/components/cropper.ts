@@ -1,8 +1,8 @@
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-import '@htmlplus/core/cropper';
-import type { CropperJSX } from '@htmlplus/core/types/components/cropper/cropper';
+import { Cropper as CropperCore } from '@htmlplus/core/cropper';
+import type { CropperElement, CropperJSX } from '@htmlplus/core/types/components/cropper/cropper';
 
 import { proxy } from '../proxy';
 import type { Rename } from '../proxy';
@@ -19,8 +19,8 @@ type Renamed = Rename<
   }
 >;
 
-export const Cropper = proxy<HTMLPlusCropperElement, Renamed>(
-  'plus-cropper',
+export const Cropper = proxy<CropperElement, Renamed>(
+  CropperCore.TAG,
   [
     'area',
     'aspectRatio',

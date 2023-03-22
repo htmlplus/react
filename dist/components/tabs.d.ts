@@ -1,8 +1,4 @@
 /// <reference types="react" />
-/**************************************************
- * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
- **************************************************/
-import '@htmlplus/core/tabs';
 import type { TabsJSX } from '@htmlplus/core/types/components/tabs/tabs';
 import type { Rename } from '../proxy';
 export declare const Tabs: import("react").ForwardRefExoticComponent<Rename<TabsJSX, {

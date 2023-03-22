@@ -4,7 +4,7 @@ import { DialogContent } from './dialog-content.js';
 import { DialogFooter } from './dialog-footer.js';
 import { DialogHeader } from './dialog-header.js';
 import { DialogToggler } from './dialog-toggler.js';
-import './index-76a6338f.js';
+import './index-8131a6bb.js';
 import './proxy.js';
 import 'react';
 

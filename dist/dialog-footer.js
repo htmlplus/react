@@ -1,4 +1,4 @@
-import { _ as __decorate, u as uhtml, a as Element } from './index-76a6338f.js';
+import { _ as __decorate, u as uhtml, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -17,12 +17,12 @@ DialogFooter$1.TAG = "plus-dialog-footer";
 // THIS PROPERTY IS AUTO-ADDED, DO NOT EDIT MANUALY
 DialogFooter$1.STYLES = css_248z;
 DialogFooter$1 = __decorate([
-    Element("plus-dialog-footer")
+    Element()
 ], DialogFooter$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var DialogFooter = proxy('plus-dialog-footer', [], []);
+var DialogFooter = proxy(DialogFooter$1.TAG, [], []);
 
 export { DialogFooter };

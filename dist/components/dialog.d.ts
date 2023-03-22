@@ -1,8 +1,4 @@
 /// <reference types="react" />
-/**************************************************
- * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
- **************************************************/
-import '@htmlplus/core/dialog';
 import type { DialogJSX } from '@htmlplus/core/types/components/dialog/dialog';
 import type { Rename } from '../proxy';
 export declare const Dialog: import("react").ForwardRefExoticComponent<Rename<DialogJSX, {

@@ -1,8 +1,8 @@
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-import '@htmlplus/core/counter';
-import type { CounterJSX } from '@htmlplus/core/types/components/counter/counter';
+import { Counter as CounterCore } from '@htmlplus/core/counter';
+import type { CounterElement, CounterJSX } from '@htmlplus/core/types/components/counter/counter';
 
 import { proxy } from '../proxy';
 import type { Rename } from '../proxy';
@@ -14,8 +14,8 @@ type Renamed = Rename<
   }
 >;
 
-export const Counter = proxy<HTMLPlusCounterElement, Renamed>(
-  'plus-counter',
+export const Counter = proxy<CounterElement, Renamed>(
+  CounterCore.TAG,
   ['easing', 'decimal', 'decimals', 'delay', 'duration', 'from', 'numerals', 'play', 'separator', 'to'],
   ['plusComplete']
 );

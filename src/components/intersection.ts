@@ -1,8 +1,8 @@
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-import '@htmlplus/core/intersection';
-import type { IntersectionJSX } from '@htmlplus/core/types/components/intersection/intersection';
+import { Intersection as IntersectionCore } from '@htmlplus/core/intersection';
+import type { IntersectionElement, IntersectionJSX } from '@htmlplus/core/types/components/intersection/intersection';
 
 import { proxy } from '../proxy';
 import type { Rename } from '../proxy';
@@ -14,8 +14,8 @@ type Renamed = Rename<
   }
 >;
 
-export const Intersection = proxy<HTMLPlusIntersectionElement, Renamed>(
-  'plus-intersection',
+export const Intersection = proxy<IntersectionElement, Renamed>(
+  IntersectionCore.TAG,
   ['disabled', 'once', 'root', 'rootMargin', 'threshold'],
   ['plusChange']
 );

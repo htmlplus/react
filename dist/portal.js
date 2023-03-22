@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, W as Watch, a as Element, h as host, j as Portal$2 } from './index-76a6338f.js';
+import { _ as __decorate, h as host, j as Portal$2, P as Property, W as Watch, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -89,12 +89,12 @@ __decorate([
     Watch(['disabled', 'strategy', 'target'])
 ], Portal$1.prototype, "watcher", null);
 Portal$1 = __decorate([
-    Element("plus-portal")
+    Element()
 ], Portal$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Portal = proxy('plus-portal', ['disabled', 'strategy', 'target'], []);
+var Portal = proxy(Portal$1.TAG, ['disabled', 'strategy', 'target'], []);
 
 export { Portal };

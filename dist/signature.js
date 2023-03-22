@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, E as Event$1, M as Method, W as Watch, B as Bind, a as Element, h as host, e as __awaiter, u as uhtml } from './index-76a6338f.js';
+import { _ as __decorate, h as host, e as __awaiter, u as uhtml, P as Property, E as Event$1, M as Method, W as Watch, B as Bind, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -372,13 +372,13 @@ __decorate([
     Bind()
 ], Signature$1.prototype, "onResize", null);
 Signature$1 = __decorate([
-    Element("plus-signature")
+    Element()
 ], Signature$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Signature = proxy('plus-signature', [
+var Signature = proxy(Signature$1.TAG, [
     'backgroundColor',
     'clearOnResize',
     'color',

@@ -1,8 +1,8 @@
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-import '@htmlplus/core/dialog';
-import type { DialogJSX } from '@htmlplus/core/types/components/dialog/dialog';
+import { Dialog as DialogCore } from '@htmlplus/core/dialog';
+import type { DialogElement, DialogJSX } from '@htmlplus/core/types/components/dialog/dialog';
 
 import { proxy } from '../proxy';
 import type { Rename } from '../proxy';
@@ -17,8 +17,8 @@ type Renamed = Rename<
   }
 >;
 
-export const Dialog = proxy<HTMLPlusDialogElement, Renamed>(
-  'plus-dialog',
+export const Dialog = proxy<DialogElement, Renamed>(
+  DialogCore.TAG,
   [
     'animation',
     'backdrop',

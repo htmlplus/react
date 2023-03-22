@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, a as Element, u as uhtml } from './index-76a6338f.js';
+import { _ as __decorate, u as uhtml, P as Property, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -270,13 +270,13 @@ __decorate([
     })
 ], GridItem$1.prototype, "orderXxl", void 0);
 GridItem$1 = __decorate([
-    Element("plus-grid-item")
+    Element()
 ], GridItem$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var GridItem = proxy('plus-grid-item', [
+var GridItem = proxy(GridItem$1.TAG, [
     'alignSelf',
     'alignSelfXs',
     'alignSelfSm',

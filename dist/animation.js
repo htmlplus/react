@@ -1,4 +1,4 @@
-import { _ as __decorate, s as setConfig, P as Property, E as Event$1, M as Method, W as Watch, B as Bind, a as Element, g as getConfig, h as host, u as uhtml } from './index-76a6338f.js';
+import { _ as __decorate, s as setConfig, g as getConfig, h as host, u as uhtml, P as Property, E as Event$1, M as Method, W as Watch, B as Bind, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -368,13 +368,13 @@ __decorate([
     Bind()
 ], Animation$1.prototype, "onRemove", null);
 Animation$1 = __decorate([
-    Element("plus-animation")
+    Element()
 ], Animation$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Animation = proxy('plus-animation', [
+var Animation = proxy(Animation$1.TAG, [
     'composite',
     'delay',
     'direction',

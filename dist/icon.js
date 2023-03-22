@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, A as Attributes, a as Element, u as uhtml } from './index-76a6338f.js';
+import { _ as __decorate, u as uhtml, P as Property, A as Attributes, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -58,12 +58,12 @@ __decorate([
     Attributes()
 ], Icon$1.prototype, "attributes", null);
 Icon$1 = __decorate([
-    Element("plus-icon")
+    Element()
 ], Icon$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Icon = proxy('plus-icon', ['color', 'flip', 'name', 'rotate', 'size'], []);
+var Icon = proxy(Icon$1.TAG, ['color', 'flip', 'name', 'rotate', 'size'], []);
 
 export { Icon };

@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, a as Element, u as uhtml } from './index-76a6338f.js';
+import { _ as __decorate, u as uhtml, P as Property, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -24,12 +24,12 @@ __decorate([
     })
 ], Center$1.prototype, "inline", void 0);
 Center$1 = __decorate([
-    Element("plus-center")
+    Element()
 ], Center$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Center = proxy('plus-center', ['inline'], []);
+var Center = proxy(Center$1.TAG, ['inline'], []);
 
 export { Center };

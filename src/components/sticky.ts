@@ -1,8 +1,8 @@
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-import '@htmlplus/core/sticky';
-import type { StickyJSX } from '@htmlplus/core/types/components/sticky/sticky';
+import { Sticky as StickyCore } from '@htmlplus/core/sticky';
+import type { StickyElement, StickyJSX } from '@htmlplus/core/types/components/sticky/sticky';
 
 import { proxy } from '../proxy';
 import type { Rename } from '../proxy';
@@ -14,8 +14,4 @@ type Renamed = Rename<
   }
 >;
 
-export const Sticky = proxy<HTMLPlusStickyElement, Renamed>(
-  'plus-sticky',
-  ['top', 'watcher', 'zIndex'],
-  ['plusChange']
-);
+export const Sticky = proxy<StickyElement, Renamed>(StickyCore.TAG, ['top', 'watcher', 'zIndex'], ['plusChange']);

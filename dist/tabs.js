@@ -1,4 +1,4 @@
-import { _ as __decorate, l as createLink, P as Property, E as Event$1, W as Watch, a as Element, u as uhtml } from './index-76a6338f.js';
+import { _ as __decorate, l as createLink, u as uhtml, P as Property, E as Event$1, W as Watch, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -87,12 +87,12 @@ __decorate([
     Watch(['connector', 'value'])
 ], Tabs$1.prototype, "watcher", null);
 Tabs$1 = __decorate([
-    Element("plus-tabs")
+    Element()
 ], Tabs$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Tabs = proxy('plus-tabs', ['value', 'vertical', 'connector'], ['plusChange']);
+var Tabs = proxy(Tabs$1.TAG, ['value', 'vertical', 'connector'], ['plusChange']);
 
 export { Tabs };

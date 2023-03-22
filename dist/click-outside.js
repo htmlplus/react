@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, E as Event$1, W as Watch, B as Bind, a as Element, h as host, o as on, c as off, u as uhtml } from './index-76a6338f.js';
+import { _ as __decorate, h as host, o as on, c as off, u as uhtml, P as Property, E as Event$1, W as Watch, B as Bind, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -80,12 +80,12 @@ __decorate([
     Bind()
 ], ClickOutside$1.prototype, "onClickOutside", null);
 ClickOutside$1 = __decorate([
-    Element("plus-click-outside")
+    Element()
 ], ClickOutside$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var ClickOutside = proxy('plus-click-outside', ['capture', 'disabled', 'once'], ['plusClickOutside']);
+var ClickOutside = proxy(ClickOutside$1.TAG, ['capture', 'disabled', 'once'], ['plusClickOutside']);
 
 export { ClickOutside };

@@ -1,4 +1,4 @@
-import { _ as __decorate, u as uhtml, a as Element } from './index-76a6338f.js';
+import { _ as __decorate, u as uhtml, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -17,12 +17,12 @@ DialogHeader$1.TAG = "plus-dialog-header";
 // THIS PROPERTY IS AUTO-ADDED, DO NOT EDIT MANUALY
 DialogHeader$1.STYLES = css_248z;
 DialogHeader$1 = __decorate([
-    Element("plus-dialog-header")
+    Element()
 ], DialogHeader$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var DialogHeader = proxy('plus-dialog-header', [], []);
+var DialogHeader = proxy(DialogHeader$1.TAG, [], []);
 
 export { DialogHeader };

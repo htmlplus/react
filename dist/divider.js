@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, A as Attributes, a as Element, u as uhtml } from './index-76a6338f.js';
+import { _ as __decorate, u as uhtml, P as Property, A as Attributes, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -71,12 +71,12 @@ __decorate([
     Attributes()
 ], Divider$1.prototype, "attributes", null);
 Divider$1 = __decorate([
-    Element("plus-divider")
+    Element()
 ], Divider$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Divider = proxy('plus-divider', ['placement', 'width', 'type', 'variant', 'vertical'], []);
+var Divider = proxy(Divider$1.TAG, ['placement', 'width', 'type', 'variant', 'vertical'], []);
 
 export { Divider };

@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, E as Event$1, S as State, A as Attributes, W as Watch, B as Bind, a as Element, h as host, u as uhtml } from './index-76a6338f.js';
+import { _ as __decorate, h as host, u as uhtml, P as Property, E as Event$1, S as State, A as Attributes, W as Watch, B as Bind, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -118,12 +118,12 @@ __decorate([
     Bind()
 ], Intersection$1.prototype, "onIntersecting", null);
 Intersection$1 = __decorate([
-    Element("plus-intersection")
+    Element()
 ], Intersection$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Intersection = proxy('plus-intersection', ['disabled', 'once', 'root', 'rootMargin', 'threshold'], ['plusChange']);
+var Intersection = proxy(Intersection$1.TAG, ['disabled', 'once', 'root', 'rootMargin', 'threshold'], ['plusChange']);
 
 export { Intersection };

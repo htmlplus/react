@@ -1,16 +1,16 @@
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-import '@htmlplus/core/grid';
-import type { GridJSX } from '@htmlplus/core/types/components/grid/grid';
+import { Grid as GridCore } from '@htmlplus/core/grid';
+import type { GridElement, GridJSX } from '@htmlplus/core/types/components/grid/grid';
 
 import { proxy } from '../proxy';
 import type { Rename } from '../proxy';
 
 type Renamed = Rename<GridJSX, {}>;
 
-export const Grid = proxy<HTMLPlusGridElement, Renamed>(
-  'plus-grid',
+export const Grid = proxy<GridElement, Renamed>(
+  GridCore.TAG,
   [
     'alignContent',
     'alignContentXs',

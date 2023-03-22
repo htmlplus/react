@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, a as Element, u as uhtml } from './index-76a6338f.js';
+import { _ as __decorate, u as uhtml, P as Property, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -23,12 +23,12 @@ __decorate([
     })
 ], DialogContent$1.prototype, "scrollable", void 0);
 DialogContent$1 = __decorate([
-    Element("plus-dialog-content")
+    Element()
 ], DialogContent$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var DialogContent = proxy('plus-dialog-content', ['scrollable'], []);
+var DialogContent = proxy(DialogContent$1.TAG, ['scrollable'], []);
 
 export { DialogContent };

@@ -1,4 +1,4 @@
-import { _ as __decorate, l as createLink, P as Property, A as Attributes, a as Element, u as uhtml } from './index-76a6338f.js';
+import { _ as __decorate, l as createLink, u as uhtml, P as Property, A as Attributes, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -37,12 +37,12 @@ __decorate([
     Attributes()
 ], TabsPanel$1.prototype, "attributes", null);
 TabsPanel$1 = __decorate([
-    Element("plus-tabs-panel")
+    Element()
 ], TabsPanel$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var TabsPanel = proxy('plus-tabs-panel', ['value'], []);
+var TabsPanel = proxy(TabsPanel$1.TAG, ['value'], []);
 
 export { TabsPanel };

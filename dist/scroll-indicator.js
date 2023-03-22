@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, E as Event$1, A as Attributes, W as Watch, B as Bind, a as Element, o as on, c as off, u as uhtml } from './index-76a6338f.js';
+import { _ as __decorate, o as on, c as off, u as uhtml, P as Property, E as Event$1, A as Attributes, W as Watch, B as Bind, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -105,12 +105,12 @@ __decorate([
     Bind()
 ], ScrollIndicator$1.prototype, "onScroll", null);
 ScrollIndicator$1 = __decorate([
-    Element("plus-scroll-indicator")
+    Element()
 ], ScrollIndicator$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var ScrollIndicator = proxy('plus-scroll-indicator', ['disabled', 'source'], ['plusScroll']);
+var ScrollIndicator = proxy(ScrollIndicator$1.TAG, ['disabled', 'source'], ['plusScroll']);
 
 export { ScrollIndicator };

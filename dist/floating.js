@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, A as Attributes, a as Element, i as isRTL, t as toAxis, f as toUnit, b as styles, u as uhtml } from './index-76a6338f.js';
+import { _ as __decorate, i as isRTL, t as toAxis, f as toUnit, b as styles, u as uhtml, P as Property, A as Attributes, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -74,12 +74,12 @@ __decorate([
     Attributes()
 ], Floating$1.prototype, "attributes", null);
 Floating$1 = __decorate([
-    Element("plus-floating")
+    Element()
 ], Floating$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Floating = proxy('plus-floating', ['fixed', 'offset', 'placement'], []);
+var Floating = proxy(Floating$1.TAG, ['fixed', 'offset', 'placement'], []);
 
 export { Floating };

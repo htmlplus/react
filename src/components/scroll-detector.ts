@@ -1,8 +1,11 @@
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-import '@htmlplus/core/scroll-detector';
-import type { ScrollDetectorJSX } from '@htmlplus/core/types/components/scroll-detector/scroll-detector';
+import { ScrollDetector as ScrollDetectorCore } from '@htmlplus/core/scroll-detector';
+import type {
+  ScrollDetectorElement,
+  ScrollDetectorJSX
+} from '@htmlplus/core/types/components/scroll-detector/scroll-detector';
 
 import { proxy } from '../proxy';
 import type { Rename } from '../proxy';
@@ -14,8 +17,8 @@ type Renamed = Rename<
   }
 >;
 
-export const ScrollDetector = proxy<HTMLPlusScrollDetectorElement, Renamed>(
-  'plus-scroll-detector',
+export const ScrollDetector = proxy<ScrollDetectorElement, Renamed>(
+  ScrollDetectorCore.TAG,
   ['disabled', 'reference', 'vertical'],
   ['plusChange']
 );

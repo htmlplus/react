@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, E as Event$1, S as State, A as Attributes, M as Method, B as Bind, a as Element, u as uhtml } from './index-76a6338f.js';
+import { _ as __decorate, u as uhtml, P as Property, E as Event$1, S as State, A as Attributes, M as Method, B as Bind, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -179,12 +179,12 @@ __decorate([
     Bind()
 ], Browse$1.prototype, "onDrop", null);
 Browse$1 = __decorate([
-    Element("plus-browse")
+    Element()
 ], Browse$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Browse = proxy('plus-browse', ['accept', 'disabled', 'droppable', 'min', 'max', 'minSize', 'maxSize', 'multiple'], ['plusChange', 'plusError', 'plusSuccess']);
+var Browse = proxy(Browse$1.TAG, ['accept', 'disabled', 'droppable', 'min', 'max', 'minSize', 'maxSize', 'multiple'], ['plusChange', 'plusError', 'plusSuccess']);
 
 export { Browse };

@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, E as Event$1, A as Attributes, B as Bind, a as Element, u as uhtml } from './index-76a6338f.js';
+import { _ as __decorate, u as uhtml, P as Property, E as Event$1, A as Attributes, B as Bind, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -74,12 +74,12 @@ __decorate([
     Bind()
 ], Switch$1.prototype, "onKeyDown", null);
 Switch$1 = __decorate([
-    Element("plus-switch")
+    Element()
 ], Switch$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Switch = proxy('plus-switch', ['checked', 'disabled'], ['plusChange']);
+var Switch = proxy(Switch$1.TAG, ['checked', 'disabled'], ['plusChange']);
 
 export { Switch };

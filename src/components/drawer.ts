@@ -1,8 +1,8 @@
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-import '@htmlplus/core/drawer';
-import type { DrawerJSX } from '@htmlplus/core/types/components/drawer/drawer';
+import { Drawer as DrawerCore } from '@htmlplus/core/drawer';
+import type { DrawerElement, DrawerJSX } from '@htmlplus/core/types/components/drawer/drawer';
 
 import { proxy } from '../proxy';
 import type { Rename } from '../proxy';
@@ -17,8 +17,8 @@ type Renamed = Rename<
   }
 >;
 
-export const Drawer = proxy<HTMLPlusDrawerElement, Renamed>(
-  'plus-drawer',
+export const Drawer = proxy<DrawerElement, Renamed>(
+  DrawerCore.TAG,
   [
     'animation',
     'backdrop',

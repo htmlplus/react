@@ -1,4 +1,4 @@
-import { _ as __decorate, l as createLink, P as Property, E as Event$1, S as State, A as Attributes, W as Watch, B as Bind, p as Media, a as Element, h as host, t as toAxis, i as isRTL, d as classes, b as styles, m as Animation, n as Scrollbar, c as off, o as on, u as uhtml } from './index-76a6338f.js';
+import { _ as __decorate, l as createLink, h as host, t as toAxis, i as isRTL, d as classes, b as styles, m as Animation, n as Scrollbar, c as off, o as on, u as uhtml, P as Property, E as Event$1, S as State, A as Attributes, W as Watch, B as Bind, p as Media, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -319,13 +319,13 @@ __decorate([
     Bind()
 ], Drawer$1.prototype, "onClickOutside", null);
 Drawer$1 = __decorate([
-    Element("plus-drawer")
+    Element()
 ], Drawer$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Drawer = proxy('plus-drawer', [
+var Drawer = proxy(Drawer$1.TAG, [
     'animation',
     'backdrop',
     'breakpoint',

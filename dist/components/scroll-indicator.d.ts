@@ -1,8 +1,4 @@
 /// <reference types="react" />
-/**************************************************
- * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
- **************************************************/
-import '@htmlplus/core/scroll-indicator';
 import type { ScrollIndicatorJSX } from '@htmlplus/core/types/components/scroll-indicator/scroll-indicator';
 import type { Rename } from '../proxy';
 export declare const ScrollIndicator: import("react").ForwardRefExoticComponent<Rename<ScrollIndicatorJSX, {

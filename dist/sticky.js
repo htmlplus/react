@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, E as Event$1, S as State, A as Attributes, W as Watch, B as Bind, a as Element, f as toUnit, b as styles, u as uhtml } from './index-76a6338f.js';
+import { _ as __decorate, f as toUnit, b as styles, u as uhtml, P as Property, E as Event$1, S as State, A as Attributes, W as Watch, B as Bind, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -120,12 +120,12 @@ __decorate([
     Bind()
 ], Sticky$1.prototype, "onIntersecting", null);
 Sticky$1 = __decorate([
-    Element("plus-sticky")
+    Element()
 ], Sticky$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Sticky = proxy('plus-sticky', ['top', 'watcher', 'zIndex'], ['plusChange']);
+var Sticky = proxy(Sticky$1.TAG, ['top', 'watcher', 'zIndex'], ['plusChange']);
 
 export { Sticky };

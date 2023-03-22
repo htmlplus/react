@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, a as Element, e as __awaiter } from './index-76a6338f.js';
+import { _ as __decorate, e as __awaiter, P as Property, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -69,12 +69,12 @@ __decorate([
     })
 ], Faker$1.prototype, "seed", void 0);
 Faker$1 = __decorate([
-    Element("plus-faker")
+    Element()
 ], Faker$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Faker = proxy('plus-faker', ['api', 'arguments', 'instance', 'seed'], []);
+var Faker = proxy(Faker$1.TAG, ['api', 'arguments', 'instance', 'seed'], []);
 
 export { Faker };

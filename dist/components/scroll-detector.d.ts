@@ -1,8 +1,4 @@
 /// <reference types="react" />
-/**************************************************
- * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
- **************************************************/
-import '@htmlplus/core/scroll-detector';
 import type { ScrollDetectorJSX } from '@htmlplus/core/types/components/scroll-detector/scroll-detector';
 import type { Rename } from '../proxy';
 export declare const ScrollDetector: import("react").ForwardRefExoticComponent<Rename<ScrollDetectorJSX, {

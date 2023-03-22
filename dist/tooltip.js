@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, S as State, A as Attributes, M as Method, W as Watch, B as Bind, a as Element, i as isRTL, k as query, h as host, o as on, c as off, e as __awaiter, u as uhtml } from './index-76a6338f.js';
+import { _ as __decorate, i as isRTL, k as query, h as host, o as on, c as off, e as __awaiter, u as uhtml, P as Property, S as State, A as Attributes, M as Method, W as Watch, B as Bind, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -326,12 +326,12 @@ __decorate([
     Bind()
 ], Tooltip$1.prototype, "onShow", null);
 Tooltip$1 = __decorate([
-    Element("plus-tooltip")
+    Element()
 ], Tooltip$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Tooltip = proxy('plus-tooltip', ['arrow', 'delay', 'disabled', 'fixed', 'offset', 'placement', 'reference', 'trigger', 'z'], []);
+var Tooltip = proxy(Tooltip$1.TAG, ['arrow', 'delay', 'disabled', 'fixed', 'offset', 'placement', 'reference', 'trigger', 'z'], []);
 
 export { Tooltip };

@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, A as Attributes, a as Element, u as uhtml } from './index-76a6338f.js';
+import { _ as __decorate, u as uhtml, P as Property, A as Attributes, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -58,12 +58,12 @@ __decorate([
     Attributes()
 ], Spinner$1.prototype, "attributes", null);
 Spinner$1 = __decorate([
-    Element("plus-spinner")
+    Element()
 ], Spinner$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Spinner = proxy('plus-spinner', ['size', 'type'], []);
+var Spinner = proxy(Spinner$1.TAG, ['size', 'type'], []);
 
 export { Spinner };

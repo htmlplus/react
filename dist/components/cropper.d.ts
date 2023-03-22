@@ -1,8 +1,4 @@
 /// <reference types="react" />
-/**************************************************
- * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
- **************************************************/
-import '@htmlplus/core/cropper';
 import type { CropperJSX } from '@htmlplus/core/types/components/cropper/cropper';
 import type { Rename } from '../proxy';
 export declare const Cropper: import("react").ForwardRefExoticComponent<Rename<CropperJSX, {

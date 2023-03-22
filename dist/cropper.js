@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, E as Event$1, M as Method, W as Watch, B as Bind, a as Element, d as classes, e as __awaiter, u as uhtml } from './index-76a6338f.js';
+import { _ as __decorate, d as classes, e as __awaiter, u as uhtml, P as Property, E as Event$1, M as Method, W as Watch, B as Bind, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -499,13 +499,13 @@ __decorate([
     Bind()
 ], Cropper$1.prototype, "onZoom", null);
 Cropper$1 = __decorate([
-    Element("plus-cropper")
+    Element()
 ], Cropper$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Cropper = proxy('plus-cropper', [
+var Cropper = proxy(Cropper$1.TAG, [
     'area',
     'aspectRatio',
     'backdrop',

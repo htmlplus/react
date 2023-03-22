@@ -1,4 +1,4 @@
-import { _ as __decorate, u as uhtml, a as Element } from './index-76a6338f.js';
+import { _ as __decorate, u as uhtml, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -18,12 +18,12 @@ CardBody$1.TAG = "plus-card-body";
 // THIS PROPERTY IS AUTO-ADDED, DO NOT EDIT MANUALY
 CardBody$1.STYLES = css_248z;
 CardBody$1 = __decorate([
-    Element("plus-card-body")
+    Element()
 ], CardBody$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var CardBody = proxy('plus-card-body', [], []);
+var CardBody = proxy(CardBody$1.TAG, [], []);
 
 export { CardBody };

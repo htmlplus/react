@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, A as Attributes, a as Element, u as uhtml } from './index-76a6338f.js';
+import { _ as __decorate, u as uhtml, P as Property, A as Attributes, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -50,12 +50,12 @@ __decorate([
     Attributes()
 ], TabsBar$1.prototype, "attributes", null);
 TabsBar$1 = __decorate([
-    Element("plus-tabs-bar")
+    Element()
 ], TabsBar$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var TabsBar = proxy('plus-tabs-bar', ['grow', 'justify', 'reverse'], []);
+var TabsBar = proxy(TabsBar$1.TAG, ['grow', 'justify', 'reverse'], []);
 
 export { TabsBar };

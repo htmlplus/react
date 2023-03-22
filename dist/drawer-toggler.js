@@ -1,4 +1,4 @@
-import { _ as __decorate, l as createLink, P as Property, A as Attributes, W as Watch, B as Bind, a as Element, u as uhtml } from './index-76a6338f.js';
+import { _ as __decorate, l as createLink, u as uhtml, P as Property, A as Attributes, W as Watch, B as Bind, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -68,12 +68,12 @@ __decorate([
     Bind()
 ], DrawerToggler$1.prototype, "onClick", null);
 DrawerToggler$1 = __decorate([
-    Element("plus-drawer-toggler")
+    Element()
 ], DrawerToggler$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var DrawerToggler = proxy('plus-drawer-toggler', ['connector'], []);
+var DrawerToggler = proxy(DrawerToggler$1.TAG, ['connector'], []);
 
 export { DrawerToggler };

@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, a as Element } from './index-76a6338f.js';
+import { _ as __decorate, P as Property, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -188,12 +188,12 @@ __decorate([
     })
 ], FormatBytes$1.prototype, "value", void 0);
 FormatBytes$1 = __decorate([
-    Element("plus-format-bytes")
+    Element()
 ], FormatBytes$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var FormatBytes = proxy('plus-format-bytes', ['display', 'locale', 'decimals', 'separator', 'signed', 'standard', 'unit', 'value'], []);
+var FormatBytes = proxy(FormatBytes$1.TAG, ['display', 'locale', 'decimals', 'separator', 'signed', 'standard', 'unit', 'value'], []);
 
 export { FormatBytes };

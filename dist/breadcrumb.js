@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, A as Attributes, S as State, B as Bind, a as Element, h as host, r as request, q as queryAll, u as uhtml } from './index-76a6338f.js';
+import { _ as __decorate, h as host, r as request, q as queryAll, u as uhtml, P as Property, A as Attributes, S as State, B as Bind, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -189,12 +189,12 @@ __decorate([
     Bind()
 ], Breadcrumb$1.prototype, "onChange", null);
 Breadcrumb$1 = __decorate([
-    Element("plus-breadcrumb")
+    Element()
 ], Breadcrumb$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Breadcrumb = proxy('plus-breadcrumb', ['expanderText', 'offset', 'max', 'separator'], []);
+var Breadcrumb = proxy(Breadcrumb$1.TAG, ['expanderText', 'offset', 'max', 'separator'], []);
 
 export { Breadcrumb };

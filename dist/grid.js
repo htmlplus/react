@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, a as Element, k as query, u as uhtml } from './index-76a6338f.js';
+import { _ as __decorate, k as query, u as uhtml, P as Property, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -216,13 +216,13 @@ __decorate([
     })
 ], Grid$1.prototype, "wrapXxl", void 0);
 Grid$1 = __decorate([
-    Element("plus-grid")
+    Element()
 ], Grid$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Grid = proxy('plus-grid', [
+var Grid = proxy(Grid$1.TAG, [
     'alignContent',
     'alignContentXs',
     'alignContentSm',

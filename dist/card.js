@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, a as Element, u as uhtml } from './index-76a6338f.js';
+import { _ as __decorate, u as uhtml, P as Property, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -41,12 +41,12 @@ __decorate([
     })
 ], Card$1.prototype, "tile", void 0);
 Card$1 = __decorate([
-    Element("plus-card")
+    Element()
 ], Card$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Card = proxy('plus-card', ['elevation', 'flat', 'outlined', 'tile'], []);
+var Card = proxy(Card$1.TAG, ['elevation', 'flat', 'outlined', 'tile'], []);
 
 export { Card };

@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, E as Event$1, A as Attributes, W as Watch, B as Bind, l as createLink, h as host, t as toAxis, i as isRTL, d as classes, m as Animation, n as Scrollbar, c as off, j as Portal, o as on, u as uhtml, a as Element } from './index-76a6338f.js';
+import { _ as __decorate, P as Property, E as Event$1, A as Attributes, W as Watch, B as Bind, l as createLink, h as host, t as toAxis, i as isRTL, d as classes, m as Animation, n as Scrollbar, c as off, j as Portal, o as on, u as uhtml, a as Element } from './index-8131a6bb.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -367,13 +367,13 @@ __decorate([
     Bind()
 ], Dialog$1.prototype, "onClickOutside", null);
 Dialog$1 = Dialog_1 = __decorate([
-    Element("plus-dialog")
+    Element()
 ], Dialog$1);
 
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Dialog = proxy('plus-dialog', [
+var Dialog = proxy(Dialog$1.TAG, [
     'animation',
     'backdrop',
     'connector',
