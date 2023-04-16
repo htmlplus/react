@@ -1,3 +1,4 @@
+export { Accordion } from './accordion.js';
 export { Animation } from './animation.js';
 export { AspectRatio } from './aspect-ratio.js';
 export { Avatar } from './avatar.compact.js';
@@ -26,7 +27,7 @@ export { Sticky } from './sticky.js';
 export { Switch } from './switch.js';
 export { Tabs } from './tabs.compact.js';
 export { Tooltip } from './tooltip.js';
-import './index-8131a6bb.js';
+import './index-fa41da57.js';
 import './proxy.js';
 import 'react';
 import './avatar.js';

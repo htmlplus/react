@@ -1,8 +1,8 @@
-import { _ as __decorate, l as createLink, u as uhtml, P as Property, A as Attributes, a as Element } from './index-8131a6bb.js';
+import { _ as __decorate, m as createLink, u as uhtml, P as Property, d as Attributes, b as Element } from './index-fa41da57.js';
 import { proxy } from './proxy.js';
 import 'react';
 
-var css_248z = "*,:after,:before{box-sizing:border-box}:host,:host:after,:host:before{box-sizing:border-box}:host([hidden]:not([hidden=false])){display:none}:host{display:none}:host([active]:not([active=false])){display:block}";
+var css_248z = ":host,:host:after,:host:before{box-sizing:border-box}:host *,:host :after,:host :before{box-sizing:border-box}:host([hidden]:not([hidden=false])){display:none!important}:host{display:none}:host([active]:not([active=false])){display:block}";
 
 const { Inject } = createLink({
     crawl: true

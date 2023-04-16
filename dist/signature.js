@@ -1,8 +1,8 @@
-import { _ as __decorate, h as host, e as __awaiter, u as uhtml, P as Property, E as Event$1, M as Method, W as Watch, B as Bind, a as Element } from './index-8131a6bb.js';
+import { _ as __decorate, h as host, a as __awaiter, u as uhtml, P as Property, E as Event$1, M as Method, W as Watch, B as Bind, b as Element } from './index-fa41da57.js';
 import { proxy } from './proxy.js';
 import 'react';
 
-var css_248z = "*,:after,:before{box-sizing:border-box}:host,:host:after,:host:before{box-sizing:border-box}:host([hidden]:not([hidden=false])){display:none}:host{display:block;height:150px;width:300px}:host([disabled]:not([disabled=false])){opacity:.5}canvas{display:block;height:100%;width:100%}";
+var css_248z = ":host,:host:after,:host:before{box-sizing:border-box}:host *,:host :after,:host :before{box-sizing:border-box}:host([hidden]:not([hidden=false])){display:none!important}:host{display:block;height:150px;width:300px}:host([disabled]:not([disabled=false])){opacity:.5}canvas{display:block;height:100%;width:100%}";
 
 let Core;
 /**

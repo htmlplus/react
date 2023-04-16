@@ -1,8 +1,8 @@
-import { _ as __decorate, h as host, j as Portal$2, P as Property, W as Watch, a as Element } from './index-8131a6bb.js';
+import { _ as __decorate, h as host, k as Portal$2, P as Property, W as Watch, b as Element } from './index-fa41da57.js';
 import { proxy } from './proxy.js';
 import 'react';
 
-var css_248z = "*,:after,:before{box-sizing:border-box}:host,:host:after,:host:before{box-sizing:border-box}:host([hidden]:not([hidden=false])){display:none}:host{display:contents}";
+var css_248z = ":host,:host:after,:host:before{box-sizing:border-box}:host *,:host :after,:host :before{box-sizing:border-box}:host([hidden]:not([hidden=false])){display:none!important}:host{display:contents}";
 
 /**
  * @experimental

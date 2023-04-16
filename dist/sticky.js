@@ -1,8 +1,8 @@
-import { _ as __decorate, f as toUnit, b as styles, u as uhtml, P as Property, E as Event$1, S as State, A as Attributes, W as Watch, B as Bind, a as Element } from './index-8131a6bb.js';
+import { _ as __decorate, j as toUnit, c as styles, u as uhtml, P as Property, E as Event$1, S as State, d as Attributes, W as Watch, B as Bind, b as Element } from './index-fa41da57.js';
 import { proxy } from './proxy.js';
 import 'react';
 
-var css_248z = "*,:after,:before{box-sizing:border-box}:host,:host:after,:host:before{box-sizing:border-box}:host([hidden]:not([hidden=false])){display:none}:host{display:block;position:sticky;will-change:auto}.sizer-wrapper{pointer-events:none;position:relative;visibility:hidden}.sizer{position:absolute}";
+var css_248z = ":host,:host:after,:host:before{box-sizing:border-box}:host *,:host :after,:host :before{box-sizing:border-box}:host([hidden]:not([hidden=false])){display:none!important}:host{display:block;position:sticky;will-change:auto}.sizer-wrapper{pointer-events:none;position:relative;visibility:hidden}.sizer{position:absolute}";
 
 /**
  * @stable

@@ -1,8 +1,8 @@
-import { _ as __decorate, s as setConfig, g as getConfig, h as host, u as uhtml, P as Property, E as Event$1, M as Method, W as Watch, B as Bind, a as Element } from './index-8131a6bb.js';
+import { _ as __decorate, s as setConfig, g as getConfig, h as host, u as uhtml, P as Property, E as Event$1, M as Method, W as Watch, B as Bind, b as Element } from './index-fa41da57.js';
 import { proxy } from './proxy.js';
 import 'react';
 
-var css_248z = "*,:after,:before{box-sizing:border-box}:host,:host:after,:host:before{box-sizing:border-box}:host([hidden]:not([hidden=false])){display:none}:host{display:block}";
+var css_248z = ":host,:host:after,:host:before{box-sizing:border-box}:host *,:host :after,:host :before{box-sizing:border-box}:host([hidden]:not([hidden=false])){display:none!important}:host{display:block}";
 
 const ANIMATION_EASINGS = {
     'ease': 'ease',
@@ -38,13 +38,9 @@ const ANIMATION_EASINGS = {
 
 const register = (name, keyframe) => {
   setConfig({
-    component: {
-      'plus-animation': {
-        asset: {
-          name: {
-            [name]: keyframe
-          }
-        }
+    asset: {
+      animation: {
+        [name]: keyframe
       }
     }
   });
@@ -133,7 +129,7 @@ let Animation$1 = class Animation {
             delay: this.delay,
             direction: this.direction,
             duration: this.duration,
-            easing: (_b = (_a = ANIMATION_EASINGS[this.easing]) !== null && _a !== void 0 ? _a : getConfig('component', 'plus-animation', 'asset', 'easing', this.easing)) !== null && _b !== void 0 ? _b : this.easing,
+            easing: (_b = (_a = ANIMATION_EASINGS[this.easing]) !== null && _a !== void 0 ? _a : getConfig('asset', 'easing', this.easing)) !== null && _b !== void 0 ? _b : this.easing,
             endDelay: this.endDelay,
             fill: this.fill,
             iterationComposite: this.iterationComposite,
@@ -223,7 +219,7 @@ let Animation$1 = class Animation {
     updatedCallback() {
         var _a, _b;
         this.disconnectedCallback();
-        const keyframes = (_b = (_a = this.keyframes) !== null && _a !== void 0 ? _a : getConfig('component', 'plus-animation', 'asset', 'name', this.name)) !== null && _b !== void 0 ? _b : [];
+        const keyframes = (_b = (_a = this.keyframes) !== null && _a !== void 0 ? _a : getConfig('asset', 'animation', this.name)) !== null && _b !== void 0 ? _b : [];
         this.instance = host(this).animate(keyframes, this.options);
         this.instance.addEventListener('cancel', this.onCancel);
         this.instance.addEventListener('finish', this.onFinish);

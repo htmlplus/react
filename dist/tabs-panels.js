@@ -1,8 +1,8 @@
-import { _ as __decorate, u as uhtml, P as Property, W as Watch, a as Element, l as createLink } from './index-8131a6bb.js';
+import { _ as __decorate, u as uhtml, P as Property, W as Watch, b as Element, m as createLink } from './index-fa41da57.js';
 import { proxy } from './proxy.js';
 import 'react';
 
-var css_248z = "*,:after,:before{box-sizing:border-box}:host,:host:after,:host:before{box-sizing:border-box}:host([hidden]:not([hidden=false])){display:none}:host{display:block}";
+var css_248z = ":host,:host:after,:host:before{box-sizing:border-box}:host *,:host :after,:host :before{box-sizing:border-box}:host([hidden]:not([hidden=false])){display:none!important}:host{display:block}";
 
 const { reconnect } = createLink({
     crawl: true,
