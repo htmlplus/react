@@ -1,6 +1,6 @@
 {
   "name": "@htmlplus/react",
-  "version": "0.7.7-next-04171753",
+  "version": "0.7.7-next-04190151",
   "license": "MIT",
   "sideEffects": false,
   "author": "Masood Abdolian <m.abdolian@gmail.com>",
@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/htmlplus/react#readme",
   "dependencies": {
-    "@htmlplus/core": "^0.8.8-next-04171750",
+    "@htmlplus/core": "^0.8.8-next-04190138",
     "change-case": "^4.1.2"
   },
   "devDependencies": {
