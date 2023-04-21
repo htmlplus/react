@@ -1,4 +1,4 @@
-import { _ as __decorate, h as host, r as request, q as queryAll, u as uhtml, P as Property, d as Attributes, S as State, B as Bind, b as Element } from './index-fa41da57.js';
+import { _ as __decorate, h as host, r as request, q as queryAll, u as uhtml, P as Property, d as Attributes, S as State, B as Bind, b as Element } from './index-2b3ba3ff.js';
 import { proxy } from './proxy.js';
 import 'react';
 

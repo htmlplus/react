@@ -1,4 +1,5 @@
-import { _ as __decorate, s as setConfig, g as getConfig, h as host, u as uhtml, P as Property, E as Event$1, M as Method, W as Watch, B as Bind, b as Element } from './index-fa41da57.js';
+import { _ as __decorate, s as setConfig, h as host, u as uhtml, P as Property, E as Event$1, M as Method, W as Watch, B as Bind, b as Element } from './index-2b3ba3ff.js';
+import { g as getConfig } from './config-aa3739b5.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -37,7 +38,7 @@ const ANIMATION_EASINGS = {
 };
 
 const register = (name, keyframe) => {
-  setConfig({
+  setConfig('PLUS', {
     asset: {
       animation: {
         [name]: keyframe

@@ -1,4 +1,4 @@
-import { _ as __decorate, j as toUnit, i as isRTL, u as uhtml, c as styles, P as Property, d as Attributes, b as Element } from './index-fa41da57.js';
+import { _ as __decorate, g as toUnit, i as isRTL, u as uhtml, c as styles, P as Property, d as Attributes, b as Element } from './index-2b3ba3ff.js';
 import { proxy } from './proxy.js';
 import 'react';
 

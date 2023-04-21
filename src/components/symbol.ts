@@ -9,4 +9,8 @@ import type { Rename } from '../proxy';
 
 type Renamed = Rename<SymbolJSX, {}>;
 
-export const Symbol = proxy<SymbolElement, Renamed>(SymbolCore.TAG, ['color', 'flip', 'name', 'rotate', 'size'], []);
+export const Symbol = proxy<SymbolElement, Renamed>(
+  SymbolCore.TAG,
+  ['color', 'flip', 'label', 'name', 'resolver', 'rotate', 'size'],
+  []
+);

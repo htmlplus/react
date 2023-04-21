@@ -28,5 +28,6 @@ export * from './signature';
 export * from './spinner';
 export * from './sticky';
 export * from './switch';
+export * from './symbol';
 export * from './tabs.compact';
 export * from './tooltip';
