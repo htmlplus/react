@@ -51,7 +51,7 @@ let Icon$1 = class Icon {
          * TODO
          */
         this.resolver = name => {
-            return import(`./icon/names/${name}.js`).then(module => (module === null || module === void 0 ? void 0 : module['default']) || module);
+            return import(`@htmlplus/core/icon/names/${name}.js`).then(module => (module === null || module === void 0 ? void 0 : module['default']) || module);
         };
     }
     get attributes() {

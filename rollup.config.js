@@ -15,6 +15,17 @@ export default {
   ],
   plugins: [
     peerDepsExternal(),
+
+    // TODO
+    {
+      name: 'dynamic-import-replacer',
+      resolveDynamicImport(specifier, importer) {
+        if (importer.endsWith('icon.js')) {
+          return '`@htmlplus/core/icon/names/${name}.js`';
+        }
+      }
+    },
+
     resolve(),
     commonjs(),
     typescript(),
