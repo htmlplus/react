@@ -47,6 +47,6 @@ Card$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Card = proxy(Card$1.TAG, ['elevation', 'flat', 'outlined', 'tile'], []);
+var Card = proxy(Card$1.TAG, ['elevation', 'flat', 'outlined', 'tile',], []);
 
 export { Card };

@@ -74,6 +74,6 @@ DrawerToggler$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var DrawerToggler = proxy(DrawerToggler$1.TAG, ['connector'], []);
+var DrawerToggler = proxy(DrawerToggler$1.TAG, ['connector',], []);
 
 export { DrawerToggler };

@@ -86,6 +86,6 @@ ClickOutside$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var ClickOutside = proxy(ClickOutside$1.TAG, ['capture', 'disabled', 'once'], ['plusClickOutside']);
+var ClickOutside = proxy(ClickOutside$1.TAG, ['capture', 'disabled', 'once',], ['plusClickOutside',]);
 
 export { ClickOutside };

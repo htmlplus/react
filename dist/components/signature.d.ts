@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import type { SignatureJSX } from '@htmlplus/core/types/components/signature/signature';
+import type { SignatureJSX as SignatureJSX } from '@htmlplus/core/types/components/signature/signature';
 import type { Rename } from '../proxy';
 export declare const Signature: import("react").ForwardRefExoticComponent<Rename<SignatureJSX, {
     onPlusAfter: 'onAfter';

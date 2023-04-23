@@ -8,7 +8,7 @@ import 'react';
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 var All = Object.assign(Grid, {
-    Item: GridItem
+    Item: GridItem,
 });
 
 export { All as Grid };

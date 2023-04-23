@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import type { IntersectionJSX } from '@htmlplus/core/types/components/intersection/intersection';
+import type { IntersectionJSX as IntersectionJSX } from '@htmlplus/core/types/components/intersection/intersection';
 import type { Rename } from '../proxy';
 export declare const Intersection: import("react").ForwardRefExoticComponent<Rename<IntersectionJSX, {
     onPlusChange: 'onChange';

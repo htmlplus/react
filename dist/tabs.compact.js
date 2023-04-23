@@ -14,7 +14,7 @@ var All = Object.assign(Tabs, {
     Bar: TabsBar,
     Panel: TabsPanel,
     Panels: TabsPanels,
-    Tab: TabsTab
+    Tab: TabsTab,
 });
 
 export { All as Tabs };

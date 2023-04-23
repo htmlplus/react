@@ -77,6 +77,6 @@ Divider$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Divider = proxy(Divider$1.TAG, ['placement', 'width', 'type', 'variant', 'vertical'], []);
+var Divider = proxy(Divider$1.TAG, ['placement', 'width', 'type', 'variant', 'vertical',], []);
 
 export { Divider };

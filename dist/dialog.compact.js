@@ -16,7 +16,7 @@ var All = Object.assign(Dialog, {
     Content: DialogContent,
     Footer: DialogFooter,
     Header: DialogHeader,
-    Toggler: DialogToggler
+    Toggler: DialogToggler,
 });
 
 export { All as Dialog };

@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import type { AnimationJSX } from '@htmlplus/core/types/components/animation/animation';
+import type { AnimationJSX as AnimationJSX } from '@htmlplus/core/types/components/animation/animation';
 import type { Rename } from '../proxy';
 export declare const Animation: import("react").ForwardRefExoticComponent<Rename<AnimationJSX, {
     onPlusCancel: 'onCancel';

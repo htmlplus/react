@@ -80,6 +80,6 @@ Switch$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Switch = proxy(Switch$1.TAG, ['checked', 'disabled'], ['plusChange']);
+var Switch = proxy(Switch$1.TAG, ['checked', 'disabled',], ['plusChange',]);
 
 export { Switch };

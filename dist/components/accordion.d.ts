@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import type { AccordionJSX } from '@htmlplus/core/types/components/accordion/accordion';
+import type { AccordionJSX as AccordionJSX } from '@htmlplus/core/types/components/accordion/accordion';
 import type { Rename } from '../proxy';
 export declare const Accordion: import("react").ForwardRefExoticComponent<Rename<AccordionJSX, {
     onPlusCollapse: 'onCollapse';

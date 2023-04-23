@@ -75,6 +75,6 @@ AspectRatio$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var AspectRatio = proxy(AspectRatio$1.TAG, ['minHeight', 'maxHeight', 'value'], []);
+var AspectRatio = proxy(AspectRatio$1.TAG, ['minHeight', 'maxHeight', 'value',], []);
 
 export { AspectRatio };

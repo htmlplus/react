@@ -36,6 +36,6 @@ AvatarGroup$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var AvatarGroup = proxy(AvatarGroup$1.TAG, ['hoverable', 'stacked'], []);
+var AvatarGroup = proxy(AvatarGroup$1.TAG, ['hoverable', 'stacked',], []);
 
 export { AvatarGroup };

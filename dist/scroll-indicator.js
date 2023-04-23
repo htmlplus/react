@@ -111,6 +111,6 @@ ScrollIndicator$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var ScrollIndicator = proxy(ScrollIndicator$1.TAG, ['disabled', 'source'], ['plusScroll']);
+var ScrollIndicator = proxy(ScrollIndicator$1.TAG, ['disabled', 'source',], ['plusScroll',]);
 
 export { ScrollIndicator };

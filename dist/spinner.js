@@ -64,6 +64,6 @@ Spinner$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Spinner = proxy(Spinner$1.TAG, ['size', 'type'], []);
+var Spinner = proxy(Spinner$1.TAG, ['size', 'type',], []);
 
 export { Spinner };

@@ -194,6 +194,6 @@ FormatBytes$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var FormatBytes = proxy(FormatBytes$1.TAG, ['display', 'locale', 'decimals', 'separator', 'signed', 'standard', 'unit', 'value'], []);
+var FormatBytes = proxy(FormatBytes$1.TAG, ['display', 'locale', 'decimals', 'separator', 'signed', 'standard', 'unit', 'value',], []);
 
 export { FormatBytes };

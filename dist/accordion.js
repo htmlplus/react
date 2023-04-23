@@ -203,6 +203,6 @@ Accordion$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Accordion = proxy(Accordion$1.TAG, ['disabled', 'open', 'summary'], ['plusCollapse', 'plusCollapsed', 'plusExpand', 'plusExpanded']);
+var Accordion = proxy(Accordion$1.TAG, ['disabled', 'open', 'summary',], ['plusCollapse', 'plusCollapsed', 'plusExpand', 'plusExpanded',]);
 
 export { Accordion };

@@ -25,7 +25,6 @@ export { Signature } from './signature.js';
 export { Spinner } from './spinner.js';
 export { Sticky } from './sticky.js';
 export { Switch } from './switch.js';
-export { Symbol } from './symbol.js';
 export { Tabs } from './tabs.compact.js';
 export { Tooltip } from './tooltip.js';
 import './index-e0fc73b0.js';

@@ -80,6 +80,6 @@ Floating$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Floating = proxy(Floating$1.TAG, ['fixed', 'offset', 'placement'], []);
+var Floating = proxy(Floating$1.TAG, ['fixed', 'offset', 'placement',], []);
 
 export { Floating };

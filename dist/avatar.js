@@ -140,6 +140,6 @@ Avatar$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Avatar = proxy(Avatar$1.TAG, ['shape', 'size'], []);
+var Avatar = proxy(Avatar$1.TAG, ['shape', 'size',], []);
 
 export { Avatar };

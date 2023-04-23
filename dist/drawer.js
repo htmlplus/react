@@ -325,19 +325,6 @@ Drawer$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Drawer = proxy(Drawer$1.TAG, [
-    'animation',
-    'backdrop',
-    'breakpoint',
-    'connector',
-    'mini',
-    'miniSize',
-    'open',
-    'persistent',
-    'placement',
-    'flexible',
-    'size',
-    'temporary'
-], ['plusClose', 'plusClosed', 'plusOpen', 'plusOpened']);
+var Drawer = proxy(Drawer$1.TAG, ['animation', 'backdrop', 'breakpoint', 'connector', 'mini', 'miniSize', 'open', 'persistent', 'placement', 'flexible', 'size', 'temporary',], ['plusClose', 'plusClosed', 'plusOpen', 'plusOpened',]);
 
 export { Drawer };

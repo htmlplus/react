@@ -222,40 +222,6 @@ Grid$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Grid = proxy(Grid$1.TAG, [
-    'alignContent',
-    'alignContentXs',
-    'alignContentSm',
-    'alignContentMd',
-    'alignContentLg',
-    'alignContentXl',
-    'alignContentXxl',
-    'alignItems',
-    'alignItemsXs',
-    'alignItemsSm',
-    'alignItemsMd',
-    'alignItemsLg',
-    'alignItemsXl',
-    'alignItemsXxl',
-    'gutter',
-    'gutterX',
-    'gutterY',
-    'justifyContent',
-    'justifyContentXs',
-    'justifyContentSm',
-    'justifyContentMd',
-    'justifyContentLg',
-    'justifyContentXl',
-    'justifyContentXxl',
-    'reverse',
-    'vertical',
-    'wrap',
-    'wrapXs',
-    'wrapSm',
-    'wrapMd',
-    'wrapLg',
-    'wrapXl',
-    'wrapXxl'
-], []);
+var Grid = proxy(Grid$1.TAG, ['alignContent', 'alignContentXs', 'alignContentSm', 'alignContentMd', 'alignContentLg', 'alignContentXl', 'alignContentXxl', 'alignItems', 'alignItemsXs', 'alignItemsSm', 'alignItemsMd', 'alignItemsLg', 'alignItemsXl', 'alignItemsXxl', 'gutter', 'gutterX', 'gutterY', 'justifyContent', 'justifyContentXs', 'justifyContentSm', 'justifyContentMd', 'justifyContentLg', 'justifyContentXl', 'justifyContentXxl', 'reverse', 'vertical', 'wrap', 'wrapXs', 'wrapSm', 'wrapMd', 'wrapLg', 'wrapXl', 'wrapXxl',], []);
 
 export { Grid };

@@ -30,6 +30,6 @@ Center$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Center = proxy(Center$1.TAG, ['inline'], []);
+var Center = proxy(Center$1.TAG, ['inline',], []);
 
 export { Center };

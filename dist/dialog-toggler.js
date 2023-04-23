@@ -74,6 +74,6 @@ DialogToggler$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var DialogToggler = proxy(DialogToggler$1.TAG, ['connector'], []);
+var DialogToggler = proxy(DialogToggler$1.TAG, ['connector',], []);
 
 export { DialogToggler };

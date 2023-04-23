@@ -124,6 +124,6 @@ Intersection$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Intersection = proxy(Intersection$1.TAG, ['disabled', 'once', 'root', 'rootMargin', 'threshold'], ['plusChange']);
+var Intersection = proxy(Intersection$1.TAG, ['disabled', 'once', 'root', 'rootMargin', 'threshold',], ['plusChange',]);
 
 export { Intersection };

@@ -75,6 +75,6 @@ Faker$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Faker = proxy(Faker$1.TAG, ['api', 'arguments', 'instance', 'seed'], []);
+var Faker = proxy(Faker$1.TAG, ['api', 'arguments', 'instance', 'seed',], []);
 
 export { Faker };

@@ -95,6 +95,6 @@ Portal$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Portal = proxy(Portal$1.TAG, ['disabled', 'strategy', 'target'], []);
+var Portal = proxy(Portal$1.TAG, ['disabled', 'strategy', 'target',], []);
 
 export { Portal };

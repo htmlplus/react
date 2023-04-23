@@ -93,6 +93,6 @@ Tabs$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Tabs = proxy(Tabs$1.TAG, ['value', 'vertical', 'connector'], ['plusChange']);
+var Tabs = proxy(Tabs$1.TAG, ['value', 'vertical', 'connector',], ['plusChange',]);
 
 export { Tabs };

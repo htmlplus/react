@@ -371,22 +371,6 @@ Animation$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Animation = proxy(Animation$1.TAG, [
-    'composite',
-    'delay',
-    'direction',
-    'duration',
-    'easing',
-    'endDelay',
-    'fill',
-    'instance',
-    'iterationComposite',
-    'iterations',
-    'iterationStart',
-    'keyframes',
-    'name',
-    'playbackRate',
-    'run'
-], ['plusCancel', 'plusFinish', 'plusRemove']);
+var Animation = proxy(Animation$1.TAG, ['composite', 'delay', 'direction', 'duration', 'easing', 'endDelay', 'fill', 'instance', 'iterationComposite', 'iterations', 'iterationStart', 'keyframes', 'name', 'playbackRate', 'run',], ['plusCancel', 'plusFinish', 'plusRemove',]);
 
 export { Animation };

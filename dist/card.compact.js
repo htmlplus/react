@@ -8,7 +8,7 @@ import 'react';
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 var All = Object.assign(Card, {
-    Body: CardBody
+    Body: CardBody,
 });
 
 export { All as Card };

@@ -276,48 +276,6 @@ GridItem$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var GridItem = proxy(GridItem$1.TAG, [
-    'alignSelf',
-    'alignSelfXs',
-    'alignSelfSm',
-    'alignSelfMd',
-    'alignSelfLg',
-    'alignSelfXl',
-    'alignSelfXxl',
-    'xs',
-    'sm',
-    'md',
-    'lg',
-    'xl',
-    'xxl',
-    'hideXs',
-    'hideSm',
-    'hideMd',
-    'hideLg',
-    'hideXl',
-    'hideXxl',
-    'hide',
-    'hideSmUp',
-    'hideMdUp',
-    'hideLgUp',
-    'hideXlUp',
-    'hideSmDown',
-    'hideMdDown',
-    'hideLgDown',
-    'hideXlDown',
-    'hideXxlDown',
-    'offsetXs',
-    'offsetSm',
-    'offsetMd',
-    'offsetLg',
-    'offsetXl',
-    'offsetXxl',
-    'orderXs',
-    'orderSm',
-    'orderMd',
-    'orderLg',
-    'orderXl',
-    'orderXxl'
-], []);
+var GridItem = proxy(GridItem$1.TAG, ['alignSelf', 'alignSelfXs', 'alignSelfSm', 'alignSelfMd', 'alignSelfLg', 'alignSelfXl', 'alignSelfXxl', 'xs', 'sm', 'md', 'lg', 'xl', 'xxl', 'hideXs', 'hideSm', 'hideMd', 'hideLg', 'hideXl', 'hideXxl', 'hide', 'hideSmUp', 'hideMdUp', 'hideLgUp', 'hideXlUp', 'hideSmDown', 'hideMdDown', 'hideLgDown', 'hideXlDown', 'hideXxlDown', 'offsetXs', 'offsetSm', 'offsetMd', 'offsetLg', 'offsetXl', 'offsetXxl', 'orderXs', 'orderSm', 'orderMd', 'orderLg', 'orderXl', 'orderXxl',], []);
 
 export { GridItem };

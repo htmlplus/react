@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import type { BrowseJSX } from '@htmlplus/core/types/components/browse/browse';
+import type { BrowseJSX as BrowseJSX } from '@htmlplus/core/types/components/browse/browse';
 import type { Rename } from '../proxy';
 export declare const Browse: import("react").ForwardRefExoticComponent<Rename<BrowseJSX, {
     onPlusChange: 'onChange';

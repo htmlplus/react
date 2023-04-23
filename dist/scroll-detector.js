@@ -94,6 +94,6 @@ ScrollDetector$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var ScrollDetector = proxy(ScrollDetector$1.TAG, ['disabled', 'reference', 'vertical'], ['plusChange']);
+var ScrollDetector = proxy(ScrollDetector$1.TAG, ['disabled', 'reference', 'vertical',], ['plusChange',]);
 
 export { ScrollDetector };

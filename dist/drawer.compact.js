@@ -8,7 +8,7 @@ import 'react';
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 var All = Object.assign(Drawer, {
-    Toggler: DrawerToggler
+    Toggler: DrawerToggler,
 });
 
 export { All as Drawer };

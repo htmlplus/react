@@ -373,23 +373,6 @@ Dialog$1 = Dialog_1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Dialog = proxy(Dialog$1.TAG, [
-    'animation',
-    'backdrop',
-    'connector',
-    'fullHeight',
-    'fullWidth',
-    'fullscreen',
-    'keyboard',
-    'open',
-    'persistent',
-    'placement',
-    'portal',
-    'portalStrategy',
-    'portalTarget',
-    'scrollable',
-    'size',
-    'sticky'
-], ['plusClose', 'plusClosed', 'plusOpen', 'plusOpened']);
+var Dialog = proxy(Dialog$1.TAG, ['animation', 'backdrop', 'connector', 'fullHeight', 'fullWidth', 'fullscreen', 'keyboard', 'open', 'persistent', 'placement', 'portal', 'portalStrategy', 'portalTarget', 'scrollable', 'size', 'sticky',], ['plusClose', 'plusClosed', 'plusOpen', 'plusOpened',]);
 
 export { Dialog };

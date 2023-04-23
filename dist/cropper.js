@@ -505,24 +505,6 @@ Cropper$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Cropper = proxy(Cropper$1.TAG, [
-    'area',
-    'aspectRatio',
-    'backdrop',
-    'background',
-    'disabled',
-    'guides',
-    'indicator',
-    'mode',
-    'resizer',
-    'resizerShape',
-    'responsive',
-    'shape',
-    'src',
-    'value',
-    'view',
-    'zoomable',
-    'zoomRatio'
-], ['plusCrop', 'plusCropEnd', 'plusCropMove', 'plusCropStart', 'plusReady', 'plusZoom']);
+var Cropper = proxy(Cropper$1.TAG, ['area', 'aspectRatio', 'backdrop', 'background', 'disabled', 'guides', 'indicator', 'mode', 'resizer', 'resizerShape', 'responsive', 'shape', 'src', 'value', 'view', 'zoomable', 'zoomRatio',], ['plusCrop', 'plusCropEnd', 'plusCropMove', 'plusCropStart', 'plusReady', 'plusZoom',]);
 
 export { Cropper };

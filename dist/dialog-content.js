@@ -29,6 +29,6 @@ DialogContent$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var DialogContent = proxy(DialogContent$1.TAG, ['scrollable'], []);
+var DialogContent = proxy(DialogContent$1.TAG, ['scrollable',], []);
 
 export { DialogContent };

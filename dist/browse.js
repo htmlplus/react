@@ -185,6 +185,6 @@ Browse$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Browse = proxy(Browse$1.TAG, ['accept', 'disabled', 'droppable', 'min', 'max', 'minSize', 'maxSize', 'multiple'], ['plusChange', 'plusError', 'plusSuccess']);
+var Browse = proxy(Browse$1.TAG, ['accept', 'disabled', 'droppable', 'min', 'max', 'minSize', 'maxSize', 'multiple',], ['plusChange', 'plusError', 'plusSuccess',]);
 
 export { Browse };

@@ -56,6 +56,6 @@ TabsBar$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var TabsBar = proxy(TabsBar$1.TAG, ['grow', 'justify', 'reverse'], []);
+var TabsBar = proxy(TabsBar$1.TAG, ['grow', 'justify', 'reverse',], []);
 
 export { TabsBar };

@@ -42,6 +42,6 @@ TabsPanels$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var TabsPanels = proxy(TabsPanels$1.TAG, ['connector'], []);
+var TabsPanels = proxy(TabsPanels$1.TAG, ['connector',], []);
 
 export { TabsPanels };

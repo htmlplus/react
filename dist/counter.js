@@ -271,6 +271,6 @@ Counter$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Counter = proxy(Counter$1.TAG, ['easing', 'decimal', 'decimals', 'delay', 'duration', 'from', 'numerals', 'play', 'separator', 'to'], ['plusComplete']);
+var Counter = proxy(Counter$1.TAG, ['easing', 'decimal', 'decimals', 'delay', 'duration', 'from', 'numerals', 'play', 'separator', 'to',], ['plusComplete',]);
 
 export { Counter };

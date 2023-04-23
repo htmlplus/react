@@ -332,6 +332,6 @@ Tooltip$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Tooltip = proxy(Tooltip$1.TAG, ['arrow', 'delay', 'disabled', 'fixed', 'offset', 'placement', 'reference', 'trigger', 'z'], []);
+var Tooltip = proxy(Tooltip$1.TAG, ['arrow', 'delay', 'disabled', 'fixed', 'offset', 'placement', 'reference', 'trigger', 'z',], []);
 
 export { Tooltip };

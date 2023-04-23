@@ -378,18 +378,6 @@ Signature$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Signature = proxy(Signature$1.TAG, [
-    'backgroundColor',
-    'clearOnResize',
-    'color',
-    'disabled',
-    'distance',
-    'dotSize',
-    'maxWidth',
-    'minWidth',
-    'resizable',
-    'throttle',
-    'velocity'
-], ['plusAfter', 'plusBefore', 'plusEnd', 'plusStart']);
+var Signature = proxy(Signature$1.TAG, ['backgroundColor', 'clearOnResize', 'color', 'disabled', 'distance', 'dotSize', 'maxWidth', 'minWidth', 'resizable', 'throttle', 'velocity',], ['plusAfter', 'plusBefore', 'plusEnd', 'plusStart',]);
 
 export { Signature };

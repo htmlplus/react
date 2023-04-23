@@ -195,6 +195,6 @@ Breadcrumb$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Breadcrumb = proxy(Breadcrumb$1.TAG, ['expanderText', 'offset', 'max', 'separator'], []);
+var Breadcrumb = proxy(Breadcrumb$1.TAG, ['expanderText', 'offset', 'max', 'separator',], []);
 
 export { Breadcrumb };

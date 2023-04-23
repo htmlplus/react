@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 import { Accordion as AccordionCore } from '@htmlplus/core/accordion';
-import type { AccordionElement, AccordionJSX } from '@htmlplus/core/types/components/accordion/accordion';
+import type { AccordionElement, AccordionJSX as AccordionJSX } from '@htmlplus/core/types/components/accordion/accordion';
 
 import { proxy } from '../proxy';
 import type { Rename } from '../proxy';
@@ -18,7 +18,7 @@ type Renamed = Rename<
 >;
 
 export const Accordion = proxy<AccordionElement, Renamed>(
-  AccordionCore.TAG,
-  ['disabled', 'open', 'summary'],
-  ['plusCollapse', 'plusCollapsed', 'plusExpand', 'plusExpanded']
+  AccordionCore.TAG, 
+  ['disabled', 'open', 'summary', ], 
+  ['plusCollapse', 'plusCollapsed', 'plusExpand', 'plusExpanded', ],
 );

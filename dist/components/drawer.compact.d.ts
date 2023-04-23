@@ -1,3 +1,6 @@
+/**************************************************
+ * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
+ **************************************************/
 /// <reference types="react" />
 declare const All: import("react").ForwardRefExoticComponent<import("../proxy").Rename<import("@htmlplus/core/types/components/drawer/drawer").DrawerJSX, {
     onPlusClose: "onClose";

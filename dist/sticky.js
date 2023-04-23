@@ -126,6 +126,6 @@ Sticky$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Sticky = proxy(Sticky$1.TAG, ['top', 'watcher', 'zIndex'], ['plusChange']);
+var Sticky = proxy(Sticky$1.TAG, ['top', 'watcher', 'zIndex',], ['plusChange',]);
 
 export { Sticky };
