@@ -1,6 +1,6 @@
 {
   "name": "@htmlplus/react",
-  "version": "0.7.7-next-04240020",
+  "version": "0.7.7-next-04240025",
   "license": "MIT",
   "sideEffects": false,
   "author": "Masood Abdolian <m.abdolian@gmail.com>",
@@ -10,7 +10,6 @@
   "types": "index.d.ts",
   "scripts": {
     "build": "npm run clean && rollup -c",
-    "format": "prettier --write .",
     "clean": "rimraf dist"
   },
   "files": [
