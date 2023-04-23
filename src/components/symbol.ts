@@ -11,6 +11,6 @@ type Renamed = Rename<SymbolJSX, {}>;
 
 export const Symbol = proxy<SymbolElement, Renamed>(
   SymbolCore.TAG,
-  ['color', 'flip', 'label', 'name', 'resolver', 'rotate', 'size'],
+  ['color', 'defaults', 'flip', 'label', 'name', 'resolver', 'rotate', 'size'],
   []
 );

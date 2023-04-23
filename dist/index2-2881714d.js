@@ -1,5 +1,5 @@
-import { s as setConfig } from './config-aa3739b5.js';
-import './index-2b3ba3ff.js';
+import { s as setConfig } from './config-1feada7c.js';
+import './index-e0fc73b0.js';
 
 const reload = `
     <svg viewBox="0 0 24 24">
