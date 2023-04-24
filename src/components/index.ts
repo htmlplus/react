@@ -27,6 +27,7 @@ export * from './scroll-detector';
 export * from './scroll-indicator';
 export * from './signature';
 export * from './spinner';
+export * from './stack';
 export * from './sticky';
 export * from './switch';
 export * from './tabs.compact';
