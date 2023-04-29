@@ -100,6 +100,9 @@ let Accordion$1 = class Accordion {
         }
     }
     watcher(next, prev, name) {
+        // TODO: problem with `false` and `undefined`
+        if (!next == !prev)
+            return;
         switch (name) {
             case 'open':
                 this.try(next, true);

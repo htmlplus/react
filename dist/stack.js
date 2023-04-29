@@ -6,18 +6,31 @@ import 'react';
  * @slot default - The default slot.
  */
 let Stack$1 = class Stack {
+    constructor() {
+        /**
+         * TODO.
+         */
+        this.alignItems = 'center';
+        /**
+         * TODO.
+         */
+        this.justifyContent = 'center';
+    }
     get attributes() {
         return {
             style: this.style
         };
     }
     get style() {
+        let direction = this.vertical ? 'column' : 'row';
+        if (this.reverse)
+            direction += '-reverse';
         return styles({
-            'align-items': 'center',
+            'align-items': this.alignItems,
             'display': 'flex',
-            'flex-direction': this.vertical ? 'column' : 'row',
+            'flex-direction': direction,
             'gap': toUnit(this.gap),
-            'justify-content': 'center'
+            'justify-content': this.justifyContent
         });
     }
     render() {
@@ -28,9 +41,24 @@ let Stack$1 = class Stack {
 Stack$1.TAG = "plus-stack";
 __decorate([
     Property({
+        type: 264
+    })
+], Stack$1.prototype, "alignItems", void 0);
+__decorate([
+    Property({
         type: 256
     })
 ], Stack$1.prototype, "gap", void 0);
+__decorate([
+    Property({
+        type: 264
+    })
+], Stack$1.prototype, "justifyContent", void 0);
+__decorate([
+    Property({
+        type: 2
+    })
+], Stack$1.prototype, "reverse", void 0);
 __decorate([
     Property({
         type: 2
@@ -46,6 +74,6 @@ Stack$1 = __decorate([
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var Stack = proxy(Stack$1.TAG, ['gap', 'vertical',], []);
+var Stack = proxy(Stack$1.TAG, ['alignItems', 'gap', 'justifyContent', 'reverse', 'vertical',], []);
 
 export { Stack };

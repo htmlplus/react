@@ -15,6 +15,6 @@ type Renamed = Rename<
 
 export const Stack = proxy<StackElement, Renamed>(
   StackCore.TAG, 
-  ['gap', 'vertical', ], 
+  ['alignItems', 'gap', 'justifyContent', 'reverse', 'vertical', ], 
   [],
 );
