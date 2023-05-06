@@ -1,4 +1,4 @@
-import { _ as __decorate, g as toUnit, c as styles, u as uhtml, P as Property, E as Event$1, S as State, d as Attributes, W as Watch, B as Bind, b as Element } from './index-e0fc73b0.js';
+import { _ as __decorate, j as toUnit, d as styles, b as html, e as attributes$1, h as host, P as Property, E as Event$1, S as State, W as Watch, B as Bind, c as Element } from './index-c3e2db65.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -16,12 +16,6 @@ let Sticky$1 = class Sticky {
          * Specifies the space from top.
          */
         this.top = 0;
-    }
-    get attributes() {
-        return {
-            state: this.watcher ? this.state : null,
-            style: this.style
-        };
     }
     get sizer() {
         const top = toUnit(this.top);
@@ -78,11 +72,19 @@ let Sticky$1 = class Sticky {
         this.unbind();
     }
     render() {
-        return uhtml.html `<div class="sizer-wrapper">
+        return html `${attributes$1(host(this), [{
+                "state": this.watcher ? this.state : null
+            }, {
+                "style": styles(this.style)
+            }])}
+        <div class="sizer-wrapper">
           <div class="sizer" ref=${$element => this.$element = $element} style=${styles(this.sizer)}></div>
-        </div><slot />${this.state && uhtml.html `<div class=${this.state}>
+        </div>
+        <slot />
+        ${this.state && html `<div class=${this.state}>
             <slot name=${this.state} />
-          </div>`}`;
+          </div>`}
+      `;
     }
 };
 // THIS PROPERTY IS AUTO-ADDED, DO NOT EDIT MANUALY
@@ -110,9 +112,6 @@ __decorate([
 __decorate([
     State()
 ], Sticky$1.prototype, "state", void 0);
-__decorate([
-    Attributes()
-], Sticky$1.prototype, "attributes", null);
 __decorate([
     Watch(['disabled', 'watcher'])
 ], Sticky$1.prototype, "watchers", null);

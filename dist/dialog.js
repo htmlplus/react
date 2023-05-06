@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, E as Event$1, d as Attributes, W as Watch, B as Bind, l as createLink, h as host, t as toAxis, i as isRTL, f as classes, m as Animation, n as Scrollbar, e as off, j as Portal, o as on, u as uhtml, b as Element } from './index-e0fc73b0.js';
+import { _ as __decorate, P as Property, E as Event$1, W as Watch, B as Bind, m as createLink, h as host, t as toAxis, i as isRTL, g as classes, n as Animation, p as Scrollbar, f as off, k as Portal, o as on, b as html, e as attributes$1, c as Element } from './index-c3e2db65.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -41,19 +41,6 @@ let Dialog$1 = Dialog_1 = class Dialog {
     }
     get $host() {
         return host(this);
-    }
-    get attributes() {
-        const attributes = {
-            tabindex: -1
-        };
-        if (this.isOpen) {
-            attributes['role'] = 'dialog';
-            attributes['aria-modal'] = 'true';
-        }
-        else {
-            attributes['aria-hidden'] = 'true';
-        }
-        return attributes;
     }
     get classes() {
         let placement = this.placement || '';
@@ -234,15 +221,26 @@ let Dialog$1 = Dialog_1 = class Dialog {
         this.terminate();
     }
     render() {
-        return uhtml.html `${this.backdrop && uhtml.html `<div class="backdrop" part="backdrop">
+        return html `${attributes$1(host(this), [{
+                "aria-hidden": this.isOpen ? null : 'true'
+            }, {
+                "aria-modal": this.isOpen ? 'true' : null
+            }, {
+                "tabindex": -1
+            }, {
+                "role": this.isOpen ? 'dialog' : null
+            }])}
+        ${this.backdrop && html `<div class="backdrop" part="backdrop">
             <div />
-          </div>`}<div class=${this.classes}>
+          </div>`}
+        <div class=${this.classes}>
           <div class="table">
             <div class="cell">
               <slot ref=${$element => this.$cell = $element} />
             </div>
           </div>
-        </div>`;
+        </div>
+      `;
     }
 };
 // THIS PROPERTY IS AUTO-ADDED, DO NOT EDIT MANUALY
@@ -351,9 +349,6 @@ __decorate([
 __decorate([
     Observable()
 ], Dialog$1.prototype, "tunnel", void 0);
-__decorate([
-    Attributes()
-], Dialog$1.prototype, "attributes", null);
 __decorate([
     Action()
 ], Dialog$1.prototype, "toggle", null);

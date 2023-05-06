@@ -1,4 +1,4 @@
-import { _ as __decorate, h as host, u as uhtml, P as Property, E as Event$1, S as State, d as Attributes, W as Watch, B as Bind, b as Element } from './index-e0fc73b0.js';
+import { _ as __decorate, h as host, b as html, e as attributes$1, P as Property, E as Event$1, S as State, W as Watch, B as Bind, c as Element } from './index-c3e2db65.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -7,11 +7,6 @@ import 'react';
  * @slot default - The default slot.
  */
 let Intersection$1 = class Intersection {
-    get attributes() {
-        return {
-            state: this.isIntersecting ? 'in' : 'out'
-        };
-    }
     get disconnected() {
         return this.once && this.isIntersecting;
     }
@@ -72,7 +67,11 @@ let Intersection$1 = class Intersection {
         this.unbind();
     }
     render() {
-        return uhtml.html `<slot />`;
+        return html `${attributes$1(host(this), [{
+                "state": this.isIntersecting ? 'in' : 'out'
+            }])}
+        <slot />
+      `;
     }
 };
 // THIS PROPERTY IS AUTO-ADDED, DO NOT EDIT MANUALY
@@ -108,9 +107,6 @@ __decorate([
 __decorate([
     State()
 ], Intersection$1.prototype, "isIntersecting", void 0);
-__decorate([
-    Attributes()
-], Intersection$1.prototype, "attributes", null);
 __decorate([
     Watch(['behavior', 'disabled', 'once', 'root', 'rootMargin', 'threshold'])
 ], Intersection$1.prototype, "watcher", null);

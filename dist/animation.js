@@ -1,5 +1,5 @@
-import { _ as __decorate, s as setConfig, h as host, u as uhtml, P as Property, E as Event$1, M as Method, W as Watch, B as Bind, b as Element } from './index-e0fc73b0.js';
-import { g as getConfig } from './config-1feada7c.js';
+import { _ as __decorate, s as setConfig, h as host, b as html, P as Property, E as Event$1, M as Method, W as Watch, B as Bind, c as Element } from './index-c3e2db65.js';
+import { g as getConfig } from './config-0c64421b.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -236,7 +236,7 @@ let Animation$1 = class Animation {
         (_c = this.instance) === null || _c === void 0 ? void 0 : _c.removeEventListener('remove', this.onFinish);
     }
     render() {
-        return uhtml.html `<slot />`;
+        return html `<slot />`;
     }
 };
 // THIS PROPERTY IS AUTO-ADDED, DO NOT EDIT MANUALY

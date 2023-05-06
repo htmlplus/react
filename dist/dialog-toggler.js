@@ -1,4 +1,4 @@
-import { _ as __decorate, l as createLink, u as uhtml, P as Property, d as Attributes, W as Watch, B as Bind, b as Element } from './index-e0fc73b0.js';
+import { _ as __decorate, m as createLink, b as html, e as attributes$1, h as host, P as Property, W as Watch, B as Bind, c as Element } from './index-c3e2db65.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -17,13 +17,6 @@ let DialogToggler$1 = class DialogToggler {
     constructor() {
         this.toggle = () => console.log('TODO: can not use out of dialog');
     }
-    get attributes() {
-        return {
-            role: 'button',
-            state: this.tunnel ? 'open' : 'close',
-            onClick: this.onClick
-        };
-    }
     get text() {
         return this.tunnel ? 'Close' : 'Open';
     }
@@ -40,7 +33,15 @@ let DialogToggler$1 = class DialogToggler {
         this.toggle();
     }
     render() {
-        return uhtml.html `<slot>${this.text}</slot>`;
+        return html `${attributes$1(host(this), [{
+                "role": "button"
+            }, {
+                "state": this.tunnel ? 'open' : 'close'
+            }, {
+                "onClick": this.onClick
+            }])}
+        <slot>${this.text}</slot>
+      `;
     }
 };
 // THIS PROPERTY IS AUTO-ADDED, DO NOT EDIT MANUALY
@@ -58,9 +59,6 @@ __decorate([
 __decorate([
     Inject(true)
 ], DialogToggler$1.prototype, "tunnel", void 0);
-__decorate([
-    Attributes()
-], DialogToggler$1.prototype, "attributes", null);
 __decorate([
     Watch(['connector'])
 ], DialogToggler$1.prototype, "watcher", null);

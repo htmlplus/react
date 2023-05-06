@@ -1,20 +1,10 @@
-import { _ as __decorate, u as uhtml, P as Property, E as Event$1, d as Attributes, B as Bind, b as Element } from './index-e0fc73b0.js';
+import { _ as __decorate, b as html, e as attributes$1, h as host, P as Property, E as Event$1, B as Bind, c as Element } from './index-c3e2db65.js';
 import { proxy } from './proxy.js';
 import 'react';
 
 var css_248z = ":host,:host:after,:host:before{box-sizing:border-box}:host *,:host :after,:host :before{box-sizing:border-box}:host([hidden]:not([hidden=false])){display:none!important}:host{border-radius:2em;cursor:pointer;display:inline-block;height:2em;overflow:hidden;user-select:none;vertical-align:middle;width:3.5em}:host([disabled]:not([disabled=false])){opacity:.5}.root{align-items:center;display:flex;flex-wrap:nowrap;height:100%;justify-content:space-between;position:relative;width:100%}.handle,.root{border-radius:inherit;transition:.3s}.handle{background:#fff;height:1.5em;left:50%;position:absolute;top:50%;width:1.5em;z-index:1}.slot{border-radius:inherit;font-size:.8em}.off{border-bottom-left-radius:0;border-top-left-radius:0;padding:0 .5em 0 0}.on{border-bottom-right-radius:0;border-top-right-radius:0;padding:0 0 0 .5em}:host .root{background:#d3d3d3}:host .handle{transform:translate(-1.5em,-50%)}:host .on{opacity:0}:host .off{opacity:1}:host([checked]:not([checked=false])) .root{background:#2196f3}:host([checked]:not([checked=false])) .handle{transform:translate(calc(1.5em - 100%),-50%)}:host([checked]:not([checked=false])) .on{opacity:1}:host([checked]:not([checked=false])) .off{opacity:0}";
 
 let Switch$1 = class Switch {
-    get attributes() {
-        return {
-            'aria-checked': `${!!this.checked}`,
-            'aria-disabled': `${!!this.disabled}`,
-            'role': 'switch',
-            'tabindex': '0',
-            'onClick': this.onClick,
-            'onKeyDown': this.onKeyDown
-        };
-    }
     toggle() {
         if (this.disabled)
             return;
@@ -32,17 +22,31 @@ let Switch$1 = class Switch {
         this.toggle();
     }
     render() {
-        return uhtml.html `<div class="root" part="root">
-        <div class="slot on" part="slot on">
-          <slot name="on" />
+        return html `${attributes$1(host(this), [{
+                "aria-checked": `${!!this.checked}`
+            }, {
+                "aria-disabled": `${!!this.disabled}`
+            }, {
+                "role": "switch"
+            }, {
+                "tabindex": 0
+            }, {
+                "onClick": this.onClick
+            }, {
+                "onKeyDown": this.onKeyDown
+            }])}
+        <div class="root" part="root">
+          <div class="slot on" part="slot on">
+            <slot name="on" />
+          </div>
+          <div class="handle" part="handle">
+            <slot name="handle" />
+          </div>
+          <div class="slot off" part="slot off">
+            <slot name="off" />
+          </div>
         </div>
-        <div class="handle" part="handle">
-          <slot name="handle" />
-        </div>
-        <div class="slot off" part="slot off">
-          <slot name="off" />
-        </div>
-      </div>`;
+      `;
     }
 };
 // THIS PROPERTY IS AUTO-ADDED, DO NOT EDIT MANUALY
@@ -64,9 +68,6 @@ __decorate([
 __decorate([
     Event$1()
 ], Switch$1.prototype, "plusChange", void 0);
-__decorate([
-    Attributes()
-], Switch$1.prototype, "attributes", null);
 __decorate([
     Bind()
 ], Switch$1.prototype, "onClick", null);

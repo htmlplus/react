@@ -1,4 +1,4 @@
-import { _ as __decorate, o as on, e as off, u as uhtml, P as Property, E as Event$1, d as Attributes, W as Watch, B as Bind, b as Element } from './index-e0fc73b0.js';
+import { _ as __decorate, o as on, f as off, b as html, P as Property, E as Event$1, W as Watch, B as Bind, c as Element } from './index-c3e2db65.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -20,11 +20,6 @@ let ScrollIndicator$1 = class ScrollIndicator {
         if (this.source === 'document')
             return document;
         return document.querySelector(this.source);
-    }
-    get attributes() {
-        return {
-        // 'role': 'TODO'
-        };
     }
     get progress() {
         var _a;
@@ -75,7 +70,7 @@ let ScrollIndicator$1 = class ScrollIndicator {
         this.unbind();
     }
     render() {
-        return uhtml.html `<div class="indicator" part="indicator" ref=${$element => this.$indicator = $element} />`;
+        return html `<div class="indicator" part="indicator" ref=${$element => this.$indicator = $element} />`;
     }
 };
 // THIS PROPERTY IS AUTO-ADDED, DO NOT EDIT MANUALY
@@ -95,9 +90,6 @@ __decorate([
 __decorate([
     Event$1()
 ], ScrollIndicator$1.prototype, "plusScroll", void 0);
-__decorate([
-    Attributes()
-], ScrollIndicator$1.prototype, "attributes", null);
 __decorate([
     Watch(['disabled', 'source'])
 ], ScrollIndicator$1.prototype, "watcher", null);

@@ -1,4 +1,4 @@
-import { _ as __decorate, f as classes, a as __awaiter, u as uhtml, P as Property, E as Event$1, M as Method, W as Watch, B as Bind, b as Element } from './index-e0fc73b0.js';
+import { _ as __decorate, g as classes, a as __awaiter, b as html, P as Property, E as Event$1, M as Method, W as Watch, B as Bind, c as Element } from './index-c3e2db65.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -332,7 +332,7 @@ let Cropper$1 = class Cropper {
         this.unbind();
     }
     render() {
-        return uhtml.html `<div class=${this.classes}>
+        return html `<div class=${this.classes}>
         <img class="image" alt="cropper" ref=${$element => this.$image = $element} src=${this.src} />
       </div>`;
     }

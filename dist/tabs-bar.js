@@ -1,4 +1,4 @@
-import { _ as __decorate, u as uhtml, P as Property, d as Attributes, b as Element } from './index-e0fc73b0.js';
+import { _ as __decorate, b as html, e as attributes$1, h as host, P as Property, c as Element } from './index-c3e2db65.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -15,13 +15,12 @@ let TabsBar$1 = class TabsBar {
          */
         this.justify = 'start';
     }
-    get attributes() {
-        return {
-            role: 'tablist'
-        };
-    }
     render() {
-        return uhtml.html `<slot />`;
+        return html `${attributes$1(host(this), [{
+                "role": "tablist"
+            }])}
+        <slot />
+      `;
     }
 };
 // THIS PROPERTY IS AUTO-ADDED, DO NOT EDIT MANUALY
@@ -46,9 +45,6 @@ __decorate([
         type: 2
     })
 ], TabsBar$1.prototype, "reverse", void 0);
-__decorate([
-    Attributes()
-], TabsBar$1.prototype, "attributes", null);
 TabsBar$1 = __decorate([
     Element()
 ], TabsBar$1);

@@ -1,4 +1,4 @@
-import { _ as __decorate, l as createLink, h as host, t as toAxis, i as isRTL, f as classes, c as styles, m as Animation, n as Scrollbar, e as off, o as on, u as uhtml, P as Property, E as Event$1, S as State, d as Attributes, W as Watch, B as Bind, p as Media, b as Element } from './index-e0fc73b0.js';
+import { _ as __decorate, m as createLink, h as host, t as toAxis, i as isRTL, g as classes, d as styles, n as Animation, p as Scrollbar, f as off, o as on, b as html, e as attributes$1, P as Property, E as Event$1, S as State, W as Watch, B as Bind, u as Media, c as Element } from './index-c3e2db65.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -26,12 +26,6 @@ let Drawer$1 = class Drawer {
     }
     get $host() {
         return host(this);
-    }
-    get attributes() {
-        return {
-            platform: this.platform,
-            style: this.styles
-        };
     }
     get classes() {
         const placement = toAxis(this.placement || 'start', isRTL(this));
@@ -206,11 +200,18 @@ let Drawer$1 = class Drawer {
         this.terminate();
     }
     render() {
-        return uhtml.html `${this.hasBackdrop ? uhtml.html `<div class="backdrop" part="backdrop">
+        return html `${attributes$1(host(this), [{
+                "platform": this.platform
+            }, {
+                "style": styles(this.styles)
+            }])}
+        ${this.hasBackdrop ? html `<div class="backdrop" part="backdrop">
             <div />
-          </div>` : ''}<div class=${this.classes} ref=${$element => this.$root = $element}>
+          </div>` : ''}
+        <div class=${this.classes} ref=${$element => this.$root = $element}>
           <slot />
-        </div>`;
+        </div>
+      `;
     }
 };
 // THIS PROPERTY IS AUTO-ADDED, DO NOT EDIT MANUALY
@@ -302,9 +303,6 @@ __decorate([
 __decorate([
     Observable()
 ], Drawer$1.prototype, "tunnel", void 0);
-__decorate([
-    Attributes()
-], Drawer$1.prototype, "attributes", null);
 __decorate([
     Action()
 ], Drawer$1.prototype, "toggle", null);

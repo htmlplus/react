@@ -1,4 +1,4 @@
-import { _ as __decorate, u as uhtml, P as Property, b as Element } from './index-e0fc73b0.js';
+import { _ as __decorate, b as html, P as Property, c as Element } from './index-c3e2db65.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -16,7 +16,7 @@ let GridItem$1 = class GridItem {
         this.alignSelf = 'auto';
     }
     render() {
-        return uhtml.html `<slot />`;
+        return html `<slot />`;
     }
 };
 // THIS PROPERTY IS AUTO-ADDED, DO NOT EDIT MANUALY

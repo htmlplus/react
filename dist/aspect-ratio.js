@@ -1,4 +1,4 @@
-import { _ as __decorate, u as uhtml, c as styles, P as Property, b as Element } from './index-e0fc73b0.js';
+import { _ as __decorate, b as html, d as styles, P as Property, c as Element } from './index-c3e2db65.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -44,7 +44,7 @@ let AspectRatio$1 = class AspectRatio {
         };
     }
     render() {
-        return uhtml.html `<div class="root" style=${styles(this.style)}>
+        return html `<div class="root" style=${styles(this.style)}>
         <slot />
       </div>`;
     }

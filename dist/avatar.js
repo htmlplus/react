@@ -1,4 +1,4 @@
-import { _ as __decorate, g as toUnit, i as isRTL, u as uhtml, c as styles, P as Property, d as Attributes, b as Element } from './index-e0fc73b0.js';
+import { _ as __decorate, i as isRTL, j as toUnit, b as html, e as attributes$1, d as styles, h as host, P as Property, c as Element } from './index-c3e2db65.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -20,13 +20,6 @@ let Avatar$1 = class Avatar {
          * Specifies the size of the component.
          */
         this.size = 'md';
-    }
-    get attributes() {
-        if (AVATAR_SIZES.includes(this.size))
-            return;
-        return {
-            style: `--plus-avatar-size: ${toUnit(this.size)}`
-        };
     }
     get PLACEMENTS() {
         const offset = this.shape == 'circle' ? '14.64466%' : '0';
@@ -108,10 +101,20 @@ let Avatar$1 = class Avatar {
             }
         };
     }
+    get style() {
+        if (AVATAR_SIZES.includes(this.size))
+            return;
+        return `--plus-avatar-size: ${toUnit(this.size)}`;
+    }
     render() {
-        return uhtml.html `<slot />${Object.keys(this.PLACEMENTS).map(PLACEMENT => uhtml.html `<div class=${PLACEMENT} style=${styles(this.PLACEMENTS[PLACEMENT])}>
+        return html `${attributes$1(host(this), [{
+                "style": styles(this.style)
+            }])}
+        <slot />
+        ${Object.keys(this.PLACEMENTS).map(PLACEMENT => html `<div class=${PLACEMENT} style=${styles(this.PLACEMENTS[PLACEMENT])}>
             <slot name=${PLACEMENT} />
-          </div>`)}`;
+          </div>`)}
+      `;
     }
 };
 // THIS PROPERTY IS AUTO-ADDED, DO NOT EDIT MANUALY
@@ -130,9 +133,6 @@ __decorate([
         type: 320
     })
 ], Avatar$1.prototype, "size", void 0);
-__decorate([
-    Attributes()
-], Avatar$1.prototype, "attributes", null);
 Avatar$1 = __decorate([
     Element()
 ], Avatar$1);

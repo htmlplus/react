@@ -1,4 +1,4 @@
-import { _ as __decorate, u as uhtml, P as Property, W as Watch, b as Element, l as createLink } from './index-e0fc73b0.js';
+import { _ as __decorate, b as html, P as Property, W as Watch, c as Element, m as createLink } from './index-c3e2db65.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -20,7 +20,7 @@ let TabsPanels$1 = class TabsPanels {
         reconnect(this);
     }
     render() {
-        return uhtml.html `<slot />`;
+        return html `<slot />`;
     }
 };
 // THIS PROPERTY IS AUTO-ADDED, DO NOT EDIT MANUALY

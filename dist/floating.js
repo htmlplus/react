@@ -1,4 +1,4 @@
-import { _ as __decorate, i as isRTL, t as toAxis, g as toUnit, c as styles, u as uhtml, P as Property, d as Attributes, b as Element } from './index-e0fc73b0.js';
+import { _ as __decorate, i as isRTL, t as toAxis, j as toUnit, d as styles, b as html, e as attributes$1, h as host, P as Property, c as Element } from './index-c3e2db65.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -44,13 +44,12 @@ let Floating$1 = class Floating {
         }
         return styles(style);
     }
-    get attributes() {
-        return {
-            style: this.style
-        };
-    }
     render() {
-        return uhtml.html `<slot />`;
+        return html `${attributes$1(host(this), [{
+                "style": styles(this.style)
+            }])}
+        <slot />
+      `;
     }
 };
 // THIS PROPERTY IS AUTO-ADDED, DO NOT EDIT MANUALY
@@ -70,9 +69,6 @@ __decorate([
         type: 8
     })
 ], Floating$1.prototype, "placement", void 0);
-__decorate([
-    Attributes()
-], Floating$1.prototype, "attributes", null);
 Floating$1 = __decorate([
     Element()
 ], Floating$1);

@@ -1,4 +1,4 @@
-import { _ as __decorate, A as Animation2, h as host, a as __awaiter, u as uhtml, P as Property, E as Event$1, M as Method, W as Watch, B as Bind, b as Element } from './index-e0fc73b0.js';
+import { _ as __decorate, A as Animation2, h as host, a as __awaiter, b as html, P as Property, E as Event$1, M as Method, W as Watch, B as Bind, c as Element } from './index-c3e2db65.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -128,20 +128,23 @@ let Accordion$1 = class Accordion {
         this.unbind();
     }
     render() {
-        return uhtml.html `<div aria-disabled=${!!this.disabled} aria-expanded=${!!this.open} class="header" part="header" role="button" tabindex=${this.disabled ? -1 : 0} ref=${$element => this.$header = $element} onClick=${this.onClick} onKeyDown=${this.onKeyDown}>
+        return html `
+        <div aria-disabled=${!!this.disabled} aria-expanded=${!!this.open} class="header" part="header" role="button" tabindex=${this.disabled ? -1 : 0} ref=${$element => this.$header = $element} onClick=${this.onClick} onKeyDown=${this.onKeyDown}>
           <slot class="summary" name="summary" part="summary">
             ${this.summary}
           </slot>
           <slot class="icon" name="icon">
             <slot name=${`icon-${this.open ? 'collapse' : 'expand'}`}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" part="svg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewbox="0 0 16 16" part="svg">
                 <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
               </svg>
             </slot>
           </slot>
-        </div><div class="body" part="body" ref=${$element => this.$body = $element}>
+        </div>
+        <div class="body" part="body" ref=${$element => this.$body = $element}>
           <slot class="content" part="content"></slot>
-        </div>`;
+        </div>
+      `;
     }
 };
 // THIS PROPERTY IS AUTO-ADDED, DO NOT EDIT MANUALY

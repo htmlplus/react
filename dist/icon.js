@@ -1,5 +1,5 @@
-import { _ as __decorate, a as __awaiter, h as host, g as toUnit, c as styles, P as Property, S as State, d as Attributes, W as Watch, b as Element } from './index-e0fc73b0.js';
-import { g as getConfig, s as setConfig } from './config-1feada7c.js';
+import { _ as __decorate, a as __awaiter, h as host, j as toUnit, d as styles, b as html, e as attributes$1, P as Property, S as State, W as Watch, c as Element } from './index-c3e2db65.js';
+import { g as getConfig, s as setConfig } from './config-0c64421b.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -60,15 +60,6 @@ let Icon$1 = class Icon {
                 mode: 'cors'
             }).then(response => response.text());
         });
-    }
-    get attributes() {
-        var _a;
-        return {
-            'aria-label': (_a = this.label) !== null && _a !== void 0 ? _a : null,
-            'aria-hidden': this.label ? null : `${!this.label}`,
-            'role': this.label ? 'img' : null,
-            'style': this.style
-        };
     }
     get $host() {
         return host(this);
@@ -155,7 +146,18 @@ let Icon$1 = class Icon {
         });
     }
     render() {
-        return this.svg || null;
+        var _a;
+        return html `${attributes$1(host(this), [{
+                "aria-hidden": this.label ? null : `${!this.label}`
+            }, {
+                "aria-label": (_a = this.label) !== null && _a !== void 0 ? _a : null
+            }, {
+                "role": this.label ? 'img' : null
+            }, {
+                "style": styles(this.style)
+            }])}
+        ${this.svg || null}
+      `;
     }
 };
 // THIS PROPERTY IS AUTO-ADDED, DO NOT EDIT MANUALY
@@ -204,9 +206,6 @@ __decorate([
 __decorate([
     State()
 ], Icon$1.prototype, "svg", void 0);
-__decorate([
-    Attributes()
-], Icon$1.prototype, "attributes", null);
 __decorate([
     Watch('name', true)
 ], Icon$1.prototype, "watcher", null);

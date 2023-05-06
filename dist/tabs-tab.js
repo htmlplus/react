@@ -1,4 +1,4 @@
-import { _ as __decorate, l as createLink, u as uhtml, P as Property, d as Attributes, B as Bind, b as Element } from './index-e0fc73b0.js';
+import { _ as __decorate, m as createLink, b as html, e as attributes$1, h as host, P as Property, B as Bind, c as Element } from './index-c3e2db65.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -15,12 +15,6 @@ let TabsTab$1 = class TabsTab {
     constructor() {
         this.change = () => console.log('TODO: can not use out of tabs');
     }
-    get attributes() {
-        return {
-            active: this.tunnel && this.tunnel === this.value,
-            onClick: this.onClick
-        };
-    }
     /**
      * Events handler
      */
@@ -30,9 +24,15 @@ let TabsTab$1 = class TabsTab {
         this.change(this.value);
     }
     render() {
-        return uhtml.html `<span>
-        <slot />
-      </span>`;
+        return html `${attributes$1(host(this), [{
+                "active": this.tunnel && this.tunnel === this.value
+            }, {
+                "onClick": this.onClick
+            }])}
+        <span>
+          <slot />
+        </span>
+      `;
     }
 };
 // THIS PROPERTY IS AUTO-ADDED, DO NOT EDIT MANUALY
@@ -56,9 +56,6 @@ __decorate([
 __decorate([
     Inject()
 ], TabsTab$1.prototype, "change", void 0);
-__decorate([
-    Attributes()
-], TabsTab$1.prototype, "attributes", null);
 __decorate([
     Bind()
 ], TabsTab$1.prototype, "onClick", null);

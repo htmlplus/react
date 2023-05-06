@@ -1,4 +1,4 @@
-import { _ as __decorate, u as uhtml, P as Property, d as Attributes, b as Element } from './index-e0fc73b0.js';
+import { _ as __decorate, b as html, e as attributes$1, h as host, P as Property, c as Element } from './index-c3e2db65.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -18,11 +18,6 @@ let Spinner$1 = class Spinner {
          */
         this.type = 'default';
     }
-    get attributes() {
-        return {
-            role: 'status'
-        };
-    }
     get elements() {
         var _a;
         const map = {
@@ -33,9 +28,13 @@ let Spinner$1 = class Spinner {
         return Array.from(Array(number).keys());
     }
     render() {
-        return uhtml.html `<div class="root">
-        ${this.elements.map(element => uhtml.html `<div key=${element} />`)}
-      </div>`;
+        return html `${attributes$1(host(this), [{
+                "role": "status"
+            }])}
+        <div class="root">
+          ${this.elements.map(element => html `<div key=${element} />`)}
+        </div>
+      `;
     }
 };
 // THIS PROPERTY IS AUTO-ADDED, DO NOT EDIT MANUALY
@@ -54,9 +53,6 @@ __decorate([
         type: 8
     })
 ], Spinner$1.prototype, "type", void 0);
-__decorate([
-    Attributes()
-], Spinner$1.prototype, "attributes", null);
 Spinner$1 = __decorate([
     Element()
 ], Spinner$1);

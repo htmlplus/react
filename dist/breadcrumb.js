@@ -1,4 +1,4 @@
-import { _ as __decorate, h as host, r as request, q as queryAll, u as uhtml, P as Property, d as Attributes, S as State, B as Bind, b as Element } from './index-e0fc73b0.js';
+import { _ as __decorate, h as host, r as request, q as queryAll, b as html, e as attributes$1, P as Property, S as State, B as Bind, c as Element } from './index-c3e2db65.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -28,11 +28,6 @@ let Breadcrumb$1 = class Breadcrumb {
         this.offset = 1;
         this.expand = false;
         this.observer = new MutationObserver(this.onChange);
-    }
-    get attributes() {
-        return {
-            'aria-label': 'breadcrumb'
-        };
     }
     get $children() {
         return Array.from(this.$host.children).filter($node => {
@@ -127,32 +122,36 @@ let Breadcrumb$1 = class Breadcrumb {
         });
     }
     render() {
-        return uhtml.html `<div class="container">
-        ${this.items.map(item => {
+        return html `${attributes$1(host(this), [{
+                "aria-label": "breadcrumb"
+            }])}
+        <div class="container">
+          ${this.items.map(item => {
             switch (item.type) {
                 case 'item':
                     {
-                        return uhtml.html `<div key=${item.key} part="item">
-                  <slot name=${item.slot} />
-                </div>`;
+                        return html `<div key=${item.key} part="item">
+                    <slot name=${item.slot} />
+                  </div>`;
                     }
                 case 'expander':
                     {
-                        return uhtml.html `<div aria-disabled="false" aria-label=${this.expanderText} class="expander" key=${item.key} part="expander" role="button" tabindex=${0} onClick=${() => this.expand = true} onKeyDown=${event => event.key.match(/Enter| /) && (this.expand = true)}>
-                  <slot name="expander">
-                    <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
-                    </svg>
-                  </slot>
-                </div>`;
+                        return html `<div aria-disabled="false" aria-label=${this.expanderText} class="expander" key=${item.key} part="expander" role="button" tabindex=${0} onClick=${() => this.expand = true} onKeyDown=${event => event.key.match(/Enter| /) && (this.expand = true)}>
+                    <slot name="expander">
+                      <svg focusable="false" viewbox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                      </svg>
+                    </slot>
+                  </div>`;
                     }
                 case 'separator':
                     {
-                        return uhtml.html `<div key=${item.key} aria-hidden="true" class="separator" part="separator" />`;
+                        return html `<div key=${item.key} aria-hidden="true" class="separator" part="separator" />`;
                     }
             }
         })}
-      </div>`;
+        </div>
+      `;
     }
 };
 // THIS PROPERTY IS AUTO-ADDED, DO NOT EDIT MANUALY
@@ -179,9 +178,6 @@ __decorate([
         type: 256
     })
 ], Breadcrumb$1.prototype, "separator", void 0);
-__decorate([
-    Attributes()
-], Breadcrumb$1.prototype, "attributes", null);
 __decorate([
     State()
 ], Breadcrumb$1.prototype, "expand", void 0);

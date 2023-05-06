@@ -1,4 +1,4 @@
-import { _ as __decorate, k as query, u as uhtml, P as Property, b as Element } from './index-e0fc73b0.js';
+import { _ as __decorate, l as query, b as html, P as Property, c as Element } from './index-c3e2db65.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -41,7 +41,7 @@ let Grid$1 = class Grid {
         }
     }
     render() {
-        return uhtml.html `<div>
+        return html `<div>
         <slot />
       </div>`;
     }

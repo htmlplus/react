@@ -1,4 +1,4 @@
-import { _ as __decorate, l as createLink, u as uhtml, P as Property, E as Event$1, W as Watch, b as Element } from './index-e0fc73b0.js';
+import { _ as __decorate, m as createLink, b as html, P as Property, E as Event$1, W as Watch, c as Element } from './index-c3e2db65.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -49,7 +49,7 @@ let Tabs$1 = class Tabs {
         this.initialize();
     }
     render() {
-        return uhtml.html `<slot />`;
+        return html `<slot />`;
     }
 };
 // THIS PROPERTY IS AUTO-ADDED, DO NOT EDIT MANUALY

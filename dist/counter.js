@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, E as Event$1, S as State, d as Attributes, M as Method, B as Bind, W as Watch, b as Element } from './index-e0fc73b0.js';
+import { _ as __decorate, b as html, e as attributes$1, h as host, P as Property, E as Event$1, S as State, M as Method, B as Bind, W as Watch, c as Element } from './index-c3e2db65.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -43,11 +43,6 @@ let Counter$1 = class Counter {
          */
         this.numerals = [];
         this.state = 'idle';
-    }
-    get attributes() {
-        return {
-            state: this.state
-        };
     }
     get easingFunction() {
         return (COUNTER_EASINGS[this.easing] || this.easing);
@@ -178,7 +173,9 @@ let Counter$1 = class Counter {
         this.stop();
     }
     render() {
-        return this.formated;
+        return html `${attributes$1(host(this), [{
+                "state": this.state
+            }])}${this.formated}`;
     }
 };
 // THIS PROPERTY IS AUTO-ADDED, DO NOT EDIT MANUALY
@@ -243,9 +240,6 @@ __decorate([
 __decorate([
     State()
 ], Counter$1.prototype, "state", void 0);
-__decorate([
-    Attributes()
-], Counter$1.prototype, "attributes", null);
 __decorate([
     Method()
 ], Counter$1.prototype, "complete", null);

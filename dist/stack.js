@@ -1,4 +1,4 @@
-import { _ as __decorate, c as styles, g as toUnit, u as uhtml, P as Property, d as Attributes, b as Element } from './index-e0fc73b0.js';
+import { _ as __decorate, d as styles, j as toUnit, b as html, e as attributes$1, h as host, P as Property, c as Element } from './index-c3e2db65.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -16,11 +16,6 @@ let Stack$1 = class Stack {
          */
         this.justifyContent = 'center';
     }
-    get attributes() {
-        return {
-            style: this.style
-        };
-    }
     get style() {
         let direction = this.vertical ? 'column' : 'row';
         if (this.reverse)
@@ -34,7 +29,11 @@ let Stack$1 = class Stack {
         });
     }
     render() {
-        return uhtml.html `<slot />`;
+        return html `${attributes$1(host(this), [{
+                "style": styles(this.style)
+            }])}
+        <slot />
+      `;
     }
 };
 // THIS PROPERTY IS AUTO-ADDED, DO NOT EDIT MANUALY
@@ -64,9 +63,6 @@ __decorate([
         type: 2
     })
 ], Stack$1.prototype, "vertical", void 0);
-__decorate([
-    Attributes()
-], Stack$1.prototype, "attributes", null);
 Stack$1 = __decorate([
     Element()
 ], Stack$1);

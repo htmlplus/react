@@ -1,4 +1,4 @@
-import { _ as __decorate, i as isRTL, k as query, h as host, o as on, e as off, a as __awaiter, u as uhtml, P as Property, S as State, d as Attributes, M as Method, W as Watch, B as Bind, b as Element } from './index-e0fc73b0.js';
+import { _ as __decorate, i as isRTL, l as query, h as host, o as on, f as off, a as __awaiter, b as html, e as attributes$1, P as Property, S as State, M as Method, W as Watch, B as Bind, c as Element } from './index-c3e2db65.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -33,12 +33,6 @@ let Tooltip$1 = class Tooltip {
          */
         this.z = 'auto';
         this.state = 'hide';
-    }
-    get attributes() {
-        return {
-            role: 'tooltip',
-            state: this.state
-        };
     }
     get options() {
         const PLACEMENT = {
@@ -246,7 +240,14 @@ let Tooltip$1 = class Tooltip {
         this.unbind();
     }
     render() {
-        return uhtml.html `<slot /><div part="arrow"></div>`;
+        return html `${attributes$1(host(this), [{
+                "role": "tooltip"
+            }, {
+                "state": this.state
+            }])}
+        <slot />
+        <div part="arrow"></div>
+      `;
     }
 };
 // THIS PROPERTY IS AUTO-ADDED, DO NOT EDIT MANUALY
@@ -304,9 +305,6 @@ __decorate([
 __decorate([
     State()
 ], Tooltip$1.prototype, "state", void 0);
-__decorate([
-    Attributes()
-], Tooltip$1.prototype, "attributes", null);
 __decorate([
     Method()
 ], Tooltip$1.prototype, "hide", null);

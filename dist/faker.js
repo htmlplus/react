@@ -1,4 +1,4 @@
-import { _ as __decorate, a as __awaiter, P as Property, b as Element } from './index-e0fc73b0.js';
+import { _ as __decorate, a as __awaiter, P as Property, c as Element } from './index-c3e2db65.js';
 import { proxy } from './proxy.js';
 import 'react';
 

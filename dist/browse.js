@@ -1,4 +1,4 @@
-import { _ as __decorate, u as uhtml, P as Property, E as Event$1, S as State, d as Attributes, M as Method, B as Bind, b as Element } from './index-e0fc73b0.js';
+import { _ as __decorate, b as html, e as attributes$1, h as host, P as Property, E as Event$1, S as State, M as Method, B as Bind, c as Element } from './index-c3e2db65.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -97,7 +97,10 @@ let Browse$1 = class Browse {
         this.do(event.dataTransfer.files);
     }
     render() {
-        return uhtml.html `<slot /><input accept=${this.accept} multiple=${this.multiple} ref=${$element => this.$input = $element} type="file" onChange=${this.onChange} onClick=${event => event.stopPropagation()} />`;
+        return html `${attributes$1(host(this), [this.attributes])}
+        <slot />
+        <input accept=${this.accept} multiple=${this.multiple} ref=${$element => this.$input = $element} type="file" onChange=${this.onChange} onClick=${event => event.stopPropagation()} />
+      `;
     }
 };
 // THIS PROPERTY IS AUTO-ADDED, DO NOT EDIT MANUALY
@@ -157,9 +160,6 @@ __decorate([
 __decorate([
     State()
 ], Browse$1.prototype, "dragging", void 0);
-__decorate([
-    Attributes()
-], Browse$1.prototype, "attributes", null);
 __decorate([
     Method()
 ], Browse$1.prototype, "browse", null);
