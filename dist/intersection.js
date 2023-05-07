@@ -1,4 +1,4 @@
-import { _ as __decorate, h as host, b as html, e as attributes$1, P as Property, E as Event$1, S as State, W as Watch, B as Bind, c as Element } from './index-c3e2db65.js';
+import { _ as __decorate, h as html, d as attributes$1, e as host, P as Property, E as Event$1, H as Host, S as State, W as Watch, B as Bind, b as Element } from './index-1d9a2e38.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -16,15 +16,6 @@ let Intersection$1 = class Intersection {
             rootMargin: this.rootMargin,
             threshold: this.threshold
         };
-    }
-    bind() {
-        this.observer = new IntersectionObserver(this.onIntersecting, this.options);
-        this.observer.observe(host(this));
-    }
-    unbind() {
-        var _a;
-        (_a = this.observer) === null || _a === void 0 ? void 0 : _a.disconnect();
-        delete this.observer;
     }
     watcher(next, prev, name) {
         switch (name) {
@@ -49,6 +40,15 @@ let Intersection$1 = class Intersection {
                 this.bind();
                 break;
         }
+    }
+    bind() {
+        this.observer = new IntersectionObserver(this.onIntersecting, this.options);
+        this.observer.observe(this.$host);
+    }
+    unbind() {
+        var _a;
+        (_a = this.observer) === null || _a === void 0 ? void 0 : _a.disconnect();
+        delete this.observer;
     }
     onIntersecting(entries) {
         const [entry] = entries;
@@ -104,6 +104,9 @@ __decorate([
 __decorate([
     Event$1()
 ], Intersection$1.prototype, "plusChange", void 0);
+__decorate([
+    Host()
+], Intersection$1.prototype, "$host", void 0);
 __decorate([
     State()
 ], Intersection$1.prototype, "isIntersecting", void 0);

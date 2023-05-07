@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, E as Event$1, W as Watch, B as Bind, m as createLink, h as host, t as toAxis, i as isRTL, g as classes, n as Animation, p as Scrollbar, f as off, k as Portal, o as on, b as html, e as attributes$1, c as Element } from './index-c3e2db65.js';
+import { _ as __decorate, P as Property, E as Event$1, H as Host, Q as Query, W as Watch, B as Bind, m as createLink, t as toAxis, j as isRTL, i as classes, n as Animation, p as Scrollbar, g as off, l as Portal, o as on, h as html, d as attributes$1, e as host, b as Element } from './index-1d9a2e38.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -39,9 +39,6 @@ let Dialog$1 = Dialog_1 = class Dialog {
          */
         this.portalTarget = 'body';
     }
-    get $host() {
-        return host(this);
-    }
     get classes() {
         let placement = this.placement || '';
         if (placement.match(/^(top|bottom)$/))
@@ -74,6 +71,17 @@ let Dialog$1 = Dialog_1 = class Dialog {
             return;
         const zIndex = window.getComputedStyle(instance.$host).getPropertyValue('z-index');
         return `${parseInt(zIndex) + 1}`;
+    }
+    watcher(next, prev, name) {
+        switch (name) {
+            case 'connector':
+                reconnect(this);
+                break;
+            case 'open':
+                next && !this.isOpen && this.tryShow(true, true);
+                !next && this.isOpen && this.tryHide(true, true);
+                break;
+        }
     }
     hide() {
         this.tryHide(true, false);
@@ -152,17 +160,6 @@ let Dialog$1 = Dialog_1 = class Dialog {
             }
         });
     }
-    watcher(next, prev, name) {
-        switch (name) {
-            case 'connector':
-                reconnect(this);
-                break;
-            case 'open':
-                next && !this.isOpen && this.tryShow(true, true);
-                !next && this.isOpen && this.tryHide(true, true);
-                break;
-        }
-    }
     onHide() {
         // reset document's scroll
         Scrollbar.reset(this);
@@ -236,7 +233,7 @@ let Dialog$1 = Dialog_1 = class Dialog {
         <div class=${this.classes}>
           <div class="table">
             <div class="cell">
-              <slot ref=${$element => this.$cell = $element} />
+              <slot />
             </div>
           </div>
         </div>
@@ -347,14 +344,20 @@ __decorate([
     Event$1()
 ], Dialog$1.prototype, "plusOpened", void 0);
 __decorate([
+    Host()
+], Dialog$1.prototype, "$host", void 0);
+__decorate([
+    Query('slot')
+], Dialog$1.prototype, "$cell", void 0);
+__decorate([
     Observable()
 ], Dialog$1.prototype, "tunnel", void 0);
 __decorate([
-    Action()
-], Dialog$1.prototype, "toggle", null);
-__decorate([
     Watch(['connector', 'open'])
 ], Dialog$1.prototype, "watcher", null);
+__decorate([
+    Action()
+], Dialog$1.prototype, "toggle", null);
 __decorate([
     Bind()
 ], Dialog$1.prototype, "onEscape", null);

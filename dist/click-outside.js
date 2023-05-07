@@ -1,4 +1,4 @@
-import { _ as __decorate, h as host, o as on, f as off, b as html, P as Property, E as Event$1, W as Watch, B as Bind, c as Element } from './index-c3e2db65.js';
+import { _ as __decorate, o as on, g as off, h as html, P as Property, E as Event$1, H as Host, W as Watch, B as Bind, b as Element } from './index-1d9a2e38.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -7,19 +7,10 @@ import 'react';
  * @slot default - The default slot.
  */
 let ClickOutside$1 = class ClickOutside {
-    get $host() {
-        return host(this);
-    }
     get options() {
         return {
             capture: this.capture
         };
-    }
-    bind() {
-        on(this.$host, 'outside', this.onClickOutside, this.options);
-    }
-    unbind() {
-        off(this.$host, 'outside', this.onClickOutside, this.options);
     }
     watcher(next, prev, name) {
         switch (name) {
@@ -32,6 +23,12 @@ let ClickOutside$1 = class ClickOutside {
                 this.bind();
                 break;
         }
+    }
+    bind() {
+        on(this.$host, 'outside', this.onClickOutside, this.options);
+    }
+    unbind() {
+        off(this.$host, 'outside', this.onClickOutside, this.options);
     }
     onClickOutside() {
         if (this.once)
@@ -73,6 +70,9 @@ __decorate([
         cancelable: true
     })
 ], ClickOutside$1.prototype, "plusClickOutside", void 0);
+__decorate([
+    Host()
+], ClickOutside$1.prototype, "$host", void 0);
 __decorate([
     Watch(['capture', 'disabled', 'once'])
 ], ClickOutside$1.prototype, "watcher", null);

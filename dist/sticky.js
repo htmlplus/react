@@ -1,4 +1,4 @@
-import { _ as __decorate, j as toUnit, d as styles, b as html, e as attributes$1, h as host, P as Property, E as Event$1, S as State, W as Watch, B as Bind, c as Element } from './index-c3e2db65.js';
+import { _ as __decorate, k as toUnit, c as styles, h as html, d as attributes$1, e as host, P as Property, E as Event$1, Q as Query, S as State, W as Watch, B as Bind, b as Element } from './index-1d9a2e38.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -32,24 +32,6 @@ let Sticky$1 = class Sticky {
             zIndex: (_a = this.zIndex) !== null && _a !== void 0 ? _a : null
         });
     }
-    bind() {
-        if (!this.watcher)
-            return;
-        // TODO
-        // if (this.disabled) return;
-        this.observer = new IntersectionObserver(this.onIntersecting, {
-            threshold: [1]
-        });
-        this.observer.observe(this.$element);
-    }
-    unbind() {
-        // TODO: immediately rerenders after remove `watcher` attribute
-        requestAnimationFrame(() => {
-            var _a;
-            this.state = undefined;
-            (_a = this.observer) === null || _a === void 0 ? void 0 : _a.disconnect();
-        });
-    }
     watchers(next, prev, key) {
         switch (key) {
             case 'disabled':
@@ -59,6 +41,24 @@ let Sticky$1 = class Sticky {
                 next ? this.bind() : this.unbind();
                 break;
         }
+    }
+    bind() {
+        if (!this.watcher)
+            return;
+        // TODO
+        // if (this.disabled) return;
+        this.observer = new IntersectionObserver(this.onIntersecting, {
+            threshold: [1]
+        });
+        this.observer.observe(this.$sizer);
+    }
+    unbind() {
+        // TODO: immediately rerenders after remove `watcher` attribute
+        requestAnimationFrame(() => {
+            var _a;
+            this.state = undefined;
+            (_a = this.observer) === null || _a === void 0 ? void 0 : _a.disconnect();
+        });
     }
     onIntersecting(entries) {
         const [entry] = entries;
@@ -78,7 +78,7 @@ let Sticky$1 = class Sticky {
                 "style": styles(this.style)
             }])}
         <div class="sizer-wrapper">
-          <div class="sizer" ref=${$element => this.$element = $element} style=${styles(this.sizer)}></div>
+          <div class="sizer" style=${styles(this.sizer)}></div>
         </div>
         <slot />
         ${this.state && html `<div class=${this.state}>
@@ -109,6 +109,9 @@ __decorate([
 __decorate([
     Event$1()
 ], Sticky$1.prototype, "plusChange", void 0);
+__decorate([
+    Query('.sizer')
+], Sticky$1.prototype, "$sizer", void 0);
 __decorate([
     State()
 ], Sticky$1.prototype, "state", void 0);

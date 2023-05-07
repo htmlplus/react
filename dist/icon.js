@@ -1,5 +1,5 @@
-import { _ as __decorate, a as __awaiter, h as host, j as toUnit, d as styles, b as html, e as attributes$1, P as Property, S as State, W as Watch, c as Element } from './index-c3e2db65.js';
-import { g as getConfig, s as setConfig } from './config-0c64421b.js';
+import { _ as __decorate, a as __awaiter, k as toUnit, c as styles, h as html, d as attributes$1, e as host, P as Property, H as Host, S as State, W as Watch, b as Element } from './index-1d9a2e38.js';
+import { g as getConfig, s as setConfig } from './config-67ed0503.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -61,9 +61,6 @@ let Icon$1 = class Icon {
             }).then(response => response.text());
         });
     }
-    get $host() {
-        return host(this);
-    }
     get cache() {
         return getConfig('asset', 'icon', this.name);
     }
@@ -104,6 +101,11 @@ let Icon$1 = class Icon {
             transform
         });
     }
+    watcher() {
+        requestAnimationFrame(() => {
+            this.update();
+        });
+    }
     sync(input) {
         if (input) {
             this.cache = parse(input);
@@ -138,11 +140,6 @@ let Icon$1 = class Icon {
             // TODO
             this.svg = parse(ICON_FALLBACK_SVG).cloneNode(true);
             console.warn([`The icon component is not able to resolve an SVG file with the name of \`${this.name}\`. `, `There is a problem with the \`resolver\` property, and its output cannot be used. `, 'Make sure that the output of the property is an SVG.'].join(''), this.$host);
-        });
-    }
-    watcher() {
-        requestAnimationFrame(() => {
-            this.update();
         });
     }
     render() {
@@ -203,6 +200,9 @@ __decorate([
         type: 256
     })
 ], Icon$1.prototype, "size", void 0);
+__decorate([
+    Host()
+], Icon$1.prototype, "$host", void 0);
 __decorate([
     State()
 ], Icon$1.prototype, "svg", void 0);

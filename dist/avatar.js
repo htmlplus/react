@@ -1,4 +1,4 @@
-import { _ as __decorate, i as isRTL, j as toUnit, b as html, e as attributes$1, d as styles, h as host, P as Property, c as Element } from './index-c3e2db65.js';
+import { _ as __decorate, j as isRTL, k as toUnit, h as html, d as attributes$1, c as styles, e as host, P as Property, b as Element } from './index-1d9a2e38.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -21,7 +21,7 @@ let Avatar$1 = class Avatar {
          */
         this.size = 'md';
     }
-    get PLACEMENTS() {
+    get placements() {
         const offset = this.shape == 'circle' ? '14.64466%' : '0';
         return {
             'bottom': {
@@ -111,8 +111,8 @@ let Avatar$1 = class Avatar {
                 "style": styles(this.style)
             }])}
         <slot />
-        ${Object.keys(this.PLACEMENTS).map(PLACEMENT => html `<div class=${PLACEMENT} style=${styles(this.PLACEMENTS[PLACEMENT])}>
-            <slot name=${PLACEMENT} />
+        ${Object.keys(this.placements).map(placement => html `<div class=${placement} style=${styles(this.placements[placement])}>
+            <slot name=${placement} />
           </div>`)}
       `;
     }

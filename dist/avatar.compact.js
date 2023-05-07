@@ -1,6 +1,6 @@
 import { Avatar } from './avatar.js';
 import { AvatarGroup } from './avatar-group.js';
-import './index-c3e2db65.js';
+import './index-1d9a2e38.js';
 import './proxy.js';
 import 'react';
 

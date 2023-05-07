@@ -1,4 +1,4 @@
-import { _ as __decorate, b as html, e as attributes$1, h as host, P as Property, E as Event$1, S as State, M as Method, B as Bind, c as Element } from './index-c3e2db65.js';
+import { _ as __decorate, h as html, d as attributes$1, e as host, P as Property, E as Event$1, Q as Query, S as State, M as Method, B as Bind, b as Element } from './index-1d9a2e38.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -99,7 +99,7 @@ let Browse$1 = class Browse {
     render() {
         return html `${attributes$1(host(this), [this.attributes])}
         <slot />
-        <input accept=${this.accept} multiple=${this.multiple} ref=${$element => this.$input = $element} type="file" onChange=${this.onChange} onClick=${event => event.stopPropagation()} />
+        <input accept=${this.accept} multiple=${this.multiple} type="file" onChange=${this.onChange} onClick=${event => event.stopPropagation()} />
       `;
     }
 };
@@ -157,6 +157,9 @@ __decorate([
 __decorate([
     Event$1()
 ], Browse$1.prototype, "plusSuccess", void 0);
+__decorate([
+    Query('input')
+], Browse$1.prototype, "$input", void 0);
 __decorate([
     State()
 ], Browse$1.prototype, "dragging", void 0);

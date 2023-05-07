@@ -1,4 +1,4 @@
-import { _ as __decorate, l as query, b as html, P as Property, c as Element } from './index-c3e2db65.js';
+import { _ as __decorate, h as html, P as Property, Q as Query, b as Element } from './index-1d9a2e38.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -30,14 +30,13 @@ let Grid$1 = class Grid {
     // TODO: auto keys detect, support spread attribute <div {...attributes} />
     updatedCallback() {
         const keys = ['alignContent', 'alignContentXs', 'alignContentSm', 'alignContentMd', 'alignContentLg', 'alignContentXl', 'alignContentXxl', 'alignItems', 'alignItemsXs', 'alignItemsSm', 'alignItemsMd', 'alignItemsLg', 'alignItemsXl', 'alignItemsXxl', 'gutter', 'gutterX', 'gutterY', 'justifyContent', 'justifyContentXs', 'justifyContentSm', 'justifyContentMd', 'justifyContentLg', 'justifyContentXl', 'justifyContentXxl', 'reverse', 'vertical', 'wrap', 'wrapXs', 'wrapSm', 'wrapMd', 'wrapLg', 'wrapXl', 'wrapXxl'];
-        const div = query(this, 'div');
         for (const key of keys) {
             const name = key.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
             const value = this[key];
             if (value)
-                div.setAttribute(name, value);
+                this.$root.setAttribute(name, value);
             else
-                div.removeAttribute(name);
+                this.$root.removeAttribute(name);
         }
     }
     render() {
@@ -215,6 +214,9 @@ __decorate([
         type: 8
     })
 ], Grid$1.prototype, "wrapXxl", void 0);
+__decorate([
+    Query('div')
+], Grid$1.prototype, "$root", void 0);
 Grid$1 = __decorate([
     Element()
 ], Grid$1);

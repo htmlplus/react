@@ -1,4 +1,4 @@
-import { _ as __decorate, m as createLink, h as host, t as toAxis, i as isRTL, g as classes, d as styles, n as Animation, p as Scrollbar, f as off, o as on, b as html, e as attributes$1, P as Property, E as Event$1, S as State, W as Watch, B as Bind, u as Media, c as Element } from './index-c3e2db65.js';
+import { _ as __decorate, m as createLink, t as toAxis, j as isRTL, i as classes, c as styles, n as Animation, p as Scrollbar, g as off, o as on, h as html, d as attributes$1, e as host, P as Property, E as Event$1, H as Host, Q as Query, S as State, W as Watch, B as Bind, q as Media, b as Element } from './index-1d9a2e38.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -23,9 +23,6 @@ let Drawer$1 = class Drawer {
          */
         this.breakpoint = 'md';
         this.animations = {};
-    }
-    get $host() {
-        return host(this);
     }
     get classes() {
         const placement = toAxis(this.placement || 'start', isRTL(this));
@@ -208,7 +205,7 @@ let Drawer$1 = class Drawer {
         ${this.hasBackdrop ? html `<div class="backdrop" part="backdrop">
             <div />
           </div>` : ''}
-        <div class=${this.classes} ref=${$element => this.$root = $element}>
+        <div class=${this.classes}>
           <slot />
         </div>
       `;
@@ -297,6 +294,12 @@ __decorate([
 __decorate([
     Event$1()
 ], Drawer$1.prototype, "plusOpened", void 0);
+__decorate([
+    Host()
+], Drawer$1.prototype, "$host", void 0);
+__decorate([
+    Query('.root')
+], Drawer$1.prototype, "$root", void 0);
 __decorate([
     State()
 ], Drawer$1.prototype, "platform", void 0);

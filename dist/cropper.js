@@ -1,4 +1,4 @@
-import { _ as __decorate, g as classes, a as __awaiter, b as html, P as Property, E as Event$1, M as Method, W as Watch, B as Bind, c as Element } from './index-c3e2db65.js';
+import { _ as __decorate, i as classes, a as __awaiter, h as html, P as Property, E as Event$1, M as Method, Q as Query, W as Watch, B as Bind, b as Element } from './index-1d9a2e38.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -52,6 +52,70 @@ let Cropper$1 = class Cropper {
          * Specifies zoom ratio when zooming the image by wheeling the mouse.
          */
         this.zoomRatio = 0.1;
+    }
+    /**
+     * Flips horizontally.
+     */
+    flipX() {
+        this.instance.scale(-1, 1);
+    }
+    /**
+     * Flips vertically.
+     */
+    flipY() {
+        this.instance.scale(1, -1);
+    }
+    /**
+     * Moves the canvas with relative offsets.
+     * @param offsetX - Moving size (px) in the `horizontal` direction. Use `null` to ignore this.
+     * @param offsetY - Moving size (px) in the `vertical` direction. Use `null` to ignore this.
+     */
+    move(offsetX, offsetY) {
+        this.instance.move(offsetX !== null && offsetX !== void 0 ? offsetX : null, offsetY !== null && offsetY !== void 0 ? offsetY : null);
+    }
+    /**
+     * Moves the canvas to an absolute point.
+     * @param x - The `left` value of the canvas. Use `null` to ignore this.
+     * @param y - The `top` value of the canvas. Use `null` to ignore this.
+     */
+    moveTo(x, y) {
+        this.instance.moveTo(x !== null && x !== void 0 ? x : null, y !== null && y !== void 0 ? y : null);
+    }
+    /**
+     * Resets the image and viewport to their initial states.
+     */
+    reset() {
+        this.instance.reset();
+    }
+    /**
+     * Rotates the image with a relative degree.
+     */
+    rotate(degree) {
+        this.instance.rotate(degree);
+    }
+    /**
+     * Rotates the image to an absolute degree.
+     */
+    rotateTo(degree) {
+        this.instance.rotateTo(degree);
+    }
+    /**
+     * Gets `canvas` from the cropped image.
+     */
+    toCanvas() {
+        return this.instance.getCroppedCanvas( /* TODO */);
+    }
+    /**
+     * Zooms the canvas with a relative ratio.
+     */
+    zoom(ratio) {
+        this.instance.zoom(ratio);
+    }
+    /**
+     * Zooms the canvas to an absolute ratio.
+     */
+    zoomTo(ratio) {
+        this.instance.zoomTo(ratio /*, TODO */);
     }
     get classes() {
         return classes(['wrapper', {
@@ -129,69 +193,43 @@ let Cropper$1 = class Cropper {
             zoom: this.onZoom
         };
     }
-    /**
-     * Flips horizontally.
-     */
-    flipX() {
-        this.instance.scale(-1, 1);
-    }
-    /**
-     * Flips vertically.
-     */
-    flipY() {
-        this.instance.scale(1, -1);
-    }
-    /**
-     * Moves the canvas with relative offsets.
-     * @param offsetX - Moving size (px) in the `horizontal` direction. Use `null` to ignore this.
-     * @param offsetY - Moving size (px) in the `vertical` direction. Use `null` to ignore this.
-     */
-    move(offsetX, offsetY) {
-        this.instance.move(offsetX !== null && offsetX !== void 0 ? offsetX : null, offsetY !== null && offsetY !== void 0 ? offsetY : null);
-    }
-    /**
-     * Moves the canvas to an absolute point.
-     * @param x - The `left` value of the canvas. Use `null` to ignore this.
-     * @param y - The `top` value of the canvas. Use `null` to ignore this.
-     */
-    moveTo(x, y) {
-        this.instance.moveTo(x !== null && x !== void 0 ? x : null, y !== null && y !== void 0 ? y : null);
-    }
-    /**
-     * Resets the image and viewport to their initial states.
-     */
-    reset() {
-        this.instance.reset();
-    }
-    /**
-     * Rotates the image with a relative degree.
-     */
-    rotate(degree) {
-        this.instance.rotate(degree);
-    }
-    /**
-     * Rotates the image to an absolute degree.
-     */
-    rotateTo(degree) {
-        this.instance.rotateTo(degree);
-    }
-    /**
-     * Gets `canvas` from the cropped image.
-     */
-    toCanvas() {
-        return this.instance.getCroppedCanvas( /* TODO */);
-    }
-    /**
-     * Zooms the canvas with a relative ratio.
-     */
-    zoom(ratio) {
-        this.instance.zoom(ratio);
-    }
-    /**
-     * Zooms the canvas to an absolute ratio.
-     */
-    zoomTo(ratio) {
-        this.instance.zoomTo(ratio /*, TODO */);
+    watcher(next, prev, name) {
+        if (this.locked)
+            return;
+        switch (name) {
+            case 'aspectRatio':
+            case 'shape':
+                this.instance.setAspectRatio(this.options.aspectRatio);
+                break;
+            case 'disabled':
+                next ? this.instance.disable() : this.instance.enable();
+                break;
+            case 'mode':
+                // TODO: Doesn't work.
+                // this.instance.setDragMode(next);
+                // TODO: Remove this after fixing the above issue.
+                this.unbind();
+                this.bind();
+                break;
+            case 'src':
+                this.instance.replace(this.src, false /* TODO */);
+                break;
+            case 'value':
+                this.sync(next);
+                break;
+            case 'area':
+            case 'backdrop':
+            case 'background':
+            case 'guides':
+            case 'indicator':
+            case 'responsive':
+            case 'view':
+            case 'zoomable':
+            case 'zoomRatio':
+                this.unbind();
+                this.bind();
+                break;
+        }
     }
     bind() {
         this.instance = new CropperCore(this.$image, this.options);
@@ -234,44 +272,6 @@ let Cropper$1 = class Cropper {
         requestAnimationFrame(() => {
             this.locked = false;
         });
-    }
-    watcher(next, prev, name) {
-        if (this.locked)
-            return;
-        switch (name) {
-            case 'aspectRatio':
-            case 'shape':
-                this.instance.setAspectRatio(this.options.aspectRatio);
-                break;
-            case 'disabled':
-                next ? this.instance.disable() : this.instance.enable();
-                break;
-            case 'mode':
-                // TODO: Doesn't work.
-                // this.instance.setDragMode(next);
-                // TODO: Remove this after fixing the above issue.
-                this.unbind();
-                this.bind();
-                break;
-            case 'src':
-                this.instance.replace(this.src, false /* TODO */);
-                break;
-            case 'value':
-                this.sync(next);
-                break;
-            case 'area':
-            case 'backdrop':
-            case 'background':
-            case 'guides':
-            case 'indicator':
-            case 'responsive':
-            case 'view':
-            case 'zoomable':
-            case 'zoomRatio':
-                this.unbind();
-                this.bind();
-                break;
-        }
     }
     onCrop() {
         this.sync();
@@ -333,7 +333,7 @@ let Cropper$1 = class Cropper {
     }
     render() {
         return html `<div class=${this.classes}>
-        <img class="image" alt="cropper" ref=${$element => this.$image = $element} src=${this.src} />
+        <img class="image" alt="cropper" src=${this.src} />
       </div>`;
     }
 };
@@ -477,6 +477,9 @@ __decorate([
 __decorate([
     Method()
 ], Cropper$1.prototype, "zoomTo", null);
+__decorate([
+    Query('.image')
+], Cropper$1.prototype, "$image", void 0);
 __decorate([
     Watch()
 ], Cropper$1.prototype, "watcher", null);

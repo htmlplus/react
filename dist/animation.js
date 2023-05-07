@@ -1,5 +1,5 @@
-import { _ as __decorate, s as setConfig, h as host, b as html, P as Property, E as Event$1, M as Method, W as Watch, B as Bind, c as Element } from './index-c3e2db65.js';
-import { g as getConfig } from './config-0c64421b.js';
+import { _ as __decorate, s as setConfig, h as html, P as Property, E as Event$1, M as Method, H as Host, W as Watch, B as Bind, b as Element } from './index-1d9a2e38.js';
+import { g as getConfig } from './config-67ed0503.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -123,22 +123,6 @@ let Animation$1 = class Animation {
          */
         this.playbackRate = 1;
     }
-    get options() {
-        var _a, _b;
-        return {
-            composite: this.composite,
-            delay: this.delay,
-            direction: this.direction,
-            duration: this.duration,
-            easing: (_b = (_a = ANIMATION_EASINGS[this.easing]) !== null && _a !== void 0 ? _a : getConfig('asset', 'easing', this.easing)) !== null && _b !== void 0 ? _b : this.easing,
-            endDelay: this.endDelay,
-            fill: this.fill,
-            iterationComposite: this.iterationComposite,
-            iterations: this.iterations,
-            iterationStart: this.iterationStart,
-            playbackRate: this.playbackRate
-        };
-    }
     /**
      * Clears all [keyframeEffects](https://mdn.io/keyframe-effect)
      * caused by this animation and aborts its playback.
@@ -202,6 +186,22 @@ let Animation$1 = class Animation {
         var _a;
         (_a = this.instance) === null || _a === void 0 ? void 0 : _a.updatePlaybackRate(playbackRate);
     }
+    get options() {
+        var _a, _b;
+        return {
+            composite: this.composite,
+            delay: this.delay,
+            direction: this.direction,
+            duration: this.duration,
+            easing: (_b = (_a = ANIMATION_EASINGS[this.easing]) !== null && _a !== void 0 ? _a : getConfig('asset', 'easing', this.easing)) !== null && _b !== void 0 ? _b : this.easing,
+            endDelay: this.endDelay,
+            fill: this.fill,
+            iterationComposite: this.iterationComposite,
+            iterations: this.iterations,
+            iterationStart: this.iterationStart,
+            playbackRate: this.playbackRate
+        };
+    }
     watcher() {
         this.run ? this.play() : this.pause();
     }
@@ -221,7 +221,7 @@ let Animation$1 = class Animation {
         var _a, _b;
         this.disconnectedCallback();
         const keyframes = (_b = (_a = this.keyframes) !== null && _a !== void 0 ? _a : getConfig('asset', 'animation', this.name)) !== null && _b !== void 0 ? _b : [];
-        this.instance = host(this).animate(keyframes, this.options);
+        this.instance = this.$host.animate(keyframes, this.options);
         this.instance.addEventListener('cancel', this.onCancel);
         this.instance.addEventListener('finish', this.onFinish);
         this.instance.addEventListener('remove', this.onRemove);
@@ -352,6 +352,9 @@ __decorate([
 __decorate([
     Method()
 ], Animation$1.prototype, "updatePlaybackRate", null);
+__decorate([
+    Host()
+], Animation$1.prototype, "$host", void 0);
 __decorate([
     Watch('run', true)
 ], Animation$1.prototype, "watcher", null);

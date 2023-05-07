@@ -1,4 +1,4 @@
-import { _ as __decorate, A as Animation2, h as host, a as __awaiter, b as html, P as Property, E as Event$1, M as Method, W as Watch, B as Bind, c as Element } from './index-c3e2db65.js';
+import { _ as __decorate, A as Animation2, a as __awaiter, h as html, P as Property, E as Event$1, H as Host, Q as Query, M as Method, W as Watch, B as Bind, b as Element } from './index-1d9a2e38.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -58,9 +58,6 @@ let Accordion$1 = class Accordion {
         });
         this.opened = false;
     }
-    get $host() {
-        return host(this);
-    }
     hide() {
         return __awaiter(this, void 0, void 0, function* () {
             this.try(false, true);
@@ -75,6 +72,16 @@ let Accordion$1 = class Accordion {
         return __awaiter(this, void 0, void 0, function* () {
             return this.open ? this.hide() : this.show();
         });
+    }
+    watcher(next, prev, name) {
+        // TODO: problem with `false` and `undefined`
+        if (!next == !prev)
+            return;
+        switch (name) {
+            case 'open':
+                this.try(next, true);
+                break;
+        }
     }
     bind() {
         this.animate.initialize((this.opened = this.open) ? 'entered' : 'leaved');
@@ -99,16 +106,6 @@ let Accordion$1 = class Accordion {
             this.animate.leave(silent);
         }
     }
-    watcher(next, prev, name) {
-        // TODO: problem with `false` and `undefined`
-        if (!next == !prev)
-            return;
-        switch (name) {
-            case 'open':
-                this.try(next, true);
-                break;
-        }
-    }
     onClick() {
         this.try(!this.open);
     }
@@ -129,7 +126,7 @@ let Accordion$1 = class Accordion {
     }
     render() {
         return html `
-        <div aria-disabled=${!!this.disabled} aria-expanded=${!!this.open} class="header" part="header" role="button" tabindex=${this.disabled ? -1 : 0} ref=${$element => this.$header = $element} onClick=${this.onClick} onKeyDown=${this.onKeyDown}>
+        <div aria-disabled=${!!this.disabled} aria-expanded=${!!this.open} class="header" part="header" role="button" tabindex=${this.disabled ? -1 : 0} onClick=${this.onClick} onKeyDown=${this.onKeyDown}>
           <slot class="summary" name="summary" part="summary">
             ${this.summary}
           </slot>
@@ -141,7 +138,7 @@ let Accordion$1 = class Accordion {
             </slot>
           </slot>
         </div>
-        <div class="body" part="body" ref=${$element => this.$body = $element}>
+        <div class="body" part="body">
           <slot class="content" part="content"></slot>
         </div>
       `;
@@ -184,6 +181,15 @@ __decorate([
 __decorate([
     Event$1()
 ], Accordion$1.prototype, "plusExpanded", void 0);
+__decorate([
+    Host()
+], Accordion$1.prototype, "$host", void 0);
+__decorate([
+    Query('.body')
+], Accordion$1.prototype, "$body", void 0);
+__decorate([
+    Query('.header')
+], Accordion$1.prototype, "$header", void 0);
 __decorate([
     Method()
 ], Accordion$1.prototype, "hide", null);

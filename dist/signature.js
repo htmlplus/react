@@ -1,4 +1,4 @@
-import { _ as __decorate, h as host, a as __awaiter, b as html, P as Property, E as Event$1, M as Method, W as Watch, B as Bind, c as Element } from './index-c3e2db65.js';
+import { _ as __decorate, a as __awaiter, h as html, P as Property, E as Event$1, M as Method, H as Host, Q as Query, W as Watch, B as Bind, b as Element } from './index-1d9a2e38.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -38,9 +38,6 @@ let Signature$1 = class Signature {
         this.history = [];
         this.index = -1;
         this.observer = new ResizeObserver(this.onResize);
-    }
-    get $host() {
-        return host(this);
     }
     /**
      * Specifies whether redo can be performed or not.
@@ -163,6 +160,34 @@ let Signature$1 = class Signature {
         const data = this.history[this.index] || [];
         this.instance.fromData(data);
     }
+    watcher(next, prev, name) {
+        switch (name) {
+            case 'color':
+                this.instance.penColor = next;
+                break;
+            case 'disabled':
+                this.instance[next ? 'off' : 'on']();
+                break;
+            case 'distance':
+                this.instance.minDistance = next;
+                break;
+            case 'velocity':
+                this.instance.velocityFilterWeight = next;
+                break;
+            case 'backgroundColor':
+            case 'dotSize':
+            case 'maxWidth':
+            case 'minWidth':
+            case 'throttle':
+                this.instance[name] = next;
+                break;
+            case 'resizable':
+                this.observer[next ? 'observe' : 'unobserve'](this.$host);
+                break;
+        }
+        // TODO
+        this.fromData(this.toData());
+    }
     bind() {
         this.instance = new Core(this.$canvas, {
             backgroundColor: this.backgroundColor,
@@ -202,34 +227,6 @@ let Signature$1 = class Signature {
         this.observer.disconnect();
         (_a = this.instance) === null || _a === void 0 ? void 0 : _a.off();
     }
-    watcher(next, prev, name) {
-        switch (name) {
-            case 'color':
-                this.instance.penColor = next;
-                break;
-            case 'disabled':
-                this.instance[next ? 'off' : 'on']();
-                break;
-            case 'distance':
-                this.instance.minDistance = next;
-                break;
-            case 'velocity':
-                this.instance.velocityFilterWeight = next;
-                break;
-            case 'backgroundColor':
-            case 'dotSize':
-            case 'maxWidth':
-            case 'minWidth':
-            case 'throttle':
-                this.instance[name] = next;
-                break;
-            case 'resizable':
-                this.observer[next ? 'observe' : 'unobserve'](this.$host);
-                break;
-        }
-        // TODO
-        this.fromData(this.toData());
-    }
     onEnd() {
         this.index++;
         this.history[this.index] = this.toData();
@@ -248,7 +245,7 @@ let Signature$1 = class Signature {
         this.unbind();
     }
     render() {
-        return html `<canvas part="canvas" ref=${$element => this.$canvas = $element}></canvas>`;
+        return html `<canvas part="canvas"></canvas>`;
     }
 };
 // THIS PROPERTY IS AUTO-ADDED, DO NOT EDIT MANUALY
@@ -362,6 +359,12 @@ __decorate([
 __decorate([
     Method()
 ], Signature$1.prototype, "undo", null);
+__decorate([
+    Host()
+], Signature$1.prototype, "$host", void 0);
+__decorate([
+    Query('canvas')
+], Signature$1.prototype, "$canvas", void 0);
 __decorate([
     Watch()
 ], Signature$1.prototype, "watcher", null);

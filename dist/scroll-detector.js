@@ -1,4 +1,4 @@
-import { _ as __decorate, o as on, f as off, P as Property, E as Event$1, W as Watch, B as Bind, c as Element } from './index-c3e2db65.js';
+import { _ as __decorate, o as on, g as off, P as Property, E as Event$1, W as Watch, B as Bind, b as Element } from './index-1d9a2e38.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -19,6 +19,9 @@ let ScrollDetector$1 = class ScrollDetector {
             return document.documentElement;
         return document.querySelector(this.reference);
     }
+    watcher(next) {
+        next ? this.unbind() : this.bind();
+    }
     bind() {
         if (this.disabled)
             return;
@@ -29,9 +32,6 @@ let ScrollDetector$1 = class ScrollDetector {
     }
     unbind() {
         off(this.$reference, 'scroll', this.onScroll);
-    }
-    watcher(next) {
-        next ? this.unbind() : this.bind();
     }
     onScroll() {
         const { scrollTop, scrollLeft, scrollHeight, scrollWidth, clientHeight, clientWidth } = this.$reference;

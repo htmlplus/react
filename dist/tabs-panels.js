@@ -1,4 +1,4 @@
-import { _ as __decorate, b as html, P as Property, W as Watch, c as Element, m as createLink } from './index-c3e2db65.js';
+import { _ as __decorate, h as html, P as Property, W as Watch, b as Element, m as createLink } from './index-1d9a2e38.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -13,9 +13,6 @@ const { reconnect } = createLink({
  * @slot default - The default slot.
  */
 let TabsPanels$1 = class TabsPanels {
-    /**
-     * Watchers
-     */
     watcher() {
         reconnect(this);
     }

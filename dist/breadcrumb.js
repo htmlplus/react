@@ -1,4 +1,4 @@
-import { _ as __decorate, h as host, r as request, q as queryAll, b as html, e as attributes$1, P as Property, S as State, B as Bind, c as Element } from './index-c3e2db65.js';
+import { _ as __decorate, r as request, h as html, d as attributes$1, e as host, P as Property, S as State, H as Host, f as QueryAll, B as Bind, b as Element } from './index-1d9a2e38.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -33,9 +33,6 @@ let Breadcrumb$1 = class Breadcrumb {
         return Array.from(this.$host.children).filter($node => {
             return !$node.matches([BREADCRUMB_EXPANDER_QUERY, BREADCRUMB_SEPARATOR_QUERY].join(','));
         });
-    }
-    get $host() {
-        return host(this);
     }
     get items() {
         const $children = this.$children;
@@ -117,7 +114,7 @@ let Breadcrumb$1 = class Breadcrumb {
         const template = this.template;
         if (!template)
             return;
-        queryAll(this, '.separator').forEach(element => {
+        this.$separators.forEach(element => {
             element.innerHTML = template;
         });
     }
@@ -181,6 +178,12 @@ __decorate([
 __decorate([
     State()
 ], Breadcrumb$1.prototype, "expand", void 0);
+__decorate([
+    Host()
+], Breadcrumb$1.prototype, "$host", void 0);
+__decorate([
+    QueryAll('.separator')
+], Breadcrumb$1.prototype, "$separators", void 0);
 __decorate([
     Bind()
 ], Breadcrumb$1.prototype, "onChange", null);

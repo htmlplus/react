@@ -1,4 +1,4 @@
-import { _ as __decorate, m as createLink, b as html, P as Property, E as Event$1, W as Watch, c as Element } from './index-c3e2db65.js';
+import { _ as __decorate, m as createLink, h as html, P as Property, E as Event$1, W as Watch, b as Element } from './index-1d9a2e38.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -13,9 +13,16 @@ const { Action, Observable, reconnect } = createLink({
  * @slot default - The default slot.
  */
 let Tabs$1 = class Tabs {
-    /**
-     * Internal Methods
-     */
+    watcher(next, prev, name) {
+        switch (name) {
+            case 'connector':
+                reconnect(this);
+                break;
+            case 'value':
+                this.tunnel = next;
+                break;
+        }
+    }
     broadcast(value) {
         this.tunnel = value;
     }
@@ -29,22 +36,6 @@ let Tabs$1 = class Tabs {
     initialize() {
         this.broadcast(this.value);
     }
-    /**
-     * Watchers
-     */
-    watcher(next, prev, name) {
-        switch (name) {
-            case 'connector':
-                reconnect(this);
-                break;
-            case 'value':
-                this.tunnel = next;
-                break;
-        }
-    }
-    /**
-     * Lifecycles
-     */
     connectedCallback() {
         this.initialize();
     }
@@ -81,11 +72,11 @@ __decorate([
     Observable()
 ], Tabs$1.prototype, "tunnel", void 0);
 __decorate([
-    Action()
-], Tabs$1.prototype, "change", null);
-__decorate([
     Watch(['connector', 'value'])
 ], Tabs$1.prototype, "watcher", null);
+__decorate([
+    Action()
+], Tabs$1.prototype, "change", null);
 Tabs$1 = __decorate([
     Element()
 ], Tabs$1);

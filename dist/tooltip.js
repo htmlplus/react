@@ -1,4 +1,4 @@
-import { _ as __decorate, i as isRTL, l as query, h as host, o as on, f as off, a as __awaiter, b as html, e as attributes$1, P as Property, S as State, M as Method, W as Watch, B as Bind, c as Element } from './index-c3e2db65.js';
+import { _ as __decorate, j as isRTL, o as on, g as off, a as __awaiter, h as html, d as attributes$1, e as host, P as Property, M as Method, H as Host, Q as Query, S as State, W as Watch, B as Bind, b as Element } from './index-1d9a2e38.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -33,64 +33,6 @@ let Tooltip$1 = class Tooltip {
          */
         this.z = 'auto';
         this.state = 'hide';
-    }
-    get options() {
-        const PLACEMENT = {
-            'top': 'top',
-            'top-left': isRTL(this) ? 'top-end' : 'top-start',
-            'top-right': isRTL(this) ? 'top-start' : 'top-end',
-            'top-start': 'top-start',
-            'top-end': 'top-end',
-            'right': 'right',
-            'right-top': 'right-start',
-            'right-bottom': 'right-end',
-            'bottom': 'bottom',
-            'bottom-left': isRTL(this) ? 'bottom-end' : 'bottom-start',
-            'bottom-right': isRTL(this) ? 'bottom-start' : 'bottom-end',
-            'bottom-start': 'bottom-start',
-            'bottom-end': 'bottom-end',
-            'left': 'left',
-            'left-top': 'left-start',
-            'left-bottom': 'left-end',
-            'start': isRTL(this) ? 'right' : 'left',
-            'start-top': isRTL(this) ? 'right-start' : 'left-start',
-            'start-bottom': isRTL(this) ? 'right-end' : 'left-end',
-            'end': isRTL(this) ? 'left' : 'right',
-            'end-top': isRTL(this) ? 'left-start' : 'right-start',
-            'end-bottom': isRTL(this) ? 'left-end' : 'right-end'
-        };
-        const padding = [this.offset].flat();
-        return {
-            middleware: [FloatingCore.offset({
-                    crossAxis: padding[0] || 0,
-                    mainAxis: padding[1] || 0
-                }), FloatingCore.flip(), this.arrow && FloatingCore.arrow({
-                    element: this.$arrow
-                })
-                // FloatingCore.hide()
-            ],
-            placement: PLACEMENT[this.placement],
-            strategy: this.fixed ? 'fixed' : 'absolute'
-        };
-    }
-    get $arrow() {
-        return query(this, '[part=arrow]');
-    }
-    get $host() {
-        return host(this);
-    }
-    get $reference() {
-        if (typeof this.reference != 'string')
-            return this.reference;
-        switch (this.reference) {
-            case 'next':
-                return this.$host.nextElementSibling;
-            case 'parent':
-                return this.$host.parentElement;
-            case 'previous':
-                return this.$host.previousElementSibling;
-        }
-        return document.querySelector(this.reference);
     }
     /**
      * Hides the component.
@@ -141,6 +83,77 @@ let Tooltip$1 = class Tooltip {
                 top: arrowY == null ? '' : `${arrowY}px`
             });
         });
+    }
+    get $reference() {
+        if (typeof this.reference != 'string')
+            return this.reference;
+        switch (this.reference) {
+            case 'next':
+                return this.$host.nextElementSibling;
+            case 'parent':
+                return this.$host.parentElement;
+            case 'previous':
+                return this.$host.previousElementSibling;
+        }
+        return document.querySelector(this.reference);
+    }
+    get options() {
+        const PLACEMENT = {
+            'top': 'top',
+            'top-left': isRTL(this) ? 'top-end' : 'top-start',
+            'top-right': isRTL(this) ? 'top-start' : 'top-end',
+            'top-start': 'top-start',
+            'top-end': 'top-end',
+            'right': 'right',
+            'right-top': 'right-start',
+            'right-bottom': 'right-end',
+            'bottom': 'bottom',
+            'bottom-left': isRTL(this) ? 'bottom-end' : 'bottom-start',
+            'bottom-right': isRTL(this) ? 'bottom-start' : 'bottom-end',
+            'bottom-start': 'bottom-start',
+            'bottom-end': 'bottom-end',
+            'left': 'left',
+            'left-top': 'left-start',
+            'left-bottom': 'left-end',
+            'start': isRTL(this) ? 'right' : 'left',
+            'start-top': isRTL(this) ? 'right-start' : 'left-start',
+            'start-bottom': isRTL(this) ? 'right-end' : 'left-end',
+            'end': isRTL(this) ? 'left' : 'right',
+            'end-top': isRTL(this) ? 'left-start' : 'right-start',
+            'end-bottom': isRTL(this) ? 'left-end' : 'right-end'
+        };
+        const padding = [this.offset].flat();
+        return {
+            middleware: [FloatingCore.offset({
+                    crossAxis: padding[0] || 0,
+                    mainAxis: padding[1] || 0
+                }), FloatingCore.flip(), this.arrow && FloatingCore.arrow({
+                    element: this.$arrow
+                })
+                // FloatingCore.hide()
+            ],
+            placement: PLACEMENT[this.placement],
+            strategy: this.fixed ? 'fixed' : 'absolute'
+        };
+    }
+    watcher(next, prev, key) {
+        switch (key) {
+            case 'disabled':
+                next ? this.unbind() : this.bind();
+                break;
+            case 'fixed':
+            case 'offset':
+            case 'placement':
+                if (this.state == 'hide')
+                    break;
+                this.update();
+                break;
+            case 'reference':
+            case 'trigger':
+                this.unbind();
+                this.bind();
+                break;
+        }
     }
     bind() {
         // TODO
@@ -197,25 +210,6 @@ let Tooltip$1 = class Tooltip {
         if (!active)
             return;
         this.cleanup = FloatingCore.autoUpdate(this.$activator, this.$host, this.update.bind(this));
-    }
-    watcher(next, prev, key) {
-        switch (key) {
-            case 'disabled':
-                next ? this.unbind() : this.bind();
-                break;
-            case 'fixed':
-            case 'offset':
-            case 'placement':
-                if (this.state == 'hide')
-                    break;
-                this.update();
-                break;
-            case 'reference':
-            case 'trigger':
-                this.unbind();
-                this.bind();
-                break;
-        }
     }
     onHide() {
         this.hide();
@@ -303,9 +297,6 @@ __decorate([
     })
 ], Tooltip$1.prototype, "z", void 0);
 __decorate([
-    State()
-], Tooltip$1.prototype, "state", void 0);
-__decorate([
     Method()
 ], Tooltip$1.prototype, "hide", null);
 __decorate([
@@ -314,6 +305,15 @@ __decorate([
 __decorate([
     Method()
 ], Tooltip$1.prototype, "update", null);
+__decorate([
+    Host()
+], Tooltip$1.prototype, "$host", void 0);
+__decorate([
+    Query('[part=arrow]')
+], Tooltip$1.prototype, "$arrow", void 0);
+__decorate([
+    State()
+], Tooltip$1.prototype, "state", void 0);
 __decorate([
     Watch()
 ], Tooltip$1.prototype, "watcher", null);
