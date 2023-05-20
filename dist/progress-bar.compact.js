@@ -1,5 +1,5 @@
-import { Avatar } from './avatar.js';
-import { AvatarGroup } from './avatar-group.js';
+import { ProgressBar } from './progress-bar.js';
+import { ProgressBarStack } from './progress-bar-stack.js';
 import './index-8a680783.js';
 import './proxy.js';
 import 'react';
@@ -7,8 +7,8 @@ import 'react';
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-var All = Object.assign(Avatar, {
-    Group: AvatarGroup,
+var All = Object.assign(ProgressBar, {
+    Stack: ProgressBarStack,
 });
 
-export { All as Avatar };
+export { All as ProgressBar };

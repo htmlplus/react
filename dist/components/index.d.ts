@@ -22,6 +22,7 @@ export * from './grid.compact';
 export * from './icon';
 export * from './intersection';
 export * from './portal';
+export * from './progress-bar.compact';
 export * from './scroll-detector';
 export * from './signature';
 export * from './spacer';

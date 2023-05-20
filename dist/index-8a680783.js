@@ -2018,6 +2018,28 @@ const BREAKPOINTS = {
     xxl: 1400
 };
 
+// TODO: use regex
+const isSize = (input) => {
+    return [
+        'xxs',
+        'xs',
+        'sm',
+        'md',
+        'lg',
+        'xl',
+        'xxl',
+        '1x',
+        '2x',
+        '3x',
+        '4x',
+        '5x',
+        '6x',
+        '7x',
+        '8x',
+        '9x'
+    ].includes(input);
+};
+
 const toAxis = (input, rtl) => {
     if (!input)
         return input;
@@ -2094,4 +2116,4 @@ function Media(query) {
 
 Object.keys(BREAKPOINTS).sort((a, b) => BREAKPOINTS[a] - BREAKPOINTS[b]);
 
-export { Animation2 as A, Bind as B, CONFIG_NAMESPACE as C, Event$1 as E, Host as H, Method as M, Property as P, Query as Q, State as S, Watch as W, __decorate as _, __awaiter as a, Element as b, styles as c, attributes$1 as d, host as e, QueryAll as f, off as g, html as h, classes as i, isRTL as j, toUnit as k, Portal as l, createLink as m, Animation as n, on as o, Scrollbar as p, Media as q, request as r, setConfig as s, toAxis as t, getConfig as u };
+export { Animation2 as A, Bind as B, CONFIG_NAMESPACE as C, Event$1 as E, Host as H, Method as M, Property as P, Query as Q, State as S, Watch as W, __decorate as _, __awaiter as a, Element as b, styles as c, attributes$1 as d, host as e, QueryAll as f, off as g, html as h, classes as i, isRTL as j, toUnit as k, isSize as l, Portal as m, createLink as n, on as o, Animation as p, Scrollbar as q, request as r, setConfig as s, toAxis as t, Media as u, getConfig as v };

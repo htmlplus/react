@@ -1,5 +1,5 @@
-import { _ as __decorate, s as setConfig, h as html, P as Property, E as Event$1, M as Method, H as Host, W as Watch, B as Bind, b as Element } from './index-1d9a2e38.js';
-import { g as getConfig } from './config-67ed0503.js';
+import { _ as __decorate, s as setConfig, h as html, P as Property, E as Event$1, M as Method, H as Host, W as Watch, B as Bind, b as Element } from './index-8a680783.js';
+import { g as getConfig } from './config-7a5e4f4c.js';
 import { proxy } from './proxy.js';
 import 'react';
 

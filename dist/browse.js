@@ -1,8 +1,20 @@
-import { _ as __decorate, h as html, d as attributes$1, e as host, P as Property, E as Event$1, Q as Query, S as State, M as Method, B as Bind, b as Element } from './index-1d9a2e38.js';
+import { _ as __decorate, h as html, d as attributes$1, e as host, P as Property, E as Event$1, Q as Query, S as State, M as Method, B as Bind, b as Element } from './index-8a680783.js';
 import { proxy } from './proxy.js';
 import 'react';
 
 var css_248z = ":host,:host:after,:host:before{box-sizing:border-box}:host *,:host :after,:host :before{box-sizing:border-box}:host([hidden]:not([hidden=false])){display:none!important}:host{cursor:pointer}input[type=file]{display:none}";
+
+var BrowseError;
+(function (BrowseError) {
+    BrowseError["Min"] = "MIN";
+    BrowseError["Max"] = "MAX";
+})(BrowseError || (BrowseError = {}));
+var BrowseFileError;
+(function (BrowseFileError) {
+    BrowseFileError["Accept"] = "ACCEPT";
+    BrowseFileError["Min_Size"] = "MIN_SIZE";
+    BrowseFileError["Max_Size"] = "MAX_SIZE";
+})(BrowseFileError || (BrowseFileError = {}));
 
 /**
  * @slot default - The default slot.
@@ -36,9 +48,9 @@ let Browse$1 = class Browse {
             files: []
         };
         if (this.min > files.length)
-            detail.errors.push('MIN');
+            detail.errors.push(BrowseError.Min);
         if (this.max < files.length)
-            detail.errors.push('MAX');
+            detail.errors.push(BrowseError.Max);
         for (let i = 0; i < files.length; i++) {
             const file = files[i];
             const value = {
@@ -54,12 +66,12 @@ let Browse$1 = class Browse {
                     break;
                 if (isMime && isPattern && value.file.type.startsWith(type.slice(0, -1)))
                     break;
-                value.errors.push('ACCEPT');
+                value.errors.push(BrowseFileError.Accept);
             }
             if (this.minSize > value.file.size)
-                value.errors.push('MIN_SIZE');
+                value.errors.push(BrowseFileError.Min_Size);
             if (this.maxSize < value.file.size)
-                value.errors.push('MAX_SIZE');
+                value.errors.push(BrowseFileError.Max_Size);
             detail.files.push(value);
         }
         const error = detail.errors.length || detail.files.some(file => file.errors.length);

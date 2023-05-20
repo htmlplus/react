@@ -1,4 +1,4 @@
-import { _ as __decorate, a as __awaiter, h as html, P as Property, E as Event$1, M as Method, H as Host, Q as Query, W as Watch, B as Bind, b as Element } from './index-1d9a2e38.js';
+import { _ as __decorate, a as __awaiter, h as html, P as Property, E as Event$1, M as Method, H as Host, Q as Query, W as Watch, B as Bind, b as Element } from './index-8a680783.js';
 import { proxy } from './proxy.js';
 import 'react';
 

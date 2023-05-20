@@ -1,4 +1,4 @@
-import { _ as __decorate, A as Animation2, a as __awaiter, h as html, P as Property, E as Event$1, H as Host, Q as Query, M as Method, W as Watch, B as Bind, b as Element } from './index-1d9a2e38.js';
+import { _ as __decorate, A as Animation2, a as __awaiter, h as html, P as Property, E as Event$1, H as Host, Q as Query, M as Method, W as Watch, B as Bind, b as Element } from './index-8a680783.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -14,6 +14,7 @@ var css_248z = ":host,:host:after,:host:before{box-sizing:border-box}:host *,:ho
  * @slot icon-expand   - The expand icon slot.
  * @slot icon-collapse - The collapse icon slot.
  * @slot summary       - The summary slot.
+ * @stable
  */
 let Accordion$1 = class Accordion {
     constructor() {
