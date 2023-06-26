@@ -15,6 +15,6 @@ type Renamed = Rename<
 
 export const Spinner = proxy<SpinnerElement, Renamed>(
   SpinnerCore.TAG, 
-  ['size', 'type', ], 
+  ['color', 'size', 'type', ], 
   [],
 );
