@@ -15,6 +15,6 @@ type Renamed = Rename<
 
 export const ProgressBar = proxy<ProgressBarElement, Renamed>(
   ProgressBarCore.TAG, 
-  ['buffer', 'label', 'min', 'max', 'variant', 'value', ], 
+  ['buffer', 'immediate', 'label', 'min', 'max', 'variant', 'value', ], 
   [],
 );
