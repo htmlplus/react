@@ -1,12 +1,13 @@
-import { _ as __decorate, o as on, g as off, P as Property, E as Event$1, W as Watch, B as Bind, b as Element } from './index-8a680783.js';
+import { _ as __decorate, P as PlusCore, o as on, i as off, b as Property, E as Event$1, W as Watch, B as Bind, c as Element } from './index-0dfb4429.js';
 import { proxy } from './proxy.js';
 import 'react';
 
 /**
  * @stable
  */
-let ScrollDetector$1 = class ScrollDetector {
+let ScrollDetector$1 = class ScrollDetector extends PlusCore {
     constructor() {
+        super(...arguments);
         /**
          * Specifies the reference of the scroll.
          */

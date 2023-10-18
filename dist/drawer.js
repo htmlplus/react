@@ -1,4 +1,4 @@
-import { _ as __decorate, n as createLink, t as toAxis, j as isRTL, i as classes, c as styles, p as Animation, q as Scrollbar, g as off, o as on, h as html, d as attributes$1, e as host, P as Property, E as Event$1, H as Host, Q as Query, S as State, W as Watch, B as Bind, u as Media, b as Element } from './index-8a680783.js';
+import { _ as __decorate, q as createLink, P as PlusCore, t as toAxis, j as classes, d as styles, u as Animation, v as Scrollbar, i as off, o as on, h as html, e as attributes$1, f as host, b as Property, E as Event$1, Q as Query, S as State, W as Watch, B as Bind, w as Media, c as Element } from './index-0dfb4429.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -11,8 +11,9 @@ const { Action, Observable, reconnect } = createLink({
 /**
  * @slot default - The default slot.
  */
-let Drawer$1 = class Drawer {
+let Drawer$1 = class Drawer extends PlusCore {
     constructor() {
+        super(...arguments);
         /**
          * Activate the drawer's backdrop to show or not.
          */
@@ -25,7 +26,7 @@ let Drawer$1 = class Drawer {
         this.animations = {};
     }
     get classes() {
-        const placement = toAxis(this.placement || 'start', isRTL(this));
+        const placement = toAxis(this.placement || 'start', this.isRTL);
         return classes(['root', {
                 [placement]: true,
                 reverse: this.flexible
@@ -294,9 +295,6 @@ __decorate([
 __decorate([
     Event$1()
 ], Drawer$1.prototype, "plusOpened", void 0);
-__decorate([
-    Host()
-], Drawer$1.prototype, "$host", void 0);
 __decorate([
     Query('.root')
 ], Drawer$1.prototype, "$root", void 0);

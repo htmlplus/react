@@ -1,4 +1,4 @@
-import { _ as __decorate, k as toUnit, c as styles, h as html, d as attributes$1, e as host, P as Property, E as Event$1, Q as Query, S as State, W as Watch, B as Bind, b as Element } from './index-8a680783.js';
+import { _ as __decorate, P as PlusCore, k as toUnit, d as styles, h as html, e as attributes$1, f as host, b as Property, E as Event$1, Q as Query, S as State, W as Watch, B as Bind, c as Element } from './index-0dfb4429.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -10,8 +10,9 @@ var css_248z = ":host,:host:after,:host:before{box-sizing:border-box}:host *,:ho
  * @slot normal  - Activated when the state becomes `normal`. To enable, set the `watcher` property to `true`.
  * @slot stick   - Activated when the state becomes `stick`. To enable, set the `watcher` property to `true`.
  */
-let Sticky$1 = class Sticky {
+let Sticky$1 = class Sticky extends PlusCore {
     constructor() {
+        super(...arguments);
         /**
          * Specifies the space from top.
          */

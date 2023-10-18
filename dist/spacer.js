@@ -1,11 +1,12 @@
-import { _ as __decorate, P as Property, b as Element } from './index-8a680783.js';
+import { _ as __decorate, P as PlusCore, b as Property, c as Element } from './index-0dfb4429.js';
 import { proxy } from './proxy.js';
 import 'react';
 
 var css_248z = ":host,:host:after,:host:before{box-sizing:border-box}:host *,:host :after,:host :before{box-sizing:border-box}:host([hidden]:not([hidden=false])){display:none!important}:host{display:block}";
 
-let Spacer$1 = class Spacer {
+let Spacer$1 = class Spacer extends PlusCore {
     constructor() {
+        super(...arguments);
         /**
          * TODO
          */

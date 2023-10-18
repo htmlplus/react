@@ -1,4 +1,4 @@
-import { _ as __decorate, i as classes, a as __awaiter, h as html, P as Property, E as Event$1, M as Method, Q as Query, W as Watch, B as Bind, b as Element } from './index-8a680783.js';
+import { _ as __decorate, P as PlusCore, j as classes, a as __awaiter, h as html, b as Property, E as Event$1, M as Method, Q as Query, W as Watch, B as Bind, c as Element } from './index-0dfb4429.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -10,8 +10,9 @@ let CropperCore;
  * @stable
  * @thirdParty
  */
-let Cropper$1 = class Cropper {
+let Cropper$1 = class Cropper extends PlusCore {
     constructor() {
+        super(...arguments);
         /**
          * A number between 0 and 1. Specifies the automatic cropping area size.
          */

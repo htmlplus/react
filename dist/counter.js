@@ -1,4 +1,4 @@
-import { _ as __decorate, h as html, d as attributes$1, e as host, P as Property, E as Event$1, M as Method, S as State, W as Watch, B as Bind, b as Element } from './index-8a680783.js';
+import { _ as __decorate, P as PlusCore, h as html, e as attributes$1, f as host, b as Property, E as Event$1, M as Method, S as State, W as Watch, B as Bind, c as Element } from './index-0dfb4429.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -12,8 +12,9 @@ const COUNTER_EASINGS = {
 /**
  * @stable
  */
-let Counter$1 = class Counter {
+let Counter$1 = class Counter extends PlusCore {
     constructor() {
+        super(...arguments);
         /**
          * Easing function. Click [here](http://robertpenner.com/easing) for more details.
          */

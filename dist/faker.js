@@ -1,4 +1,4 @@
-import { _ as __decorate, a as __awaiter, P as Property, b as Element } from './index-8a680783.js';
+import { _ as __decorate, P as PlusCore, a as __awaiter, b as Property, c as Element } from './index-0dfb4429.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -9,8 +9,9 @@ var css_248z = ":host,:host:after,:host:before{box-sizing:border-box}:host *,:ho
  * @stable
  * @thirdParty
  */
-let Faker$1 = class Faker {
+let Faker$1 = class Faker extends PlusCore {
     constructor() {
+        super(...arguments);
         /**
          * Specifies the [API](https://fakerjs.dev/api).
          */

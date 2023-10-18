@@ -1,4 +1,4 @@
-import { _ as __decorate, a as __awaiter, h as html, P as Property, E as Event$1, M as Method, H as Host, Q as Query, W as Watch, B as Bind, b as Element } from './index-8a680783.js';
+import { _ as __decorate, p as PlusForm, a as __awaiter, h as html, b as Property, E as Event$1, M as Method, Q as Query, W as Watch, B as Bind, c as Element } from './index-0dfb4429.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -9,8 +9,9 @@ let Core;
  * @part canvas - The canvas element.
  * @stable
  */
-let Signature$1 = class Signature {
+let Signature$1 = class Signature extends PlusForm {
     constructor() {
+        super(...arguments);
         /**
          * Specifies the background color.
          */
@@ -359,9 +360,6 @@ __decorate([
 __decorate([
     Method()
 ], Signature$1.prototype, "undo", null);
-__decorate([
-    Host()
-], Signature$1.prototype, "$host", void 0);
 __decorate([
     Query('canvas')
 ], Signature$1.prototype, "$canvas", void 0);

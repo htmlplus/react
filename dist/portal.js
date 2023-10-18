@@ -1,4 +1,4 @@
-import { _ as __decorate, m as Portal$2, P as Property, H as Host, W as Watch, b as Element } from './index-8a680783.js';
+import { _ as __decorate, P as PlusCore, n as Portal$2, b as Property, W as Watch, c as Element } from './index-0dfb4429.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -8,8 +8,9 @@ var css_248z = ":host,:host:after,:host:before{box-sizing:border-box}:host *,:ho
  * @experimental
  * @slot default - The default slot.
  */
-let Portal$1 = class Portal {
+let Portal$1 = class Portal extends PlusCore {
     constructor() {
+        super(...arguments);
         /**
          * Specifies the position of the portal content relative to the target.
          */
@@ -76,9 +77,6 @@ __decorate([
         type: 0
     })
 ], Portal$1.prototype, "target", void 0);
-__decorate([
-    Host()
-], Portal$1.prototype, "$host", void 0);
 __decorate([
     Watch(['disabled', 'strategy', 'target'])
 ], Portal$1.prototype, "watcher", null);

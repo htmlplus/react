@@ -1,4 +1,4 @@
-import { _ as __decorate, o as on, g as off, h as html, P as Property, E as Event$1, H as Host, W as Watch, B as Bind, b as Element } from './index-8a680783.js';
+import { _ as __decorate, P as PlusCore, o as on, i as off, h as html, b as Property, E as Event$1, W as Watch, B as Bind, c as Element } from './index-0dfb4429.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -6,7 +6,7 @@ import 'react';
  * @stable
  * @slot default - The default slot.
  */
-let ClickOutside$1 = class ClickOutside {
+let ClickOutside$1 = class ClickOutside extends PlusCore {
     get options() {
         return {
             capture: this.capture
@@ -70,9 +70,6 @@ __decorate([
         cancelable: true
     })
 ], ClickOutside$1.prototype, "plusClickOutside", void 0);
-__decorate([
-    Host()
-], ClickOutside$1.prototype, "$host", void 0);
 __decorate([
     Watch(['capture', 'disabled', 'once'])
 ], ClickOutside$1.prototype, "watcher", null);

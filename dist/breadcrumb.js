@@ -1,4 +1,4 @@
-import { _ as __decorate, r as request, h as html, d as attributes$1, e as host, P as Property, S as State, H as Host, f as QueryAll, B as Bind, b as Element } from './index-8a680783.js';
+import { _ as __decorate, P as PlusCore, r as request, h as html, e as attributes$1, f as host, b as Property, S as State, g as QueryAll, B as Bind, c as Element } from './index-0dfb4429.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -15,8 +15,9 @@ const BREADCRUMB_SEPARATOR_QUERY = '[slot=separator]';
  * @slot expander  - The expander slot.
  * @slot separator - The separator slot.
  */
-let Breadcrumb$1 = class Breadcrumb {
+let Breadcrumb$1 = class Breadcrumb extends PlusCore {
     constructor() {
+        super(...arguments);
         /**
          * Specifies the label for the expander button.
          */
@@ -178,9 +179,6 @@ __decorate([
 __decorate([
     State()
 ], Breadcrumb$1.prototype, "expand", void 0);
-__decorate([
-    Host()
-], Breadcrumb$1.prototype, "$host", void 0);
 __decorate([
     QueryAll('.separator')
 ], Breadcrumb$1.prototype, "$separators", void 0);

@@ -1,4 +1,4 @@
-import { _ as __decorate, h as html, P as Property, Q as Query, b as Element } from './index-8a680783.js';
+import { _ as __decorate, P as PlusCore, h as html, b as Property, Q as Query, c as Element } from './index-0dfb4429.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -7,8 +7,9 @@ var css_248z = ":host,:host:after,:host:before{box-sizing:border-box}:host *,:ho
 /**
  * @slot default - The default slot.
  */
-let Grid$1 = class Grid {
+let Grid$1 = class Grid extends PlusCore {
     constructor() {
+        super(...arguments);
         /**
          * Aligns contents vertically across all rows (It overrides alignItems).
          */

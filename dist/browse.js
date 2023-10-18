@@ -1,4 +1,4 @@
-import { _ as __decorate, h as html, d as attributes$1, e as host, P as Property, E as Event$1, Q as Query, S as State, M as Method, B as Bind, b as Element } from './index-8a680783.js';
+import { _ as __decorate, P as PlusCore, h as html, e as attributes$1, f as host, b as Property, E as Event$1, Q as Query, S as State, M as Method, B as Bind, c as Element } from './index-0dfb4429.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -19,7 +19,7 @@ var BrowseFileError;
 /**
  * @slot default - The default slot.
  */
-let Browse$1 = class Browse {
+let Browse$1 = class Browse extends PlusCore {
     get attributes() {
         const attributes = {};
         if (this.disabled)

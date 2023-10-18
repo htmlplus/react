@@ -1,5 +1,5 @@
-import { _ as __decorate, s as setConfig, h as html, P as Property, E as Event$1, M as Method, H as Host, W as Watch, B as Bind, b as Element } from './index-8a680783.js';
-import { g as getConfig } from './config-7a5e4f4c.js';
+import { _ as __decorate, s as setConfig, P as PlusCore, h as html, b as Property, E as Event$1, M as Method, W as Watch, B as Bind, c as Element } from './index-0dfb4429.js';
+import { g as getConfig } from './config-f3bbc3de.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -61,8 +61,9 @@ register('fade-out', [
  * @stable
  * @slot default - The default slot.
  */
-let Animation$1 = class Animation {
+let Animation$1 = class Animation extends PlusCore {
     constructor() {
+        super(...arguments);
         /**
          * Determines how values are combined between this animation and other,
          * separate animations that do not specify their own specific composite operation.
@@ -352,9 +353,6 @@ __decorate([
 __decorate([
     Method()
 ], Animation$1.prototype, "updatePlaybackRate", null);
-__decorate([
-    Host()
-], Animation$1.prototype, "$host", void 0);
 __decorate([
     Watch('run', true)
 ], Animation$1.prototype, "watcher", null);

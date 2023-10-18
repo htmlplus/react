@@ -1,4 +1,4 @@
-import { _ as __decorate, h as html, P as Property, W as Watch, b as Element, n as createLink } from './index-8a680783.js';
+import { _ as __decorate, P as PlusCore, h as html, b as Property, W as Watch, c as Element, q as createLink } from './index-0dfb4429.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -12,7 +12,7 @@ const { reconnect } = createLink({
  * TODO: This component contains panels.
  * @slot default - The default slot.
  */
-let TabsPanels$1 = class TabsPanels {
+let TabsPanels$1 = class TabsPanels extends PlusCore {
     watcher() {
         reconnect(this);
     }

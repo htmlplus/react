@@ -1,4 +1,4 @@
-import { _ as __decorate, A as Animation2, a as __awaiter, h as html, P as Property, E as Event$1, H as Host, Q as Query, M as Method, W as Watch, B as Bind, b as Element } from './index-8a680783.js';
+import { _ as __decorate, P as PlusCore, A as Animation2, a as __awaiter, h as html, b as Property, E as Event$1, Q as Query, M as Method, W as Watch, B as Bind, c as Element } from './index-0dfb4429.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -16,8 +16,9 @@ var css_248z = ":host,:host:after,:host:before{box-sizing:border-box}:host *,:ho
  * @slot summary       - The summary slot.
  * @stable
  */
-let Accordion$1 = class Accordion {
+let Accordion$1 = class Accordion extends PlusCore {
     constructor() {
+        super(...arguments);
         this.animate = new Animation2({
             key: 'state',
             source: () => this.$body,
@@ -182,9 +183,6 @@ __decorate([
 __decorate([
     Event$1()
 ], Accordion$1.prototype, "plusExpanded", void 0);
-__decorate([
-    Host()
-], Accordion$1.prototype, "$host", void 0);
 __decorate([
     Query('.body')
 ], Accordion$1.prototype, "$body", void 0);

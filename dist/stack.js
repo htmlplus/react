@@ -1,12 +1,13 @@
-import { _ as __decorate, c as styles, k as toUnit, h as html, d as attributes$1, e as host, P as Property, b as Element } from './index-8a680783.js';
+import { _ as __decorate, P as PlusCore, d as styles, k as toUnit, h as html, e as attributes$1, f as host, b as Property, c as Element } from './index-0dfb4429.js';
 import { proxy } from './proxy.js';
 import 'react';
 
 /**
  * @slot default - The default slot.
  */
-let Stack$1 = class Stack {
+let Stack$1 = class Stack extends PlusCore {
     constructor() {
+        super(...arguments);
         /**
          * TODO.
          */

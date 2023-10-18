@@ -1,9 +1,9 @@
-import { _ as __decorate, a as __awaiter, l as isSize, k as toUnit, c as styles, h as html, d as attributes$1, e as host, P as Property, H as Host, S as State, W as Watch, b as Element } from './index-8a680783.js';
-import { g as getConfig, s as setConfig } from './config-7a5e4f4c.js';
+import { _ as __decorate, P as PlusCore, a as __awaiter, l as isSize, k as toUnit, d as styles, m as isValidCSSColor, h as html, e as attributes$1, f as host, b as Property, S as State, W as Watch, c as Element } from './index-0dfb4429.js';
+import { g as getConfig, s as setConfig } from './config-f3bbc3de.js';
 import { proxy } from './proxy.js';
 import 'react';
 
-var css_248z = ":host,:host:after,:host:before{box-sizing:border-box}:host *,:host :after,:host :before{box-sizing:border-box}:host([hidden]:not([hidden=false])){display:none!important}:host{align-items:center;display:inline-flex;height:1em;justify-content:center;vertical-align:middle;width:1em}:host([size=xs]){height:.7em;width:.7em}:host([size=sm]){height:.85em;width:.85em}:host([size=md]){height:1em;width:1em}:host([size=lg]){height:1.5em;width:1.5em}:host([size=xl]){height:1.75em;width:1.75em}:host([size=\"1x\"]){height:1em;width:1em}:host([size=\"2x\"]){height:2em;width:2em}:host([size=\"3x\"]){height:3em;width:3em}:host([size=\"4x\"]){height:4em;width:4em}:host([size=\"5x\"]){height:5em;width:5em}:host([size=\"6x\"]){height:6em;width:6em}:host([size=\"7x\"]){height:7em;width:7em}:host([size=\"8x\"]){height:8em;width:8em}:host([size=\"9x\"]){height:9em;width:9em}svg{display:block;height:100%;width:100%}";
+var css_248z = ":host,:host:after,:host:before{box-sizing:border-box}:host *,:host :after,:host :before{box-sizing:border-box}:host([hidden]:not([hidden=false])){display:none!important}:host{align-items:center;color:var(--plus-color,currentColor);display:inline-flex;height:1em;justify-content:center;vertical-align:middle;width:1em}:host([size=xs]){height:.7em;width:.7em}:host([size=sm]){height:.85em;width:.85em}:host([size=md]){height:1em;width:1em}:host([size=lg]){height:1.5em;width:1.5em}:host([size=xl]){height:1.75em;width:1.75em}:host([size=\"1x\"]){height:1em;width:1em}:host([size=\"2x\"]){height:2em;width:2em}:host([size=\"3x\"]){height:3em;width:3em}:host([size=\"4x\"]){height:4em;width:4em}:host([size=\"5x\"]){height:5em;width:5em}:host([size=\"6x\"]){height:6em;width:6em}:host([size=\"7x\"]){height:7em;width:7em}:host([size=\"8x\"]){height:8em;width:8em}:host([size=\"9x\"]){height:9em;width:9em}svg{display:block;height:100%;width:100%}";
 
 const ICON_FALLBACK_SVG = `
   <svg width="16" height="16" fill="red" viewBox="0 0 16 16">
@@ -34,8 +34,9 @@ const parse = (input) => {
 /**
  * @part svg - The svg element.
  */
-let Icon$1 = class Icon {
+let Icon$1 = class Icon extends PlusCore {
     constructor() {
+        super(...arguments);
         /**
          * An asynchronous function to load SVG files.
          */
@@ -79,7 +80,7 @@ let Icon$1 = class Icon {
             }
         }
         return styles({
-            color: this.color,
+            color: isValidCSSColor(this.color) ? this.color : null,
             height: size,
             width: size,
             transform
@@ -184,9 +185,6 @@ __decorate([
         type: 328
     })
 ], Icon$1.prototype, "size", void 0);
-__decorate([
-    Host()
-], Icon$1.prototype, "$host", void 0);
 __decorate([
     State()
 ], Icon$1.prototype, "svg", void 0);

@@ -1,4 +1,4 @@
-import { _ as __decorate, h as html, c as styles, P as Property, b as Element } from './index-8a680783.js';
+import { _ as __decorate, P as PlusCore, h as html, d as styles, b as Property, c as Element } from './index-0dfb4429.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -8,8 +8,9 @@ var css_248z = ":host,:host:after,:host:before{box-sizing:border-box}:host *,:ho
  * @stable
  * @slot default - The default slot.
  */
-let AspectRatio$1 = class AspectRatio {
+let AspectRatio$1 = class AspectRatio extends PlusCore {
     constructor() {
+        super(...arguments);
         /**
          * Specifies the minimum height.
          */

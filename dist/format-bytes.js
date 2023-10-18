@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, b as Element } from './index-8a680783.js';
+import { _ as __decorate, P as PlusCore, b as Property, c as Element } from './index-0dfb4429.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -70,8 +70,9 @@ const FORMAT_BYTES_STANDARD = {
 /**
  * @stable
  */
-let FormatBytes$1 = class FormatBytes {
+let FormatBytes$1 = class FormatBytes extends PlusCore {
     constructor() {
+        super(...arguments);
         /**
          * Specifies the unit will be shown as an abbreviation or not.
          */

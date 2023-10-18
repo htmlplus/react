@@ -1,4 +1,4 @@
-import { _ as __decorate, n as createLink, h as html, P as Property, E as Event$1, W as Watch, b as Element } from './index-8a680783.js';
+import { _ as __decorate, q as createLink, P as PlusCore, h as html, b as Property, E as Event$1, W as Watch, c as Element } from './index-0dfb4429.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -12,7 +12,7 @@ const { Action, Observable, reconnect } = createLink({
  * @development
  * @slot default - The default slot.
  */
-let Tabs$1 = class Tabs {
+let Tabs$1 = class Tabs extends PlusCore {
     watcher(next, prev, name) {
         switch (name) {
             case 'connector':

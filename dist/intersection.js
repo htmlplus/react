@@ -1,4 +1,4 @@
-import { _ as __decorate, h as html, d as attributes$1, e as host, P as Property, E as Event$1, H as Host, S as State, W as Watch, B as Bind, b as Element } from './index-8a680783.js';
+import { _ as __decorate, P as PlusCore, h as html, e as attributes$1, f as host, b as Property, E as Event$1, S as State, W as Watch, B as Bind, c as Element } from './index-0dfb4429.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -6,7 +6,7 @@ import 'react';
  * @stable
  * @slot default - The default slot.
  */
-let Intersection$1 = class Intersection {
+let Intersection$1 = class Intersection extends PlusCore {
     get disconnected() {
         return this.once && this.isIntersecting;
     }
@@ -104,9 +104,6 @@ __decorate([
 __decorate([
     Event$1()
 ], Intersection$1.prototype, "plusChange", void 0);
-__decorate([
-    Host()
-], Intersection$1.prototype, "$host", void 0);
 __decorate([
     State()
 ], Intersection$1.prototype, "isIntersecting", void 0);

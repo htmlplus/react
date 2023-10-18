@@ -1,4 +1,4 @@
-import { _ as __decorate, j as isRTL, l as isSize, k as toUnit, h as html, d as attributes$1, c as styles, e as host, P as Property, b as Element } from './index-8a680783.js';
+import { _ as __decorate, P as PlusCore, l as isSize, k as toUnit, h as html, e as attributes$1, d as styles, f as host, b as Property, c as Element } from './index-0dfb4429.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -8,8 +8,9 @@ var css_248z = ":host,:host:after,:host:before{box-sizing:border-box}:host *,:ho
  * @stable
  * @slot default - The default slot.
  */
-let Avatar$1 = class Avatar {
+let Avatar$1 = class Avatar extends PlusCore {
     constructor() {
+        super(...arguments);
         /**
          * Specifies the shape of the component.
          */
@@ -24,27 +25,27 @@ let Avatar$1 = class Avatar {
         return {
             'bottom': {
                 bottom: 0,
-                [isRTL(this) ? 'right' : 'left']: '50%',
+                [this.isRTL ? 'right' : 'left']: '50%',
                 transform: 'translate(-50%, +50%)'
             },
             'center': {
                 top: '50%',
-                [isRTL(this) ? 'right' : 'left']: '50%',
+                [this.isRTL ? 'right' : 'left']: '50%',
                 transform: 'translate(-50%, -50%)'
             },
             'end': {
                 top: '50%',
-                [isRTL(this) ? 'left' : 'right']: 0,
+                [this.isRTL ? 'left' : 'right']: 0,
                 transform: 'translate(+50%, -50%)'
             },
             'end-bottom': {
                 bottom: offset,
-                [isRTL(this) ? 'left' : 'right']: offset,
+                [this.isRTL ? 'left' : 'right']: offset,
                 transform: 'translate(+50%, +50%)'
             },
             'end-top': {
                 top: offset,
-                [isRTL(this) ? 'left' : 'right']: offset,
+                [this.isRTL ? 'left' : 'right']: offset,
                 transform: 'translate(+50%, -50%)'
             },
             'left': {
@@ -79,22 +80,22 @@ let Avatar$1 = class Avatar {
             },
             'start': {
                 top: '50%',
-                [isRTL(this) ? 'right' : 'left']: 0,
+                [this.isRTL ? 'right' : 'left']: 0,
                 transform: 'translate(-50%, -50%)'
             },
             'start-bottom': {
                 bottom: offset,
-                [isRTL(this) ? 'right' : 'left']: offset,
+                [this.isRTL ? 'right' : 'left']: offset,
                 transform: 'translate(-50%, +50%)'
             },
             'start-top': {
                 top: offset,
-                [isRTL(this) ? 'right' : 'left']: offset,
+                [this.isRTL ? 'right' : 'left']: offset,
                 transform: 'translate(-50%, -50%)'
             },
             'top': {
                 top: 0,
-                [isRTL(this) ? 'right' : 'left']: '50%',
+                [this.isRTL ? 'right' : 'left']: '50%',
                 transform: 'translate(-50%, -50%)'
             }
         };

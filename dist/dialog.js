@@ -1,4 +1,4 @@
-import { _ as __decorate, P as Property, E as Event$1, H as Host, Q as Query, W as Watch, B as Bind, n as createLink, t as toAxis, j as isRTL, i as classes, p as Animation, q as Scrollbar, g as off, m as Portal, o as on, h as html, d as attributes$1, e as host, b as Element } from './index-8a680783.js';
+import { _ as __decorate, b as Property, E as Event$1, Q as Query, W as Watch, B as Bind, q as createLink, P as PlusCore, t as toAxis, j as classes, u as Animation, v as Scrollbar, i as off, n as Portal, o as on, h as html, e as attributes$1, f as host, c as Element } from './index-0dfb4429.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -13,8 +13,9 @@ const { Action, Observable, reconnect } = createLink({
  * @part backdrop - Backdrop element.
  * @slot default - The default slot.
  */
-let Dialog$1 = Dialog_1 = class Dialog {
+let Dialog$1 = Dialog_1 = class Dialog extends PlusCore {
     constructor() {
+        super(...arguments);
         /**
          * Activate the dialog's backdrop to show or not.
          */
@@ -46,7 +47,7 @@ let Dialog$1 = Dialog_1 = class Dialog {
         let [x, y] = placement.split('-');
         x = x || 'center';
         y = y || 'center';
-        x = toAxis(x, isRTL(this));
+        x = toAxis(x, this.isRTL);
         return classes(['dialog', {
                 x,
                 y,
@@ -343,9 +344,6 @@ __decorate([
 __decorate([
     Event$1()
 ], Dialog$1.prototype, "plusOpened", void 0);
-__decorate([
-    Host()
-], Dialog$1.prototype, "$host", void 0);
 __decorate([
     Query('slot')
 ], Dialog$1.prototype, "$cell", void 0);

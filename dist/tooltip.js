@@ -1,4 +1,4 @@
-import { _ as __decorate, j as isRTL, o as on, g as off, a as __awaiter, h as html, d as attributes$1, e as host, P as Property, M as Method, H as Host, Q as Query, S as State, W as Watch, B as Bind, b as Element } from './index-8a680783.js';
+import { _ as __decorate, P as PlusCore, o as on, i as off, a as __awaiter, h as html, e as attributes$1, f as host, b as Property, M as Method, Q as Query, S as State, W as Watch, B as Bind, c as Element } from './index-0dfb4429.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -9,8 +9,9 @@ let FloatingCore;
  * @dependencies @floating-ui/dom
  * @thirdParty
  */
-let Tooltip$1 = class Tooltip {
+let Tooltip$1 = class Tooltip extends PlusCore {
     constructor() {
+        super(...arguments);
         /**
          * TODO
          */
@@ -100,27 +101,27 @@ let Tooltip$1 = class Tooltip {
     get options() {
         const PLACEMENT = {
             'top': 'top',
-            'top-left': isRTL(this) ? 'top-end' : 'top-start',
-            'top-right': isRTL(this) ? 'top-start' : 'top-end',
+            'top-left': this.isRTL ? 'top-end' : 'top-start',
+            'top-right': this.isRTL ? 'top-start' : 'top-end',
             'top-start': 'top-start',
             'top-end': 'top-end',
             'right': 'right',
             'right-top': 'right-start',
             'right-bottom': 'right-end',
             'bottom': 'bottom',
-            'bottom-left': isRTL(this) ? 'bottom-end' : 'bottom-start',
-            'bottom-right': isRTL(this) ? 'bottom-start' : 'bottom-end',
+            'bottom-left': this.isRTL ? 'bottom-end' : 'bottom-start',
+            'bottom-right': this.isRTL ? 'bottom-start' : 'bottom-end',
             'bottom-start': 'bottom-start',
             'bottom-end': 'bottom-end',
             'left': 'left',
             'left-top': 'left-start',
             'left-bottom': 'left-end',
-            'start': isRTL(this) ? 'right' : 'left',
-            'start-top': isRTL(this) ? 'right-start' : 'left-start',
-            'start-bottom': isRTL(this) ? 'right-end' : 'left-end',
-            'end': isRTL(this) ? 'left' : 'right',
-            'end-top': isRTL(this) ? 'left-start' : 'right-start',
-            'end-bottom': isRTL(this) ? 'left-end' : 'right-end'
+            'start': this.isRTL ? 'right' : 'left',
+            'start-top': this.isRTL ? 'right-start' : 'left-start',
+            'start-bottom': this.isRTL ? 'right-end' : 'left-end',
+            'end': this.isRTL ? 'left' : 'right',
+            'end-top': this.isRTL ? 'left-start' : 'right-start',
+            'end-bottom': this.isRTL ? 'left-end' : 'right-end'
         };
         const padding = [this.offset].flat();
         return {
@@ -305,9 +306,6 @@ __decorate([
 __decorate([
     Method()
 ], Tooltip$1.prototype, "update", null);
-__decorate([
-    Host()
-], Tooltip$1.prototype, "$host", void 0);
 __decorate([
     Query('[part=arrow]')
 ], Tooltip$1.prototype, "$arrow", void 0);

@@ -1,4 +1,4 @@
-import { _ as __decorate, j as isRTL, t as toAxis, k as toUnit, c as styles, h as html, d as attributes$1, e as host, P as Property, b as Element } from './index-8a680783.js';
+import { _ as __decorate, P as PlusCore, t as toAxis, k as toUnit, d as styles, h as html, e as attributes$1, f as host, b as Property, c as Element } from './index-0dfb4429.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -6,8 +6,9 @@ import 'react';
  * @stable
  * @slot default - The default slot.
  */
-let Floating$1 = class Floating {
+let Floating$1 = class Floating extends PlusCore {
     constructor() {
+        super(...arguments);
         /**
          * Specifies the deviation from the center.
          */
@@ -19,17 +20,16 @@ let Floating$1 = class Floating {
     }
     get style() {
         var _a;
-        const rtl = isRTL(this);
         let placement = this.placement || '';
         if (placement.match(/^(top|bottom)$/))
             placement = `-${placement}`;
         let [x, y] = placement.split('-');
         x || (x = 'center');
         y || (y = 'center');
-        x = toAxis(x, rtl);
+        x = toAxis(x, this.isRTL);
         const centeredX = x == 'center';
         const centeredY = y == 'center';
-        const X = !centeredX ? x : rtl ? 'right' : 'left';
+        const X = !centeredX ? x : this.isRTL ? 'right' : 'left';
         const Y = !centeredY ? y : 'top';
         const offset = [this.offset].flat().map(offset => toUnit(offset));
         const offsetX = offset[0];
@@ -40,7 +40,7 @@ let Floating$1 = class Floating {
         style[X] = centeredX ? `calc(50% + ${offsetX})` : `calc(0px + ${offsetX})`;
         style[Y] = centeredY ? `calc(50% + ${offsetY})` : `calc(0px + ${offsetY})`;
         if (centeredX || centeredY) {
-            style['transform'] = `translate(${centeredX ? `${rtl ? '' : '-'}50%` : '0'}, ${centeredY ? '-50%' : '0'})`;
+            style['transform'] = `translate(${centeredX ? `${this.isRTL ? '' : '-'}50%` : '0'}, ${centeredY ? '-50%' : '0'})`;
         }
         return styles(style);
     }

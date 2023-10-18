@@ -1,10 +1,10 @@
-import { _ as __decorate, h as html, d as attributes$1, e as host, P as Property, E as Event$1, B as Bind, b as Element } from './index-8a680783.js';
+import { _ as __decorate, P as PlusCore, h as html, e as attributes$1, f as host, b as Property, E as Event$1, B as Bind, c as Element } from './index-0dfb4429.js';
 import { proxy } from './proxy.js';
 import 'react';
 
 var css_248z = ":host,:host:after,:host:before{box-sizing:border-box}:host *,:host :after,:host :before{box-sizing:border-box}:host([hidden]:not([hidden=false])){display:none!important}:host{border-radius:2em;cursor:pointer;display:inline-block;height:2em;overflow:hidden;user-select:none;vertical-align:middle;width:3.5em}:host([disabled]:not([disabled=false])){opacity:.5}.root{align-items:center;display:flex;flex-wrap:nowrap;height:100%;justify-content:space-between;position:relative;width:100%}.handle,.root{border-radius:inherit;transition:.3s}.handle{background:#fff;height:1.5em;left:50%;position:absolute;top:50%;width:1.5em;z-index:1}.slot{border-radius:inherit;font-size:.8em}.off{border-bottom-left-radius:0;border-top-left-radius:0;padding:0 .5em 0 0}.on{border-bottom-right-radius:0;border-top-right-radius:0;padding:0 0 0 .5em}:host .root{background:#d3d3d3}:host .handle{transform:translate(-1.5em,-50%)}:host .on{opacity:0}:host .off{opacity:1}:host([checked]:not([checked=false])) .root{background:#2196f3}:host([checked]:not([checked=false])) .handle{transform:translate(calc(1.5em - 100%),-50%)}:host([checked]:not([checked=false])) .on{opacity:1}:host([checked]:not([checked=false])) .off{opacity:0}";
 
-let Switch$1 = class Switch {
+let Switch$1 = class Switch extends PlusCore {
     toggle() {
         if (this.disabled)
             return;

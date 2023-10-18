@@ -1,4 +1,4 @@
-import { _ as __decorate, h as html, b as Element } from './index-8a680783.js';
+import { _ as __decorate, P as PlusCore, h as html, c as Element } from './index-0dfb4429.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -8,7 +8,7 @@ var css_248z = ":host,:host:after,:host:before{box-sizing:border-box}:host *,:ho
  * @development
  * @slot default - The default slot.
  */
-let CardBody$1 = class CardBody {
+let CardBody$1 = class CardBody extends PlusCore {
     render() {
         return html `<slot />`;
     }

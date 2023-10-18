@@ -1,4 +1,4 @@
-import { _ as __decorate, h as html, d as attributes$1, e as host, P as Property, b as Element } from './index-8a680783.js';
+import { _ as __decorate, P as PlusCore, h as html, e as attributes$1, f as host, b as Property, c as Element } from './index-0dfb4429.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -8,8 +8,9 @@ var css_248z = ":host,:host:after,:host:before{box-sizing:border-box}:host *,:ho
  * TODO: Arranges tabs within a bar.
  * @slot default - The default slot.
  */
-let TabsBar$1 = class TabsBar {
+let TabsBar$1 = class TabsBar extends PlusCore {
     constructor() {
+        super(...arguments);
         /**
          * Specifies how the tabs are aligned.
          */
