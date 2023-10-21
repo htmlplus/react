@@ -1,4 +1,4 @@
-import { _ as __decorate, P as PlusCore, o as on, i as off, a as __awaiter, h as html, e as attributes$1, f as host, b as Property, M as Method, Q as Query, S as State, W as Watch, B as Bind, c as Element } from './index-0dfb4429.js';
+import { _ as __decorate, P as PlusCore, o as on, i as off, h as html, e as attributes$1, f as host, b as Property, M as Method, Q as Query, S as State, W as Watch, B as Bind, c as Element } from './index-0dfb4429.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -219,13 +219,10 @@ let Tooltip$1 = class Tooltip extends PlusCore {
         this.show();
     }
     connectCallback() {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                FloatingCore = yield import('@floating-ui/dom');
-            }
-            catch (_a) {
-                throw new Error("The `tooltip` component depends on an external package, but it doesn't seem to be installed. Running `npm install @floating-ui/dom` will fix this problem.");
-            }
+        return import('@floating-ui/dom').then(module => {
+            FloatingCore = module;
+        }).catch(() => {
+            throw new Error("The `tooltip` component depends on an external package, but it doesn't seem to be installed. Running `npm install @floating-ui/dom` will fix this problem.");
         });
     }
     connectedCallback() {
