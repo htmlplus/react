@@ -1,6 +1,6 @@
 import { Card } from './card.js';
 import { CardBody } from './card-body.js';
-import './index-0dfb4429.js';
+import './index-73178400.js';
 import './proxy.js';
 import 'react';
 

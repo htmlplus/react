@@ -363,58 +363,6 @@ const direction = (target) => {
     return getComputedStyle(host(target)).getPropertyValue('direction').toLowerCase();
 };
 
-const fromAttribute = (input, type) => {
-    const string = `${input}`;
-    if (TYPE_BOOLEAN & type) {
-        if (string === '')
-            return true;
-        if (string === 'false')
-            return false;
-        if (string === 'true')
-            return true;
-    }
-    if (TYPE_NUMBER & type) {
-        if (string != '' && !isNaN(input)) {
-            return parseFloat(input);
-        }
-    }
-    if (TYPE_NULL & type) {
-        if (string === 'null') {
-            return null;
-        }
-    }
-    if (TYPE_DATE & type) {
-        const value = new Date(input);
-        if (value.toString() != 'Invalid Date') {
-            return value;
-        }
-    }
-    if (TYPE_ARRAY & type) {
-        try {
-            const value = JSON.parse(input);
-            if (typeOf(value) == 'array') {
-                return value;
-            }
-        }
-        catch (_a) { }
-    }
-    if (TYPE_OBJECT & type) {
-        try {
-            const value = JSON.parse(input);
-            if (typeOf(value) == 'object') {
-                return value;
-            }
-        }
-        catch (_b) { }
-    }
-    if (TYPE_UNDEFINED & type) {
-        if (string === 'undefined') {
-            return undefined;
-        }
-    }
-    return input;
-};
-
 const getFramework = (target) => {
     const keys = Object.keys(target);
     const has = (key) => keys.some((key) => key.startsWith(key));
@@ -1269,6 +1217,60 @@ const styles = (input) => {
     }
 };
 
+const toProperty = (input, type) => {
+    if (type === undefined)
+        return input;
+    const string = `${input}`;
+    if (TYPE_BOOLEAN & type) {
+        if (string === '')
+            return true;
+        if (string === 'false')
+            return false;
+        if (string === 'true')
+            return true;
+    }
+    if (TYPE_NUMBER & type) {
+        if (string != '' && !isNaN(input)) {
+            return parseFloat(input);
+        }
+    }
+    if (TYPE_NULL & type) {
+        if (string === 'null') {
+            return null;
+        }
+    }
+    if (TYPE_DATE & type) {
+        const value = new Date(input);
+        if (value.toString() != 'Invalid Date') {
+            return value;
+        }
+    }
+    if (TYPE_ARRAY & type) {
+        try {
+            const value = JSON.parse(input);
+            if (typeOf(value) == 'array') {
+                return value;
+            }
+        }
+        catch (_a) { }
+    }
+    if (TYPE_OBJECT & type) {
+        try {
+            const value = JSON.parse(input);
+            if (typeOf(value) == 'object') {
+                return value;
+            }
+        }
+        catch (_b) { }
+    }
+    if (TYPE_UNDEFINED & type) {
+        if (string === 'undefined') {
+            return undefined;
+        }
+    }
+    return input;
+};
+
 const toUnit = (input, unit = 'px') => {
     if (input == null || input === '')
         return undefined;
@@ -1331,7 +1333,7 @@ function Element() {
                     return;
                 const name = camelCase(attribute);
                 const type = (_a = members[name]) === null || _a === void 0 ? void 0 : _a.type;
-                const value = fromAttribute(next, type);
+                const value = toProperty(next, type);
                 if (instance[name] === value)
                     return;
                 instance[name] = value;
@@ -1417,14 +1419,15 @@ function Property(options) {
         }
         function set(next) {
             const previous = this[symbol];
-            if (next === previous)
+            const parsed = toProperty(next, options === null || options === void 0 ? void 0 : options.type);
+            if (parsed === previous)
                 return;
-            this[symbol] = next;
+            this[symbol] = parsed;
             request(this, name, previous, (skipped) => {
                 if (!(options === null || options === void 0 ? void 0 : options.reflect) || skipped)
                     return;
                 target[API_LOCKED] = true;
-                updateAttribute(host(this), name, next);
+                updateAttribute(host(this), name, parsed);
                 target[API_LOCKED] = false;
             });
         }
@@ -1534,8 +1537,8 @@ class PlusForm extends PlusCore {
 }
 
 class Animation2 {
-    get animations() {
-        return this.source.getAnimations();
+    get animation() {
+        return this.source.getAnimations()[0];
     }
     get source() {
         const element = this.config.source;
@@ -1551,7 +1554,6 @@ class Animation2 {
     }
     constructor(config) {
         this.state = 'leaved';
-        this.destroy = [];
         this.config = Object.assign({}, this.config, config, {
             states: Object.assign({}, {
                 enter: 'enter',
@@ -1564,75 +1566,78 @@ class Animation2 {
         });
     }
     dispose() {
-        this.unbind();
+        var _a;
+        (_a = this.destroy) === null || _a === void 0 ? void 0 : _a.call(this);
     }
     enter(parameters) {
-        var _a, _b;
-        if (this.state == 'leaving')
-            return this.reverse();
-        this.update('enter');
-        (_b = (_a = this.config).onEnter) === null || _b === void 0 ? void 0 : _b.call(_a, parameters);
-        this.next(() => {
-            var _a, _b;
-            this.update('entering');
-            (_b = (_a = this.config).onEntering) === null || _b === void 0 ? void 0 : _b.call(_a, parameters);
-            this.bind(parameters);
+        return new Promise((resolve) => {
+            var _a, _b, _c;
+            (_a = this.destroy) === null || _a === void 0 ? void 0 : _a.call(this);
+            this.update('enter');
+            (_c = (_b = this.config).onEnter) === null || _c === void 0 ? void 0 : _c.call(_b, parameters);
+            this.next(() => {
+                var _a, _b;
+                this.update('entering');
+                (_b = (_a = this.config).onEntering) === null || _b === void 0 ? void 0 : _b.call(_a, parameters);
+                const onCancel = () => {
+                    resolve(true);
+                };
+                const onFinish = () => {
+                    var _a, _b;
+                    this.update('entered');
+                    (_b = (_a = this.config).onEntered) === null || _b === void 0 ? void 0 : _b.call(_a, parameters);
+                    resolve(false);
+                };
+                if (!this.animation)
+                    return onFinish();
+                this.destroy = () => {
+                    var _a, _b;
+                    resolve(true);
+                    (_a = this.animation) === null || _a === void 0 ? void 0 : _a.removeEventListener('cancel', onCancel);
+                    (_b = this.animation) === null || _b === void 0 ? void 0 : _b.removeEventListener('finish', onFinish);
+                };
+                this.animation.addEventListener('cancel', onCancel, { once: true });
+                this.animation.addEventListener('finish', onFinish, { once: true });
+            });
         });
     }
     initialize(state) {
         this.update(state);
     }
     leave(parameters) {
-        var _a, _b;
-        if (this.state == 'entering')
-            return this.reverse();
-        this.update('leave');
-        (_b = (_a = this.config).onLeave) === null || _b === void 0 ? void 0 : _b.call(_a, parameters);
-        this.next(() => {
-            var _a, _b;
-            this.update('leaving');
-            (_b = (_a = this.config).onLeaving) === null || _b === void 0 ? void 0 : _b.call(_a, parameters);
-            this.bind(parameters);
-        });
-    }
-    bind(parameters) {
-        this.unbind();
-        const callback = () => {
-            var _a, _b, _c, _d;
-            switch (this.state) {
-                case 'entering':
-                    this.update('entered');
-                    (_b = (_a = this.config).onEntered) === null || _b === void 0 ? void 0 : _b.call(_a, parameters);
-                    break;
-                case 'leaving':
+        return new Promise((resolve) => {
+            var _a, _b, _c;
+            (_a = this.destroy) === null || _a === void 0 ? void 0 : _a.call(this);
+            this.update('leave');
+            (_c = (_b = this.config).onLeave) === null || _c === void 0 ? void 0 : _c.call(_b, parameters);
+            this.next(() => {
+                var _a, _b;
+                this.update('leaving');
+                (_b = (_a = this.config).onLeaving) === null || _b === void 0 ? void 0 : _b.call(_a, parameters);
+                const onCancel = () => {
+                    resolve(true);
+                };
+                const onFinish = () => {
+                    var _a, _b;
                     this.update('leaved');
-                    (_d = (_c = this.config).onLeaved) === null || _d === void 0 ? void 0 : _d.call(_c, parameters);
-                    break;
-            }
-        };
-        if (!this.animations.length)
-            return callback();
-        this.animations.forEach((animation) => {
-            const destroy = () => {
-                animation.removeEventListener('finish', callback);
-            };
-            this.destroy.push(destroy);
-            animation.addEventListener('finish', callback, { once: true });
+                    (_b = (_a = this.config).onLeaved) === null || _b === void 0 ? void 0 : _b.call(_a, parameters);
+                    resolve(false);
+                };
+                if (!this.animation)
+                    return onFinish();
+                this.destroy = () => {
+                    var _a, _b;
+                    resolve(true);
+                    (_a = this.animation) === null || _a === void 0 ? void 0 : _a.removeEventListener('cancel', onCancel);
+                    (_b = this.animation) === null || _b === void 0 ? void 0 : _b.removeEventListener('finish', onFinish);
+                };
+                this.animation.addEventListener('cancel', onCancel, { once: true });
+                this.animation.addEventListener('finish', onFinish, { once: true });
+            });
         });
     }
     next(callback) {
         requestAnimationFrame(() => setTimeout(() => callback(), 5));
-    }
-    reverse() {
-        this.update(this.state == 'entering' ? 'leaving' : 'entering');
-        for (const animation of this.animations) {
-            animation.reverse();
-        }
-    }
-    unbind() {
-        for (const callback of this.destroy) {
-            callback();
-        }
     }
     update(state) {
         this.state = state;
@@ -2139,7 +2144,5 @@ function Media(query) {
         };
     };
 }
-
-Object.keys(BREAKPOINTS).sort((a, b) => BREAKPOINTS[a] - BREAKPOINTS[b]);
 
 export { Animation2 as A, Bind as B, CONFIG_NAMESPACE as C, Event$1 as E, Method as M, PlusCore as P, Query as Q, State as S, Watch as W, __decorate as _, __awaiter as a, Property as b, Element as c, styles as d, attributes$1 as e, host as f, QueryAll as g, html as h, off as i, classes as j, toUnit as k, isSize as l, isValidCSSColor as m, Portal as n, on as o, PlusForm as p, createLink as q, request as r, setConfig as s, toAxis as t, Animation as u, Scrollbar as v, Media as w, getConfig as x };
