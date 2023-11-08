@@ -1,4 +1,4 @@
-import { _ as __decorate, P as PlusCore, A as Animation2, a as __awaiter, h as html, b as Property, E as Event$1, Q as Query, M as Method, W as Watch, B as Bind, c as Element } from './index-73178400.js';
+import { _ as __decorate, P as PlusCore, A as Animation2, a as __awaiter, h as html, b as Property, E as Event$1, Q as Query, M as Method, W as Watch, B as Bind, c as Element } from './index-de22bbcf.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -66,21 +66,24 @@ let Accordion$1 = class Accordion extends PlusCore {
     }
     /**
      * Collapses the component.
-     * @returns
+     * @returns {Promise<boolean>} A Promise that resolves to `true` if the
+     * operation was successful or `false` if it was canceled.
      */
     collapse() {
         return this.try(false, true);
     }
     /**
      * Expands the component.
-     * @returns
+     * @returns {Promise<boolean>} A Promise that resolves to `true` if the
+     * operation was successful or `false` if it was canceled.
      */
     expand() {
         return this.try(true, true);
     }
     /**
-     * Toggles between collapse and expand
-     * @returns
+     * Toggles between `collapse` and `expand` state.
+     * @returns {Promise<boolean>} A Promise that resolves to `true` if the
+     * operation was successful or `false` if it was canceled.
      */
     toggle() {
         return this.try(!this.open, true);

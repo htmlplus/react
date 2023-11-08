@@ -54,77 +54,107 @@ function __rest(s, e) {
     return t;
 }
 
+// Regexps involved with splitting words in various case formats.
+const SPLIT_LOWER_UPPER_RE = /([\p{Ll}\d])(\p{Lu})/gu;
+const SPLIT_UPPER_UPPER_RE = /(\p{Lu})([\p{Lu}][\p{Ll}])/gu;
+const SPLIT_NUMBER_LOWER_RE = /(\d)(\p{Ll})/gu;
+const SPLIT_LETTER_NUMBER_RE = /(\p{L})(\d)/gu;
+// Regexp involved with stripping non-word characters from the result.
+const DEFAULT_STRIP_REGEXP = /[^\p{L}\d]+/giu;
+// The replacement value for splits.
+const SPLIT_REPLACE_VALUE = "$1\0$2";
+// The default characters to keep after transforming case.
+const DEFAULT_PREFIX_CHARACTERS = "";
 /**
- * Source: ftp://ftp.unicode.org/Public/UCD/latest/ucd/SpecialCasing.txt
+ * Split any cased input strings into an array of words.
  */
-/**
- * Lower case as a function.
- */
-function lowerCase(str) {
-    return str.toLowerCase();
-}
-
-// Support camel case ("camelCase" -> "camel Case" and "CAMELCase" -> "CAMEL Case").
-var DEFAULT_SPLIT_REGEXP = [/([a-z0-9])([A-Z])/g, /([A-Z])([A-Z][a-z])/g];
-// Remove all non-word characters.
-var DEFAULT_STRIP_REGEXP = /[^A-Z0-9]+/gi;
-/**
- * Normalize the string into something other libraries can manipulate easier.
- */
-function noCase(input, options) {
-    if (options === void 0) { options = {}; }
-    var _a = options.splitRegexp, splitRegexp = _a === void 0 ? DEFAULT_SPLIT_REGEXP : _a, _b = options.stripRegexp, stripRegexp = _b === void 0 ? DEFAULT_STRIP_REGEXP : _b, _c = options.transform, transform = _c === void 0 ? lowerCase : _c, _d = options.delimiter, delimiter = _d === void 0 ? " " : _d;
-    var result = replace(replace(input, splitRegexp, "$1\0$2"), stripRegexp, "\0");
-    var start = 0;
-    var end = result.length;
+function split(input, options = {}) {
+    const { separateNumbers } = options;
+    let result = input.trim();
+    result = result
+        .replace(SPLIT_LOWER_UPPER_RE, SPLIT_REPLACE_VALUE)
+        .replace(SPLIT_UPPER_UPPER_RE, SPLIT_REPLACE_VALUE);
+    if (separateNumbers) {
+        result = result
+            .replace(SPLIT_NUMBER_LOWER_RE, SPLIT_REPLACE_VALUE)
+            .replace(SPLIT_LETTER_NUMBER_RE, SPLIT_REPLACE_VALUE);
+    }
+    result = result.replace(DEFAULT_STRIP_REGEXP, "\0");
+    let start = 0;
+    let end = result.length;
     // Trim the delimiter from around the output string.
     while (result.charAt(start) === "\0")
         start++;
+    if (start === end)
+        return [];
     while (result.charAt(end - 1) === "\0")
         end--;
-    // Transform each token independently.
-    return result.slice(start, end).split("\0").map(transform).join(delimiter);
+    return result.slice(start, end).split(/\0/g);
 }
 /**
- * Replace `re` in the input string with the replacement value.
+ * Convert a string to camel case (`fooBar`).
  */
-function replace(input, re, value) {
-    if (re instanceof RegExp)
-        return input.replace(re, value);
-    return re.reduce(function (input, re) { return input.replace(re, value); }, input);
-}
-
-function pascalCaseTransform(input, index) {
-    var firstChar = input.charAt(0);
-    var lowerChars = input.substr(1).toLowerCase();
-    if (index > 0 && firstChar >= "0" && firstChar <= "9") {
-        return "_" + firstChar + lowerChars;
-    }
-    return "" + firstChar.toUpperCase() + lowerChars;
-}
-function pascalCase(input, options) {
-    if (options === void 0) { options = {}; }
-    return noCase(input, __assign({ delimiter: "", transform: pascalCaseTransform }, options));
-}
-
-function camelCaseTransform(input, index) {
-    if (index === 0)
-        return input.toLowerCase();
-    return pascalCaseTransform(input, index);
-}
 function camelCase(input, options) {
-    if (options === void 0) { options = {}; }
-    return pascalCase(input, __assign({ transform: camelCaseTransform }, options));
+    const prefix = getPrefix(input, options?.prefixCharacters);
+    const lower = lowerFactory(options?.locale);
+    const upper = upperFactory(options?.locale);
+    const transform = pascalCaseTransformFactory(lower, upper);
+    return (prefix +
+        split(input, options)
+            .map((word, index) => {
+            if (index === 0)
+                return lower(word);
+            return transform(word, index);
+        })
+            .join(""));
 }
-
-function dotCase(input, options) {
-    if (options === void 0) { options = {}; }
-    return noCase(input, __assign({ delimiter: "." }, options));
+/**
+ * Convert a string to pascal case (`FooBar`).
+ */
+function pascalCase(input, options) {
+    const prefix = getPrefix(input, options?.prefixCharacters);
+    const lower = lowerFactory(options?.locale);
+    const upper = upperFactory(options?.locale);
+    return (prefix +
+        split(input, options).map(pascalCaseTransformFactory(lower, upper)).join(""));
 }
-
-function paramCase(input, options) {
-    if (options === void 0) { options = {}; }
-    return dotCase(input, __assign({ delimiter: "-" }, options));
+/**
+ * Convert a string to kebab case (`foo-bar`).
+ */
+function kebabCase(input, options) {
+    const prefix = getPrefix(input, options?.prefixCharacters);
+    const lower = lowerFactory(options?.locale);
+    return prefix + split(input, options).map(lower).join("-");
+}
+function lowerFactory(locale) {
+    return locale === false
+        ? (input) => input.toLowerCase()
+        : (input) => input.toLocaleLowerCase(locale);
+}
+function upperFactory(locale) {
+    return locale === false
+        ? (input) => input.toUpperCase()
+        : (input) => input.toLocaleUpperCase(locale);
+}
+function pascalCaseTransformFactory(lower, upper) {
+    return (word, index) => {
+        const char0 = word[0];
+        const initial = index > 0 && char0 >= "0" && char0 <= "9" ? "_" + char0 : upper(char0);
+        return initial + lower(word.slice(1));
+    };
+}
+function getPrefix(input, prefixCharacters = DEFAULT_PREFIX_CHARACTERS) {
+    let prefix = "";
+    for (let i = 0; i < input.length; i++) {
+        const char = input.charAt(i);
+        if (prefixCharacters.includes(char)) {
+            prefix += char;
+        }
+        else {
+            break;
+        }
+    }
+    return prefix;
 }
 
 var arrayToMap = function (array) {
@@ -178,7 +208,7 @@ var getProps = function (ref, props, extra) {
         else if ((_a = extra.props) === null || _a === void 0 ? void 0 : _a.includes(name)) {
             if (!isPrimitive(value))
                 return;
-            result[paramCase(name)] = value;
+            result[kebabCase(name)] = value;
         }
         else {
             result[name] = value;
@@ -225,8 +255,8 @@ var setClass = function (element, props) {
 var setEvent = function (element, name, handler) {
     var events = element['$events'] || (element['$events'] = {});
     var previous = events[name];
-    previous && element.removeEventListener(paramCase(name), previous);
-    element.addEventListener(paramCase(name), (events[name] = function callback(event) {
+    previous && element.removeEventListener(pascalCase(name), previous);
+    element.addEventListener(pascalCase(name), (events[name] = function callback(event) {
         handler && handler.call(this, event);
     }));
 };
@@ -254,7 +284,7 @@ var setProps = function (element, props, extra) {
         }
         else if ((_a = extra.props) === null || _a === void 0 ? void 0 : _a.includes(name)) {
             if (isPrimitive(value)) {
-                element.setAttribute(paramCase(name), value);
+                element.setAttribute(kebabCase(name), value);
             }
             else {
                 element[name] = value;
@@ -294,7 +324,7 @@ var proxy = function (tagName, props, events) {
             var events = this.element['$events'] || {};
             Object.keys(events).forEach(function (name) {
                 var handler = events[name];
-                _this.element.removeEventListener(paramCase(name), handler);
+                _this.element.removeEventListener(pascalCase(name), handler);
             });
             delete this.element['$events'];
         };

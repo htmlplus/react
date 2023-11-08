@@ -1,5 +1,5 @@
-import { _ as __decorate, s as setConfig, P as PlusCore, h as html, b as Property, E as Event$1, M as Method, W as Watch, B as Bind, c as Element } from './index-73178400.js';
-import { g as getConfig } from './config-d4b056d0.js';
+import { _ as __decorate, s as setConfig, P as PlusCore, h as html, b as Property, E as Event$1, M as Method, W as Watch, B as Bind, c as Element } from './index-de22bbcf.js';
+import { g as getConfig } from './config-0bb6cf97.js';
 import { proxy } from './proxy.js';
 import 'react';
 

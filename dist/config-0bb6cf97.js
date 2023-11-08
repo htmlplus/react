@@ -1,4 +1,4 @@
-import { x as getConfig$1, C as CONFIG_NAMESPACE, s as setConfig$1 } from './index-73178400.js';
+import { x as getConfig$1, C as CONFIG_NAMESPACE, s as setConfig$1 } from './index-de22bbcf.js';
 
 const getConfig = (...parameters) => {
     return getConfig$1(CONFIG_NAMESPACE, ...parameters);

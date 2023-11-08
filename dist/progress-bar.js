@@ -1,9 +1,12 @@
-import { _ as __decorate, P as PlusCore, h as html, e as attributes$1, d as styles, f as host, b as Property, c as Element } from './index-73178400.js';
+import { _ as __decorate, P as PlusCore, h as html, e as attributes$1, d as styles, f as host, b as Property, c as Element } from './index-de22bbcf.js';
 import { proxy } from './proxy.js';
 import 'react';
 
 var css_248z = ":host,:host:after,:host:before{box-sizing:border-box}:host *,:host :after,:host :before{box-sizing:border-box}:host([hidden]:not([hidden=false])){display:none!important}@keyframes indeterminate{0%{left:0;transform:translateX(-100%)}to{left:100%;transform:translateX(0)}}:host{background-color:#dcdcdc;border-radius:.25rem;display:flex;font-size:.75rem;height:1rem;overflow:hidden;position:relative}:host>*{inset:0;position:absolute}.underlay{background-color:transparent}.buffer{background-color:#add8e6}.indicator{align-items:center;background-color:#1e90ff;color:#fff;display:flex;flex-direction:column;justify-content:center;overflow:hidden;transition:width .6s ease;white-space:nowrap}:host([immediate]:not([immediate=false])) .indicator{transition:none}:host([variant=indeterminate]) .indicator{animation:indeterminate 2s linear infinite;width:50%!important}";
 
+/**
+ * @slot default - The default slot.
+ */
 let ProgressBar$1 = class ProgressBar extends PlusCore {
     constructor() {
         super(...arguments);
