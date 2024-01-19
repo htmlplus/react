@@ -1,4 +1,4 @@
-import { _ as __decorate, P as PlusCore, l as isSize, k as toUnit, h as html, e as attributes$1, d as styles, f as host, b as Property, c as Element } from './index-de22bbcf.js';
+import { _ as __decorate, P as PlusCore, l as isSize, k as toUnit, h as html, e as attributes$1, d as styles, f as host, b as Property, c as Element } from './index-7a2d17ac.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -12,11 +12,11 @@ let Avatar$1 = class Avatar extends PlusCore {
     constructor() {
         super(...arguments);
         /**
-         * Specifies the shape of the component.
+         * Specifies the shape of the element.
          */
         this.shape = 'round';
         /**
-         * Specifies the size of the component.
+         * Specifies the size of the element.
          */
         this.size = 'md';
     }

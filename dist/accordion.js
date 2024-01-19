@@ -1,4 +1,4 @@
-import { _ as __decorate, P as PlusCore, A as Animation2, a as __awaiter, h as html, b as Property, E as Event$1, Q as Query, M as Method, W as Watch, B as Bind, c as Element } from './index-de22bbcf.js';
+import { _ as __decorate, P as PlusCore, A as Animation2, a as __awaiter, h as html, b as Property, E as Event$1, Q as Query, M as Method, W as Watch, B as Bind, c as Element } from './index-7a2d17ac.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -65,7 +65,7 @@ let Accordion$1 = class Accordion extends PlusCore {
         this.opened = false;
     }
     /**
-     * Collapses the component.
+     * Collapses the element.
      * @returns {Promise<boolean>} A Promise that resolves to `true` if the
      * operation was successful or `false` if it was canceled.
      */
@@ -73,7 +73,7 @@ let Accordion$1 = class Accordion extends PlusCore {
         return this.try(false, true);
     }
     /**
-     * Expands the component.
+     * Expands the element.
      * @returns {Promise<boolean>} A Promise that resolves to `true` if the
      * operation was successful or `false` if it was canceled.
      */

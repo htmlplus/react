@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import type { ClickOutsideJSX as ClickOutsideJSX } from '@htmlplus/core/types/components/click-outside/click-outside';
+import type { ClickOutsideJSX as ClickOutsideJSX } from '@htmlplus/core/types/elements/click-outside/click-outside';
 import type { Rename } from '../proxy';
 export declare const ClickOutside: import("react").ForwardRefExoticComponent<Rename<ClickOutsideJSX, {
     onPlusClickOutside: 'onClickOutside';

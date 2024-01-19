@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 import { Floating as FloatingCore } from '@htmlplus/core/floating';
-import type { FloatingElement, FloatingJSX as FloatingJSX } from '@htmlplus/core/types/components/floating/floating';
+import type { FloatingElement, FloatingJSX as FloatingJSX } from '@htmlplus/core/types/elements/floating/floating';
 
 import { proxy } from '../proxy';
 import type { Rename } from '../proxy';

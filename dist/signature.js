@@ -1,4 +1,4 @@
-import { _ as __decorate, p as PlusForm, a as __awaiter, h as html, b as Property, E as Event$1, M as Method, Q as Query, W as Watch, B as Bind, c as Element } from './index-de22bbcf.js';
+import { _ as __decorate, p as PlusForm, a as __awaiter, h as html, b as Property, E as Event$1, M as Method, Q as Query, W as Watch, B as Bind, c as Element } from './index-7a2d17ac.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -136,7 +136,7 @@ let Signature$1 = class Signature extends PlusForm {
         this.instance.fromData(data);
     }
     /**
-     * Syncs the canvas dimensions with the component dimensions.
+     * Syncs the canvas dimensions with the element dimensions.
      * @param clear Clears the canvas after resizing.
      */
     resize(clear) {

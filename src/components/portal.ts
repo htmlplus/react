@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 import { Portal as PortalCore } from '@htmlplus/core/portal';
-import type { PortalElement, PortalJSX as PortalJSX } from '@htmlplus/core/types/components/portal/portal';
+import type { PortalElement, PortalJSX as PortalJSX } from '@htmlplus/core/types/elements/portal/portal';
 
 import { proxy } from '../proxy';
 import type { Rename } from '../proxy';

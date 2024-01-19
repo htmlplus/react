@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 import { Animation as AnimationCore } from '@htmlplus/core/animation';
-import type { AnimationElement, AnimationJSX as AnimationJSX } from '@htmlplus/core/types/components/animation/animation';
+import type { AnimationElement, AnimationJSX as AnimationJSX } from '@htmlplus/core/types/elements/animation/animation';
 
 import { proxy } from '../proxy';
 import type { Rename } from '../proxy';

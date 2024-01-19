@@ -1,5 +1,5 @@
-import { _ as __decorate, P as PlusCore, a as __awaiter, l as isSize, k as toUnit, d as styles, m as isValidCSSColor, h as html, e as attributes$1, f as host, b as Property, S as State, W as Watch, c as Element } from './index-de22bbcf.js';
-import { g as getConfig, s as setConfig } from './config-0bb6cf97.js';
+import { _ as __decorate, P as PlusCore, a as __awaiter, l as isSize, k as toUnit, d as styles, m as isValidCSSColor, h as html, e as attributes$1, f as host, b as Property, S as State, W as Watch, c as Element } from './index-7a2d17ac.js';
+import { g as getConfig, s as setConfig } from './config-fd804de6.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -116,7 +116,7 @@ let Icon$1 = class Icon extends PlusCore {
         }
         catch (_a) { }
         if (typeof this.resolver != 'function') {
-            console.warn([`The icon component is not able to find an SVG file with the name of \`${this.name}\`. `, 'This component uses an asynchronous function called `resolver` to load SVG files. ', 'The function is defined as built-in by default. ', 'It is possible that it has not been reconfigured correctly. ', 'To solve the problem, ', 'read the documentation to check the correct configuration of the `resolver` property.'].join(''), this.$host);
+            console.warn([`The icon element is not able to find an SVG file with the name of \`${this.name}\`. `, 'This element uses an asynchronous function called `resolver` to load SVG files. ', 'The function is defined as built-in by default. ', 'It is possible that it has not been reconfigured correctly. ', 'To solve the problem, ', 'read the documentation to check the correct configuration of the `resolver` property.'].join(''), this.$host);
             return;
         }
         this.cache = this.resolver(this.name, parse).then(input => {
@@ -124,7 +124,7 @@ let Icon$1 = class Icon extends PlusCore {
         }).catch(() => {
             // TODO
             this.svg = parse(ICON_FALLBACK_SVG).cloneNode(true);
-            console.warn([`The icon component is not able to resolve an SVG file with the name of \`${this.name}\`. `, `There is a problem with the \`resolver\` property, and its output cannot be used. `, 'Make sure that the output of the property is an SVG.'].join(''), this.$host);
+            console.warn([`The icon element is not able to resolve an SVG file with the name of \`${this.name}\`. `, `There is a problem with the \`resolver\` property, and its output cannot be used. `, 'Make sure that the output of the property is an SVG.'].join(''), this.$host);
         });
     }
     render() {

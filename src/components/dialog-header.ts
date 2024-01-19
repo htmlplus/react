@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 import { DialogHeader as DialogHeaderCore } from '@htmlplus/core/dialog-header';
-import type { DialogHeaderElement, DialogHeaderJSX as DialogHeaderJSX } from '@htmlplus/core/types/components/dialog-header/dialog-header';
+import type { DialogHeaderElement, DialogHeaderJSX as DialogHeaderJSX } from '@htmlplus/core/types/elements/dialog-header/dialog-header';
 
 import { proxy } from '../proxy';
 import type { Rename } from '../proxy';

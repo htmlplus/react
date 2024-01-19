@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import type { TabsJSX as TabsJSX } from '@htmlplus/core/types/components/tabs/tabs';
+import type { TabsJSX as TabsJSX } from '@htmlplus/core/types/elements/tabs/tabs';
 import type { Rename } from '../proxy';
 export declare const Tabs: import("react").ForwardRefExoticComponent<Rename<TabsJSX, {
     onPlusChange: 'onChange';

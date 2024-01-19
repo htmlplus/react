@@ -1,6 +1,6 @@
 import { ProgressBar } from './progress-bar.js';
 import { ProgressBarStack } from './progress-bar-stack.js';
-import './index-de22bbcf.js';
+import './index-7a2d17ac.js';
 import './proxy.js';
 import 'react';
 

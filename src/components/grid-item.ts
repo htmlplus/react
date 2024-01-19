@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 import { GridItem as GridItemCore } from '@htmlplus/core/grid-item';
-import type { GridItemElement, GridItemJSX as GridItemJSX } from '@htmlplus/core/types/components/grid-item/grid-item';
+import type { GridItemElement, GridItemJSX as GridItemJSX } from '@htmlplus/core/types/elements/grid-item/grid-item';
 
 import { proxy } from '../proxy';
 import type { Rename } from '../proxy';

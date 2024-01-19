@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 import { Drawer as DrawerCore } from '@htmlplus/core/drawer';
-import type { DrawerElement, DrawerJSX as DrawerJSX } from '@htmlplus/core/types/components/drawer/drawer';
+import type { DrawerElement, DrawerJSX as DrawerJSX } from '@htmlplus/core/types/elements/drawer/drawer';
 
 import { proxy } from '../proxy';
 import type { Rename } from '../proxy';

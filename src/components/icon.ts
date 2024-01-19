@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 import { Icon as IconCore } from '@htmlplus/core/icon';
-import type { IconElement, IconJSX as IconJSX } from '@htmlplus/core/types/components/icon/icon';
+import type { IconElement, IconJSX as IconJSX } from '@htmlplus/core/types/elements/icon/icon';
 
 import { proxy } from '../proxy';
 import type { Rename } from '../proxy';

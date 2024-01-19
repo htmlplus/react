@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 import { Browse as BrowseCore } from '@htmlplus/core/browse';
-import type { BrowseElement, BrowseJSX as BrowseJSX } from '@htmlplus/core/types/components/browse/browse';
+import type { BrowseElement, BrowseJSX as BrowseJSX } from '@htmlplus/core/types/elements/browse/browse';
 
 import { proxy } from '../proxy';
 import type { Rename } from '../proxy';

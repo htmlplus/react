@@ -1,4 +1,4 @@
-import { _ as __decorate, P as PlusCore, b as Property, c as Element } from './index-de22bbcf.js';
+import { _ as __decorate, P as PlusCore, b as Property, c as Element } from './index-7a2d17ac.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -35,7 +35,7 @@ let Faker$1 = class Faker extends PlusCore {
         return import('@faker-js/faker').then(module => {
             this.instance = module.faker;
         }).catch(() => {
-            throw new Error("The `faker` component depends on an external package, but it doesn't seem to be installed. Running `npm install @faker-js/faker` will fix this problem.");
+            throw new Error("The `faker` element depends on an external package, but it doesn't seem to be installed. Running `npm install @faker-js/faker` will fix this problem.");
         });
     }
     render() {

@@ -1,4 +1,4 @@
-import { _ as __decorate, P as PlusCore, h as html, b as Property, W as Watch, c as Element, q as createLink } from './index-de22bbcf.js';
+import { _ as __decorate, P as PlusCore, h as html, b as Property, W as Watch, c as Element, q as createLink } from './index-7a2d17ac.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -9,7 +9,7 @@ const { reconnect } = createLink({
     namespace: ({ connector }) => connector ? `Tabs:${connector}` : undefined
 });
 /**
- * TODO: This component contains panels.
+ * TODO: This element contains panels.
  * @slot default - The default slot.
  */
 let TabsPanels$1 = class TabsPanels extends PlusCore {

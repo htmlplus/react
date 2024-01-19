@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 import { Signature as SignatureCore } from '@htmlplus/core/signature';
-import type { SignatureElement, SignatureJSX as SignatureJSX } from '@htmlplus/core/types/components/signature/signature';
+import type { SignatureElement, SignatureJSX as SignatureJSX } from '@htmlplus/core/types/elements/signature/signature';
 
 import { proxy } from '../proxy';
 import type { Rename } from '../proxy';

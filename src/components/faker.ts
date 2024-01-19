@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 import { Faker as FakerCore } from '@htmlplus/core/faker';
-import type { FakerElement, FakerJSX as FakerJSX } from '@htmlplus/core/types/components/faker/faker';
+import type { FakerElement, FakerJSX as FakerJSX } from '@htmlplus/core/types/elements/faker/faker';
 
 import { proxy } from '../proxy';
 import type { Rename } from '../proxy';

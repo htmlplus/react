@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 import { Spacer as SpacerCore } from '@htmlplus/core/spacer';
-import type { SpacerElement, SpacerJSX as SpacerJSX } from '@htmlplus/core/types/components/spacer/spacer';
+import type { SpacerElement, SpacerJSX as SpacerJSX } from '@htmlplus/core/types/elements/spacer/spacer';
 
 import { proxy } from '../proxy';
 import type { Rename } from '../proxy';

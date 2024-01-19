@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 import { Card as CardCore } from '@htmlplus/core/card';
-import type { CardElement, CardJSX as CardJSX } from '@htmlplus/core/types/components/card/card';
+import type { CardElement, CardJSX as CardJSX } from '@htmlplus/core/types/elements/card/card';
 
 import { proxy } from '../proxy';
 import type { Rename } from '../proxy';

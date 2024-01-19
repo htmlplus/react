@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 import { CardBody as CardBodyCore } from '@htmlplus/core/card-body';
-import type { CardBodyElement, CardBodyJSX as CardBodyJSX } from '@htmlplus/core/types/components/card-body/card-body';
+import type { CardBodyElement, CardBodyJSX as CardBodyJSX } from '@htmlplus/core/types/elements/card-body/card-body';
 
 import { proxy } from '../proxy';
 import type { Rename } from '../proxy';

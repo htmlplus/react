@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 import { TabsBar as TabsBarCore } from '@htmlplus/core/tabs-bar';
-import type { TabsBarElement, TabsBarJSX as TabsBarJSX } from '@htmlplus/core/types/components/tabs-bar/tabs-bar';
+import type { TabsBarElement, TabsBarJSX as TabsBarJSX } from '@htmlplus/core/types/elements/tabs-bar/tabs-bar';
 
 import { proxy } from '../proxy';
 import type { Rename } from '../proxy';

@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import type { DrawerJSX as DrawerJSX } from '@htmlplus/core/types/components/drawer/drawer';
+import type { DrawerJSX as DrawerJSX } from '@htmlplus/core/types/elements/drawer/drawer';
 import type { Rename } from '../proxy';
 export declare const Drawer: import("react").ForwardRefExoticComponent<Rename<DrawerJSX, {
     onPlusClose: 'onClose';

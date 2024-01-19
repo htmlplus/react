@@ -1,4 +1,4 @@
-import { _ as __decorate, P as PlusCore, j as classes, h as html, b as Property, E as Event$1, M as Method, Q as Query, W as Watch, B as Bind, c as Element } from './index-de22bbcf.js';
+import { _ as __decorate, P as PlusCore, j as classes, h as html, b as Property, E as Event$1, M as Method, Q as Query, W as Watch, B as Bind, c as Element } from './index-7a2d17ac.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -320,7 +320,7 @@ let Cropper$1 = class Cropper extends PlusCore {
         return import('cropperjs').then(module => {
             CropperCore = module.default;
         }).catch(() => {
-            throw new Error("The `cropper` component depends on an external package, but it doesn't seem to be installed. Running `npm install cropperjs` will fix this problem.");
+            throw new Error("The `cropper` element depends on an external package, but it doesn't seem to be installed. Running `npm install cropperjs` will fix this problem.");
         });
     }
     loadedCallback() {

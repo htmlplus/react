@@ -1,4 +1,4 @@
-import { _ as __decorate, q as createLink, P as PlusCore, h as html, b as Property, E as Event$1, W as Watch, c as Element } from './index-de22bbcf.js';
+import { _ as __decorate, q as createLink, P as PlusCore, h as html, b as Property, E as Event$1, W as Watch, c as Element } from './index-7a2d17ac.js';
 import { proxy } from './proxy.js';
 import 'react';
 

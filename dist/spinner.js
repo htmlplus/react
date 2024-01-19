@@ -1,4 +1,4 @@
-import { _ as __decorate, P as PlusCore, d as styles, m as isValidCSSColor, h as html, e as attributes$1, f as host, b as Property, c as Element } from './index-de22bbcf.js';
+import { _ as __decorate, P as PlusCore, d as styles, m as isValidCSSColor, h as html, e as attributes$1, f as host, b as Property, c as Element } from './index-7a2d17ac.js';
 import { proxy } from './proxy.js';
 import 'react';
 

@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 import { Grid as GridCore } from '@htmlplus/core/grid';
-import type { GridElement, GridJSX as GridJSX } from '@htmlplus/core/types/components/grid/grid';
+import type { GridElement, GridJSX as GridJSX } from '@htmlplus/core/types/elements/grid/grid';
 
 import { proxy } from '../proxy';
 import type { Rename } from '../proxy';

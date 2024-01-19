@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 import { Avatar as AvatarCore } from '@htmlplus/core/avatar';
-import type { AvatarElement, AvatarJSX as AvatarJSX } from '@htmlplus/core/types/components/avatar/avatar';
+import type { AvatarElement, AvatarJSX as AvatarJSX } from '@htmlplus/core/types/elements/avatar/avatar';
 
 import { proxy } from '../proxy';
 import type { Rename } from '../proxy';

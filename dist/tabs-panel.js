@@ -1,4 +1,4 @@
-import { _ as __decorate, q as createLink, P as PlusCore, h as html, e as attributes$1, f as host, b as Property, c as Element } from './index-de22bbcf.js';
+import { _ as __decorate, q as createLink, P as PlusCore, h as html, e as attributes$1, f as host, b as Property, c as Element } from './index-7a2d17ac.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -8,7 +8,7 @@ const { Inject } = createLink({
     crawl: true
 });
 /**
- * TODO: This component contains the contents of each tab and when the tab is activated the panel is displayed.
+ * TODO: This element contains the contents of each tab and when the tab is activated the panel is displayed.
  * @slot default - The default slot.
  */
 let TabsPanel$1 = class TabsPanel extends PlusCore {

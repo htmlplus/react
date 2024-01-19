@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 import { Tabs as TabsCore } from '@htmlplus/core/tabs';
-import type { TabsElement, TabsJSX as TabsJSX } from '@htmlplus/core/types/components/tabs/tabs';
+import type { TabsElement, TabsJSX as TabsJSX } from '@htmlplus/core/types/elements/tabs/tabs';
 
 import { proxy } from '../proxy';
 import type { Rename } from '../proxy';

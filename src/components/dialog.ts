@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 import { Dialog as DialogCore } from '@htmlplus/core/dialog';
-import type { DialogElement, DialogJSX as DialogJSX } from '@htmlplus/core/types/components/dialog/dialog';
+import type { DialogElement, DialogJSX as DialogJSX } from '@htmlplus/core/types/elements/dialog/dialog';
 
 import { proxy } from '../proxy';
 import type { Rename } from '../proxy';

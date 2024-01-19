@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import type { CropperJSX as CropperJSX } from '@htmlplus/core/types/components/cropper/cropper';
+import type { CropperJSX as CropperJSX } from '@htmlplus/core/types/elements/cropper/cropper';
 import type { Rename } from '../proxy';
 export declare const Cropper: import("react").ForwardRefExoticComponent<Rename<CropperJSX, {
     onPlusCrop: 'onCrop';
