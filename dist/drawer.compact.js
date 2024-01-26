@@ -1,6 +1,6 @@
 import { Drawer } from './drawer.js';
 import { DrawerToggler } from './drawer-toggler.js';
-import './index-cd4ee4b1.js';
+import './index-7d763b00.js';
 import './proxy.js';
 import 'react';
 

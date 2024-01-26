@@ -1,5 +1,4 @@
-import { _ as __decorate, P as PlusCore, a as __awaiter, l as isSize, k as toUnit, d as styles, m as isValidCSSColor, h as html, e as attributes$1, f as host, b as Property, S as State, W as Watch, c as Element } from './index-cd4ee4b1.js';
-import { g as getConfig, s as setConfig } from './config-1b682dff.js';
+import { _ as __decorate, P as PlusCore, a as __awaiter, g as getConfig, s as setConfig, m as isSize, l as toUnit, d as styles, n as isValidCSSColor, h as html, e as attributes$1, f as host, b as Property, S as State, W as Watch, c as Element } from './index-7d763b00.js';
 import { proxy } from './proxy.js';
 import 'react';
 

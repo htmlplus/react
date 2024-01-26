@@ -3,7 +3,7 @@ import { TabsBar } from './tabs-bar.js';
 import { TabsPanel } from './tabs-panel.js';
 import { TabsPanels } from './tabs-panels.js';
 import { TabsTab } from './tabs-tab.js';
-import './index-cd4ee4b1.js';
+import './index-7d763b00.js';
 import './proxy.js';
 import 'react';
 
