@@ -1,4 +1,4 @@
-import { _ as __decorate, P as PlusCore, l as isSize, k as toUnit, h as html, e as attributes$1, d as styles, f as host, b as Property, c as Element } from './index-7a2d17ac.js';
+import { _ as __decorate, P as PlusCore, l as isSize, k as toUnit, h as html, e as attributes$1, d as styles, f as host, b as Property, c as Element } from './index-cd4ee4b1.js';
 import { proxy } from './proxy.js';
 import 'react';
 

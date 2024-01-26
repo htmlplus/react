@@ -1,5 +1,5 @@
-import { _ as __decorate, s as setConfig, P as PlusCore, h as html, b as Property, E as Event$1, M as Method, W as Watch, B as Bind, c as Element } from './index-7a2d17ac.js';
-import { g as getConfig } from './config-fd804de6.js';
+import { _ as __decorate, s as setConfig, P as PlusCore, h as html, b as Property, E as Event$1, M as Method, W as Watch, B as Bind, c as Element } from './index-cd4ee4b1.js';
+import { g as getConfig } from './config-1b682dff.js';
 import { proxy } from './proxy.js';
 import 'react';
 
@@ -38,7 +38,7 @@ const ANIMATION_EASINGS = {
 };
 
 const register = (name, keyframe) => {
-  setConfig('PLUS')({
+  setConfig('$htmlplus')({
     asset: {
       animation: {
         [name]: keyframe
